@@ -14,6 +14,9 @@ TextureImporter:
   - first:
       213: -8353119416228933080
     second: animated_door_big_3_48x48_3
+  - first:
+      213: 3068749490537382407
+    second: animated_door_big_3_48x48_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,9 +111,9 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 3
-        width: 93
+        width: 54
         height: 102
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -131,7 +134,7 @@ TextureImporter:
         y: 3
         width: 36
         height: 111
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -152,7 +155,7 @@ TextureImporter:
         y: 3
         width: 29
         height: 120
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -173,7 +176,7 @@ TextureImporter:
         y: 3
         width: 9
         height: 123
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -182,6 +185,27 @@ TextureImporter:
       bones: []
       spriteID: 822914dc522c31c80800000000000000
       internalID: -8353119416228933080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_big_3_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 5
+        width: 38
+        height: 100
+      alignment: 9
+      pivot: {x: 0.052378703, y: 0.017146721}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70244281763669a20800000000000000
+      internalID: 3068749490537382407
       vertices: []
       indices: 
       edges: []

@@ -62,9 +62,9 @@ TagManager:
   - name: Furniture
     uniqueID: 253638099
     locked: 0
-  - name: Small furniture
-    uniqueID: 1749069899
-    locked: 0
   - name: NPC
     uniqueID: 1678139197
+    locked: 0
+  - name: Small furniture
+    uniqueID: 1749069899
     locked: 0

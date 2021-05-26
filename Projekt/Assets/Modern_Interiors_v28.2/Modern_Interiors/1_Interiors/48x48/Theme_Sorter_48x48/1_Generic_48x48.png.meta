@@ -2666,9 +2666,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -12730,7 +12730,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -24, y: -24}
+        - {x: -24, y: 24}
+        - {x: 24, y: 24}
+        - {x: 24, y: -24}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -12776,7 +12780,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -13, y: 3}
+        - {x: -13, y: 6}
+        - {x: -16, y: 6}
+        - {x: -16, y: 24}
+        - {x: 15, y: 24}
+        - {x: 15, y: 6}
+        - {x: 12, y: 6}
+        - {x: 12, y: 3}
       physicsShape:
       - - {x: -13, y: 5}
         - {x: -13, y: 24}
@@ -20490,7 +20502,23 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 0, y: 18}
+        - {x: 0, y: 12}
+        - {x: -3, y: 12}
+        - {x: -3, y: 6}
+        - {x: -6, y: 6}
+        - {x: -6, y: 3}
+        - {x: -12, y: 3}
+        - {x: -12, y: 6}
+        - {x: -15, y: 6}
+        - {x: -15, y: 12}
+        - {x: -18, y: 12}
+        - {x: -18, y: 18}
+        - {x: -22, y: 18}
+        - {x: -22, y: 24}
+        - {x: 24, y: 24}
+        - {x: 24, y: 18}
       physicsShape:
       - - {x: -9, y: 1}
         - {x: -21, y: 23}
@@ -20516,7 +20544,25 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 12, y: 6}
+        - {x: 12, y: 3}
+        - {x: 6, y: 3}
+        - {x: 6, y: 6}
+        - {x: 3, y: 6}
+        - {x: 3, y: 12}
+        - {x: 0, y: 12}
+        - {x: 0, y: 18}
+        - {x: -24, y: 18}
+        - {x: -24, y: 24}
+        - {x: 24, y: 24}
+        - {x: 24, y: 21}
+        - {x: 21, y: 21}
+        - {x: 21, y: 18}
+        - {x: 18, y: 18}
+        - {x: 18, y: 12}
+        - {x: 15, y: 12}
+        - {x: 15, y: 6}
       physicsShape:
       - - {x: 1, y: 17}
         - {x: -24, y: 18}

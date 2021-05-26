@@ -8,12 +8,15 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rigidbody2d;
     SpriteRenderer spriteRen;
 
+    public static PlayerController instant;
+
     float runSpeed = 7;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        instant = this;
         animation2d = GetComponent<Animator>();
         rigidbody2d = GetComponent<Rigidbody2D>();
         spriteRen = GetComponent<SpriteRenderer>();

@@ -131,6 +131,30 @@ TextureImporter:
   - first:
       213: 21300084
     second: animated_door_vertical_left_1_48x48_42
+  - first:
+      213: 4114006679395017099
+    second: animated_door_vertical_left_1_48x48_0
+  - first:
+      213: 5070335629826727745
+    second: animated_door_vertical_left_1_48x48_1
+  - first:
+      213: -3972770257108188984
+    second: animated_door_vertical_left_1_48x48_2
+  - first:
+      213: 8414706412213951428
+    second: animated_door_vertical_left_1_48x48_3
+  - first:
+      213: -2281562676478679564
+    second: animated_door_vertical_left_1_48x48_4
+  - first:
+      213: 1680846473122606035
+    second: animated_door_vertical_left_1_48x48_5
+  - first:
+      213: -4564279154989663591
+    second: animated_door_vertical_left_1_48x48_6
+  - first:
+      213: -338101930205550004
+    second: animated_door_vertical_left_1_48x48_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -161,9 +185,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -223,19 +247,19 @@ TextureImporter:
       name: animated_door_vertical_left_1_48x48_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 57
+        y: 0
+        width: 12
+        height: 123
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c454feadad14be24f8c9f8561db3be4b
-      internalID: 21300000
+      spriteID: b81ace82743e71930800000000000000
+      internalID: 4114006679395017099
       vertices: []
       indices: 
       edges: []
@@ -244,19 +268,19 @@ TextureImporter:
       name: animated_door_vertical_left_1_48x48_1
       rect:
         serializedVersion: 2
-        x: 144
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 135
+        y: 3
+        width: 30
+        height: 120
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77b69b40d8ccdcc4387fce6df98e7fc7
-      internalID: 21300002
+      spriteID: 14f14db34637d5640800000000000000
+      internalID: 5070335629826727745
       vertices: []
       indices: 
       edges: []
@@ -265,19 +289,19 @@ TextureImporter:
       name: animated_door_vertical_left_1_48x48_2
       rect:
         serializedVersion: 2
-        x: 192
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 216
+        y: 6
+        width: 45
+        height: 117
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 121a32f16b5d1fa499e55079d50fe46a
-      internalID: 21300004
+      spriteID: 8c044d2ff72edd8c0800000000000000
+      internalID: -3972770257108188984
       vertices: []
       indices: 
       edges: []
@@ -286,19 +310,19 @@ TextureImporter:
       name: animated_door_vertical_left_1_48x48_3
       rect:
         serializedVersion: 2
-        x: 240
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 303
+        y: 18
+        width: 54
+        height: 105
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaa95d920d647514aa506c0c0ff399cf
-      internalID: 21300006
+      spriteID: 4cbd63d16ea07c470800000000000000
+      internalID: 8414706412213951428
       vertices: []
       indices: 
       edges: []
@@ -307,19 +331,19 @@ TextureImporter:
       name: animated_door_vertical_left_1_48x48_4
       rect:
         serializedVersion: 2
-        x: 288
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 399
+        y: 39
+        width: 54
+        height: 84
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9cc192790a05f8469c0f224a9bc88b4
-      internalID: 21300008
+      spriteID: 4f5e2bf75d24650e0800000000000000
+      internalID: -2281562676478679564
       vertices: []
       indices: 
       edges: []
@@ -328,19 +352,19 @@ TextureImporter:
       name: animated_door_vertical_left_1_48x48_5
       rect:
         serializedVersion: 2
-        x: 336
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 495
+        y: 18
+        width: 54
+        height: 105
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80b3ce7d17120ae4dbb2322893d57f6e
-      internalID: 21300010
+      spriteID: 3dbe07836f0935710800000000000000
+      internalID: 1680846473122606035
       vertices: []
       indices: 
       edges: []
@@ -349,19 +373,19 @@ TextureImporter:
       name: animated_door_vertical_left_1_48x48_6
       rect:
         serializedVersion: 2
-        x: 384
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 600
+        y: 6
+        width: 45
+        height: 117
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7eed1ad6e52f16e4c9d871b9f2c352a5
-      internalID: 21300012
+      spriteID: 99afe178a4c68a0c0800000000000000
+      internalID: -4564279154989663591
       vertices: []
       indices: 
       edges: []
@@ -370,754 +394,19 @@ TextureImporter:
       name: animated_door_vertical_left_1_48x48_7
       rect:
         serializedVersion: 2
-        x: 432
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 711
+        y: 3
+        width: 30
+        height: 120
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5753ad380ac3ab243a22ca45a5dbda6b
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_8
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2649d6189688a2e498f88a1c8a1a8337
-      internalID: 21300016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_9
-      rect:
-        serializedVersion: 2
-        x: 528
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 328fb54664e454846be679041d8d3f24
-      internalID: 21300018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_10
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c2b5786fc44ca345b0277851bd0d6df
-      internalID: 21300020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_11
-      rect:
-        serializedVersion: 2
-        x: 624
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6dc6cb82ac30c6429516be9ea43535e
-      internalID: 21300022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_12
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 269fd96566681fc4f956350461e33a36
-      internalID: 21300024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_13
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81704462f494c904e9caae5142ea40e0
-      internalID: 21300026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_14
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9dcdc073568ea8f4780a242b584f752c
-      internalID: 21300028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_15
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4adf76450803214ca5b7ff2de35a793
-      internalID: 21300030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_16
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 079e39242e0765d4d9451b0d26be6a8a
-      internalID: 21300032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_17
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cbbc649b23930404dabb1c74c4e33f09
-      internalID: 21300034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_18
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36198626fd3de664d99b55aac35dfa27
-      internalID: 21300036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_19
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7d3e3101cc7649458ee51adfdbac95b
-      internalID: 21300038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_20
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fbdafe4d6dab06646826cbcd560c7666
-      internalID: 21300040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_21
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 200b968d0f75b6c4483b1ed091d81a43
-      internalID: 21300042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_22
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e895fcc65e2a464684e63d5d7a03eef
-      internalID: 21300044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_23
-      rect:
-        serializedVersion: 2
-        x: 528
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41b8c6d6bdd424b46ba21e78c997027f
-      internalID: 21300046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_24
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 197f2ffde312c6648b714e242bcc20c7
-      internalID: 21300048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_25
-      rect:
-        serializedVersion: 2
-        x: 624
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8729cd1b2d2e6f2489bda0b423cd4b06
-      internalID: 21300050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_26
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 131d98a27ee901740a0980b873c0324b
-      internalID: 21300052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_27
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 696c5a1e84773fa4f8cb93a90cdf6f4c
-      internalID: 21300054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_28
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdda74b1221a5704a95a0f3a63470988
-      internalID: 21300056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_29
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2fd0d42f845263548a135d3db1faec82
-      internalID: 21300058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_30
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb7d9742fb8cf70448b2793a30ea2fb0
-      internalID: 21300060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_31
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32bd4a568b624e141b7d1cd479c934bc
-      internalID: 21300062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_32
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d664ffc1261a69541ac48b2c8cc5495e
-      internalID: 21300064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_33
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83d2bc83e02dc5d4b92ca99eecfafd8f
-      internalID: 21300066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_34
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34d69e5a838c7a74cbc2ad33422ab5f5
-      internalID: 21300068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_35
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21cf85acae1e47b4b9d9cf024382a92b
-      internalID: 21300070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_36
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e108cda2d38f724285ffa15d4ac4c20
-      internalID: 21300072
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_37
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24101ed37b17e3045bc6b23a72848f1f
-      internalID: 21300074
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_38
-      rect:
-        serializedVersion: 2
-        x: 528
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64f9568780002a94a909af9eeeec2cde
-      internalID: 21300076
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_39
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4bf0a7ae61db9a2409bd1577a689d967
-      internalID: 21300078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_40
-      rect:
-        serializedVersion: 2
-        x: 624
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1464302ef1ba9e34c98adbda2c127eda
-      internalID: 21300080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_41
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6ab313acca74524f9fbc7b7313a5b5d
-      internalID: 21300082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_door_vertical_left_1_48x48_42
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c62862e31ba7528468177920212d5f18
-      internalID: 21300084
+      spriteID: c4a6938f512de4bf0800000000000000
+      internalID: -338101930205550004
       vertices: []
       indices: 
       edges: []

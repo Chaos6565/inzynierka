@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-    [SerializeField] private Animator _animation = null;
+    [SerializeField] private Animator lowerAnimation = null;
+    [SerializeField] private Animator leftAnimation = null;
 
-    [SerializeField] private GameObject door = null;
+    [SerializeField] private GameObject lowerDoor = null;
+    [SerializeField] private GameObject leftDoor = null;
+
+    [SerializeField] private GameObject trigger = null;
+
 
     private bool hasPlayer = false;
 
@@ -14,15 +19,17 @@ public class DoorScript : MonoBehaviour
     {
         if (hasPlayer && Input.GetKeyDown(KeyCode.Space))
         {
-            if (_animation.GetBool("isOpen") == false)
+            if (leftAnimation.GetBool("isOpen") == false)
             {
-                _animation.SetBool("isOpen", true);
-                door.GetComponent<BoxCollider2D>().enabled = false;
+                leftAnimation.SetBool("isOpen", true);
+                leftDoor.GetComponent<BoxCollider2D>().enabled = false;
+                trigger.SetActive(false);
             }
-            else
+            if (lowerAnimation.GetBool("isOpen") == false)
             {
-                _animation.SetBool("isOpen", false);
-                door.GetComponent<BoxCollider2D>().enabled = true;
+                lowerAnimation.SetBool("isOpen", true);
+                lowerDoor.GetComponent<BoxCollider2D>().enabled = false;
+                trigger.SetActive(false);
             }
         }
     }

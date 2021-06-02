@@ -55,4 +55,28 @@ public class PlayerController : MonoBehaviourPun
             }
         }
     }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        /*Debug.Log("What Is This Trash!");
+        if (other.CompareTag("Door"))
+        {
+            Debug.Log("It Looks Like I Stumbled Upon A Door");
+            if (photonView.IsMine)
+            {
+                Debug.Log("Be Or Not To Be");
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    Debug.Log("I Shall Open The Door Now");
+                    //DoorScript doorScript = other.GetComponent<DoorScript>();
+                    //doorScript.DoorHinge();
+                }
+                else
+                {
+                    Debug.Log("Should I Stay Or Should I Go?");
+                }
+            }
+        }*/
+    }
+
 }

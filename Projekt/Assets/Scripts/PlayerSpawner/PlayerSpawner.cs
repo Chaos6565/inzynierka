@@ -8,21 +8,26 @@ namespace Projekt.PlayerSpawner
     public class PlayerSpawner : MonoBehaviour
     {
         [SerializeField] private GameObject playerPrefab = null;
+        [SerializeField] public GameObject[] spawnPoints = null;
+
         CameraScript cameraScript;
+
+        int numberPlayers = 0;
 
         // Start is called before the first frame update
         private void Start()
         {
-            SpawnPlayers();
+            cameraScript = FindObjectOfType<CameraScript>();
+
+            GameObject player = PhotonNetwork.Instantiate(playerPrefab.name, spawnPoints[DeterminePlayerSpawnPoint()].transform.position, Quaternion.identity);
+            cameraScript.SetCameraTarget(player.transform);
         }
 
-        private void SpawnPlayers()
+        private int DeterminePlayerSpawnPoint()
         {
-            int playerCount = PhotonNetwork.CurrentRoom.PlayerCount;
-            cameraScript = FindObjectOfType<CameraScript>();
-            GameObject player = PhotonNetwork.Instantiate(playerPrefab.name, new Vector3(-1.18f, -12.81f, 0), Quaternion.identity);
-            cameraScript.SetCameraTarget(player.transform);
+            numberPlayers = PhotonNetwork.CountOfPlayers;
+
+            return numberPlayers - 1;
         }
     }
 }
-

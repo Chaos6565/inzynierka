@@ -1,23 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using Photon.Pun;
 using UnityEngine;
 
-namespace Projekt.PlayerSpawner
+public class CameraScript : MonoBehaviour
 {
-    public class CameraScript : MonoBehaviour
-    {
-        public Transform target;
-        public Vector3 offset;
+    public Transform player;
+    public Vector3 offset;
 
-        public void SetCameraTarget(Transform playerTransform)
-        {
-            target = playerTransform;
-        }
-        // Update is called once per frame
-        void LateUpdate()
-        {
-            transform.position = new Vector3(target.position.x + offset.x, target.position.y + offset.y, target.position.z + offset.z);
-        }
+    // Update is called once per frame
+    void Update()
+    {
+        transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, player.position.z + offset.z);
     }
 }

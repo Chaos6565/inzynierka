@@ -5090,8 +5090,6 @@ GameObject:
   - component: {fileID: 510350430}
   - component: {fileID: 510350429}
   - component: {fileID: 510350428}
-  - component: {fileID: 510350431}
-  - component: {fileID: 510350432}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -5163,7 +5161,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 510350431}
+      - m_Target: {fileID: 1629797463}
         m_TargetAssemblyTypeName: FormBottomHandler, Assembly-CSharp
         m_MethodName: ClickEndingButton
         m_Mode: 1
@@ -5213,51 +5211,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510350426}
   m_CullTransparentMesh: 1
---- !u!114 &510350431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510350426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee3dccc572725024ea9f90d44666bed6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allForm: {fileID: 0}
-  background: {fileID: 94515116}
-  resultWindowPass: {fileID: 293566889}
-  resultWindowFailed: {fileID: 779130715}
-  checkYes: {fileID: 2006116666}
-  checkNo: {fileID: 1749784469}
-  nameFromField: {fileID: 183340569}
-  dropDownMenu: {fileID: 1891470563}
-  _animation: {fileID: 0}
-  door: {fileID: 0}
-  trigger: {fileID: 0}
---- !u!114 &510350432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510350426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 1
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &545876097
 GameObject:
   m_ObjectHideFlags: 0
@@ -5650,7 +5603,7 @@ PrefabInstance:
     - target: {fileID: 5554901055632750993, guid: 550aaf11785bd4041be7b6d2bf474fee,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5554901055632750993, guid: 550aaf11785bd4041be7b6d2bf474fee,
         type: 3}
@@ -6384,8 +6337,6 @@ GameObject:
   - component: {fileID: 946934329}
   - component: {fileID: 946934328}
   - component: {fileID: 946934327}
-  - component: {fileID: 946934330}
-  - component: {fileID: 946934331}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -6457,7 +6408,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 946934330}
+      - m_Target: {fileID: 1629797463}
         m_TargetAssemblyTypeName: FormBottomHandler, Assembly-CSharp
         m_MethodName: FailedClick
         m_Mode: 1
@@ -6507,51 +6458,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946934325}
   m_CullTransparentMesh: 1
---- !u!114 &946934330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946934325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee3dccc572725024ea9f90d44666bed6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allForm: {fileID: 200006531}
-  background: {fileID: 94515116}
-  resultWindowPass: {fileID: 293566889}
-  resultWindowFailed: {fileID: 779130715}
-  checkYes: {fileID: 2006116666}
-  checkNo: {fileID: 1749784469}
-  nameFromField: {fileID: 183340569}
-  dropDownMenu: {fileID: 1891470563}
-  _animation: {fileID: 0}
-  door: {fileID: 0}
-  trigger: {fileID: 0}
---- !u!114 &946934331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946934325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 4
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &946963330
 GameObject:
   m_ObjectHideFlags: 0
@@ -6639,8 +6545,6 @@ GameObject:
   - component: {fileID: 1007636598}
   - component: {fileID: 1007636597}
   - component: {fileID: 1007636596}
-  - component: {fileID: 1007636599}
-  - component: {fileID: 1007636600}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -6712,7 +6616,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1007636599}
+      - m_Target: {fileID: 1629797463}
         m_TargetAssemblyTypeName: FormBottomHandler, Assembly-CSharp
         m_MethodName: PassClick
         m_Mode: 1
@@ -6762,51 +6666,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007636594}
   m_CullTransparentMesh: 1
---- !u!114 &1007636599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007636594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee3dccc572725024ea9f90d44666bed6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allForm: {fileID: 200006531}
-  background: {fileID: 94515116}
-  resultWindowPass: {fileID: 293566889}
-  resultWindowFailed: {fileID: 779130715}
-  checkYes: {fileID: 2006116666}
-  checkNo: {fileID: 1749784469}
-  nameFromField: {fileID: 183340569}
-  dropDownMenu: {fileID: 1891470563}
-  _animation: {fileID: 1396319853}
-  door: {fileID: 1396319851}
-  trigger: {fileID: 477229149}
---- !u!114 &1007636600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007636594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 3
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &1022341565
 GameObject:
   m_ObjectHideFlags: 0
@@ -7253,7 +7112,7 @@ GameObject:
   - component: {fileID: 1116744626}
   - component: {fileID: 1116744625}
   m_Layer: 5
-  m_Name: UI Canvas
+  m_Name: Form Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7332,8 +7191,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 200006532}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1629797462}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9985,6 +9844,84 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &1629797461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1629797462}
+  - component: {fileID: 1629797463}
+  - component: {fileID: 1629797464}
+  m_Layer: 0
+  m_Name: Form Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1629797462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629797461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.814523, y: -2.755993, z: -18.596441}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1116744628}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1629797463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629797461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3dccc572725024ea9f90d44666bed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allForm: {fileID: 200006531}
+  background: {fileID: 94515116}
+  resultWindowPass: {fileID: 293566889}
+  resultWindowFailed: {fileID: 779130715}
+  checkYes: {fileID: 2006116666}
+  checkNo: {fileID: 1749784469}
+  nameFromField: {fileID: 183340569}
+  dropDownMenu: {fileID: 1891470563}
+  _animation: {fileID: 1396319853}
+  door: {fileID: 1396319851}
+  trigger: {fileID: 1396319851}
+--- !u!114 &1629797464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629797461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 5
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1667571535
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace TestingNetworkWithPhoton.Menus
+namespace WMI.Menus
 {
     public class PlayerNameInput : MonoBehaviour
     {

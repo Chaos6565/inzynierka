@@ -5,19 +5,19 @@ using Photon.Realtime;
 using TMPro;
 using UnityEngine;
 
-namespace Projekt.Menus
+namespace WMI.Menus
 {   
     public class MainMenuScript : MonoBehaviourPunCallbacks
     {
         [SerializeField] private GameObject findOpponentPanel = null;
-        [SerializeField] private GameObject waitingStatusPanel = null;
+        [SerializeField] private GameObject waitingStatusPanel = null; 
         [SerializeField] private TextMeshProUGUI waitingStatusText = null;
         [SerializeField] private TextMeshProUGUI playerCountText = null;
 
         private bool isConnecting = false;
 
         private const string GameVersion = "0.1";
-        private const int MaxPlayersPerRoom = 3;
+        private const int MaxPlayersPerRoom = 2;
 
         private void Awake() => PhotonNetwork.AutomaticallySyncScene = true;
 

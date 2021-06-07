@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door
+  - Bullet
+  - Interactable
   layers:
   - Default
   - TransparentFX

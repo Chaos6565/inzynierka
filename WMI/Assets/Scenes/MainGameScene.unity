@@ -2610,7 +2610,7 @@ GameObject:
   - component: {fileID: 74169698}
   m_Layer: 0
   m_Name: FormTrigger
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5642,6 +5642,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5554901055632750988, guid: 550aaf11785bd4041be7b6d2bf474fee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 5554901055632750993, guid: 550aaf11785bd4041be7b6d2bf474fee,
         type: 3}
       propertyPath: m_RootOrder
@@ -6957,6 +6962,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 730919746721158534, guid: e5440d73afbd4984f9f479ed75240303,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 730919746721158534, guid: e5440d73afbd4984f9f479ed75240303,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 730919748115634816, guid: e5440d73afbd4984f9f479ed75240303,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 730919748115634816, guid: e5440d73afbd4984f9f479ed75240303,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -16.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 730919748250710055, guid: e5440d73afbd4984f9f479ed75240303,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 730919748250710055, guid: e5440d73afbd4984f9f479ed75240303,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -15.93
+      objectReference: {fileID: 0}
     - target: {fileID: 730919748479380516, guid: e5440d73afbd4984f9f479ed75240303,
         type: 3}
       propertyPath: m_RootOrder
@@ -8625,6 +8660,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030638755376068179, guid: 4571573215b4a864b836756014aeee71,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3030638755376068182, guid: 4571573215b4a864b836756014aeee71,
         type: 3}

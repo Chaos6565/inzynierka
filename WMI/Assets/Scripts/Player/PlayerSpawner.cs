@@ -7,7 +7,7 @@ namespace WMI
 {
     public class PlayerSpawner : MonoBehaviour
     {
-        [SerializeField] private GameObject playerPrefab = null;
+        [SerializeField] private GameObject[] playerPrefab = null;
         [SerializeField] public GameObject[] spawnPoints = null;
 
         CameraScript cameraScript;
@@ -19,7 +19,7 @@ namespace WMI
         {
             cameraScript = FindObjectOfType<CameraScript>();
 
-            GameObject player = PhotonNetwork.Instantiate(playerPrefab.name, spawnPoints[DeterminePlayerSpawnPoint()].transform.position, Quaternion.identity);
+            GameObject player = PhotonNetwork.Instantiate(playerPrefab[DeterminePlayerSpawnPoint()].name, spawnPoints[DeterminePlayerSpawnPoint()].transform.position, Quaternion.identity);
             cameraScript.SetCameraTarget(player.transform);
         }
 

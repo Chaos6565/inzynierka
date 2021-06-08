@@ -97,6 +97,11 @@ namespace WMI.Menus
             }
         }
 
+        public void ExitTheGame()
+        {
+            Application.Quit();
+        }
+
     }
 
 }

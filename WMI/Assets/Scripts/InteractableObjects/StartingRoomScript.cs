@@ -7,7 +7,13 @@ namespace WMI
 {
     public class StartingRoomScript : InteractableObject
     {
+        private BoxCollider2D trigger;
         [SerializeField] private List<GameObject> doors = new List<GameObject>();
+
+        private void Start()
+        {
+            trigger = this.GetComponent<BoxCollider2D>();
+        }
 
         public override void PerformAction()
         {
@@ -15,6 +21,8 @@ namespace WMI
             {
                 door.gameObject.GetComponent<DoorScript>().OpenTheDoor();
             }
+            this.DisableInteraction();
+            trigger.enabled = false;
         }
 
     }

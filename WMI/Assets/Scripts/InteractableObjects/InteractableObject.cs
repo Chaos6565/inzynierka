@@ -14,17 +14,29 @@ namespace WMI
 
         public void EnableInteraction()
         {
-            enabledState = true;
+            photonView.RPC("EnableInteractionRPC", RpcTarget.All);
         }
 
         public void DisableInteraction()
         {
-            enabledState = false;
+            photonView.RPC("DisableInteractionRPC", RpcTarget.All);
         }
 
         public bool IsEnabled()
         {
             return enabledState;
+        }
+
+        [PunRPC]
+        public void EnableInteractionRPC()
+        {
+            enabledState = true;
+        }
+
+        [PunRPC]
+        public void DisableInteractionRPC()
+        {
+            enabledState = false;
         }
 
     }

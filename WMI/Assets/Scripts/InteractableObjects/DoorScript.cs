@@ -60,7 +60,10 @@ namespace WMI
             }
         }
 
-
+        public bool IsTheDoorOpen()
+        {
+            return isOpen;
+        }
 
     }
 }

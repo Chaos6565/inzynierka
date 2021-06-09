@@ -1,13 +1,13 @@
 # EscapeWMI
 
-Projekt inżynierki przygotowany przez:
-Mateusza Szczecińskiego
-Dominika Zawadzkiego
-Laurę Piotrowską
-Roberta Pietrykowskiego 
+Projekt inżynierki przygotowany przez:  
+Mateusza Szczecińskiego   
+Dominika Zawadzkiego    
+Laurę Piotrowską    
+Roberta Pietrykowskiego     
+  
 
-
-Pod opieką:
+Pod opieką:   
 Marcina Witkowskiego
 
 Projekt Escape WMI ma na celu stworzenie wieloosobowej gry online typu Escape Room.

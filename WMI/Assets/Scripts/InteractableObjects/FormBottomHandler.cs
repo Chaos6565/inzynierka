@@ -15,9 +15,10 @@ namespace WMI
         [SerializeField] private GameObject resultWindowFailed;
 
         [Header("Wyniki formularza")]
-        [SerializeField] private Toggle checkYes;
-        [SerializeField] private Toggle checkNo;
         [SerializeField] private Text nameFromField;
+        [SerializeField] private Toggle intField;
+        [SerializeField] private Toggle stringField;
+        [SerializeField] private Toggle floatField;
         [SerializeField] private Text dropDownMenu;
 
         [Header("Zmienne do okna rezultatu")]
@@ -33,7 +34,7 @@ namespace WMI
         // Update is called once per frame
         void Update()
         {
-            if (checkYes.GetComponent<Toggle>().isOn == true && checkNo.GetComponent<Toggle>().isOn == false)
+            if (intField.GetComponent<Toggle>().isOn == true && stringField.GetComponent<Toggle>().isOn == false && floatField.GetComponent<Toggle>().isOn == true)
             {
                 check = true;
             }
@@ -51,7 +52,7 @@ namespace WMI
         public void ClickEndingButton()
         {
 
-            if (check == true && nameInput != "" && option == "Opcja trzecia - ta do wygrania")
+            if (check == true && nameInput != "" && option == "Java")
             {
 
                 CompleteForm();

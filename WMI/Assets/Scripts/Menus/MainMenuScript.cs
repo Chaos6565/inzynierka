@@ -17,7 +17,7 @@ namespace WMI.Menus
         private bool isConnecting = false;
 
         private const string GameVersion = "0.1";
-        [SerializeField] private const int MaxPlayersPerRoom = 2;
+        [SerializeField] private const int MaxPlayersPerRoom = 3;
 
         private void Awake() => PhotonNetwork.AutomaticallySyncScene = true;
 

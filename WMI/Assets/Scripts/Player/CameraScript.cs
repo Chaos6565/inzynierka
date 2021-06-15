@@ -17,7 +17,10 @@ namespace WMI
         // Update is called once per frame
         void LateUpdate()
         {
-            transform.position = new Vector3(target.position.x + offset.x, target.position.y + offset.y, target.position.z + offset.z);
+            if (target != null)
+            {
+                transform.position = new Vector3(target.position.x + offset.x, target.position.y + offset.y, target.position.z + offset.z);
+            }
         }
     }
 }

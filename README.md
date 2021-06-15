@@ -16,5 +16,5 @@ Wydziału Matematyki i Informatyki UAM, a także pasjonatów gier i łamigłówe
 wcielać się w studentów wydziału i będą musieli przejść przez trzy lata nauki, aż do
 ukończenia studiów rozwiązując po drodze różne zagadki i zadania grupowe.
 
-<b> <size=15> Instrukcja uruchomienia</size> </b>
+<b><size=15>Instrukcja uruchomienia</size></b>
 

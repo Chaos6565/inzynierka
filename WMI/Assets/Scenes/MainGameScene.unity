@@ -7972,6 +7972,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 730919748479380523, guid: e5440d73afbd4984f9f479ed75240303,
         type: 3}
+      propertyPath: spawnPoints.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 730919748479380523, guid: e5440d73afbd4984f9f479ed75240303,
+        type: 3}
+      propertyPath: playerPrefab.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 730919748479380523, guid: e5440d73afbd4984f9f479ed75240303,
+        type: 3}
+      propertyPath: spawnPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1031025882}
+    - target: {fileID: 730919748479380523, guid: e5440d73afbd4984f9f479ed75240303,
+        type: 3}
       propertyPath: playerPrefab.Array.data[0]
       value: 
       objectReference: {fileID: 1516193525732413025, guid: 7584c32e24b5c394892da96e90a9e1db,
@@ -7985,6 +8000,12 @@ PrefabInstance:
     - target: {fileID: 730919748479380523, guid: e5440d73afbd4984f9f479ed75240303,
         type: 3}
       propertyPath: playerPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 8259780091295970633, guid: e681817c8b4021446a9733b7c6fda48b,
+        type: 3}
+    - target: {fileID: 730919748479380523, guid: e5440d73afbd4984f9f479ed75240303,
+        type: 3}
+      propertyPath: playerPrefab.Array.data[3]
       value: 
       objectReference: {fileID: 8259780091295970633, guid: e681817c8b4021446a9733b7c6fda48b,
         type: 3}
@@ -8018,6 +8039,12 @@ MonoBehaviour:
   sceneViewId: 8
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!1 &1031025882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 730919748115634823, guid: e5440d73afbd4984f9f479ed75240303,
+    type: 3}
+  m_PrefabInstance: {fileID: 1031025879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1056375820
 GameObject:
   m_ObjectHideFlags: 0

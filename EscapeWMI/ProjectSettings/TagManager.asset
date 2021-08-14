@@ -53,3 +53,12 @@ TagManager:
   - name: Walls 2
     uniqueID: 1653525487
     locked: 0
+  - name: Objects_Dead
+    uniqueID: 1070131085
+    locked: 0
+  - name: Objects_1
+    uniqueID: 1890850077
+    locked: 0
+  - name: Objects_2
+    uniqueID: 2163856455
+    locked: 0

@@ -50,11 +50,11 @@ TagManager:
   - name: Walls 1
     uniqueID: 4049313141
     locked: 0
-  - name: Walls no col
-    uniqueID: 4057022175
-    locked: 0
   - name: Walls 2
     uniqueID: 1653525487
+    locked: 0
+  - name: Walls no col
+    uniqueID: 4057022175
     locked: 0
   - name: Objects_Dead
     uniqueID: 1070131085

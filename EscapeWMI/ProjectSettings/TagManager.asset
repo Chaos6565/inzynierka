@@ -44,8 +44,11 @@ TagManager:
   - name: Floor
     uniqueID: 1686149645
     locked: 0
-  - name: Floor - conference
+  - name: Floor 2
     uniqueID: 2612075779
+    locked: 0
+  - name: Trees
+    uniqueID: 2036406685
     locked: 0
   - name: Walls 1
     uniqueID: 4049313141

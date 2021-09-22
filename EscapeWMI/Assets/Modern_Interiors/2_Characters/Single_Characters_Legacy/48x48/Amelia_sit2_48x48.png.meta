@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: da5f4540be9988e4789472e152080403
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6102051838846929116
+    second: Amelia_sit2_48x48_0
+  - first:
+      213: -5268172046164863217
+    second: Amelia_sit2_48x48_1
+  - first:
+      213: -4593340487129341125
+    second: Amelia_sit2_48x48_2
+  - first:
+      213: 1328375077082598778
+    second: Amelia_sit2_48x48_3
+  - first:
+      213: -7497251496542324731
+    second: Amelia_sit2_48x48_4
+  - first:
+      213: -3689487761142277185
+    second: Amelia_sit2_48x48_5
+  - first:
+      213: 4048902290918169174
+    second: Amelia_sit2_48x48_6
+  - first:
+      213: 3140654277849561831
+    second: Amelia_sit2_48x48_7
+  - first:
+      213: 1716510257528381860
+    second: Amelia_sit2_48x48_8
+  - first:
+      213: -2863611358323295596
+    second: Amelia_sit2_48x48_9
+  - first:
+      213: -8758229230289458912
+    second: Amelia_sit2_48x48_10
+  - first:
+      213: -5426118070533730163
+    second: Amelia_sit2_48x48_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +77,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +111,273 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Amelia_sit2_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd88d7f31d7dea450800000000000000
+      internalID: 6102051838846929116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_sit2_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0753bc9f61b3e6b0800000000000000
+      internalID: -5268172046164863217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_sit2_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 21
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b336c3cd92d2140c0800000000000000
+      internalID: -4593340487129341125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_sit2_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 21
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d8df538165f6210800000000000000
+      internalID: 1328375077082598778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_sit2_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50834dc6c7964f790800000000000000
+      internalID: -7497251496542324731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_sit2_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb96f1dd6e4cccc0800000000000000
+      internalID: -3689487761142277185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_sit2_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a517c7e27903830800000000000000
+      internalID: 4048902290918169174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_sit2_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eab8810d68d59b20800000000000000
+      internalID: 3140654277849561831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_sit2_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 21
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a12b491cf442d710800000000000000
+      internalID: 1716510257528381860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_sit2_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 21
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49abd5444a86248d0800000000000000
+      internalID: -2863611358323295596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_sit2_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029672b0be4847680800000000000000
+      internalID: -8758229230289458912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_sit2_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8052881d5e82b4b0800000000000000
+      internalID: -5426118070533730163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

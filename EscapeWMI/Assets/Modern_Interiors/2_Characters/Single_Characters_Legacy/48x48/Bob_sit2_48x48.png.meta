@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 11f196d41f98a124fa0709eb3701ee80
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5188401093631692538
+    second: Bob_sit2_48x48_0
+  - first:
+      213: 3480905096873131578
+    second: Bob_sit2_48x48_1
+  - first:
+      213: -7479142028024959657
+    second: Bob_sit2_48x48_2
+  - first:
+      213: 7234876155870477184
+    second: Bob_sit2_48x48_3
+  - first:
+      213: -8329128104737121509
+    second: Bob_sit2_48x48_4
+  - first:
+      213: -970675031683483549
+    second: Bob_sit2_48x48_5
+  - first:
+      213: -8663703781914230807
+    second: Bob_sit2_48x48_6
+  - first:
+      213: 8376845964640709784
+    second: Bob_sit2_48x48_7
+  - first:
+      213: 5459450043930066791
+    second: Bob_sit2_48x48_8
+  - first:
+      213: 4886481484441939166
+    second: Bob_sit2_48x48_9
+  - first:
+      213: 6892353992886417062
+    second: Bob_sit2_48x48_10
+  - first:
+      213: -5219569809844191117
+    second: Bob_sit2_48x48_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +77,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +111,273 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Bob_sit2_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe4a2a2e47e00840800000000000000
+      internalID: 5188401093631692538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bob_sit2_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e38f33eb8ae4030800000000000000
+      internalID: 3480905096873131578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bob_sit2_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 21
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75da0e2a3ffb43890800000000000000
+      internalID: -7479142028024959657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bob_sit2_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 21
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b7a902881776460800000000000000
+      internalID: 7234876155870477184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bob_sit2_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bdb6c4e1ef86c80800000000000000
+      internalID: -8329128104737121509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bob_sit2_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3683a2893387782f0800000000000000
+      internalID: -970675031683483549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bob_sit2_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef3bc7005754c780800000000000000
+      internalID: -8663703781914230807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bob_sit2_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ce29cb509804470800000000000000
+      internalID: 8376845964640709784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bob_sit2_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 21
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f3179b3ecd3cb40800000000000000
+      internalID: 5459450043930066791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bob_sit2_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 21
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc6fa9350540d340800000000000000
+      internalID: 4886481484441939166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bob_sit2_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a67d34707f86af50800000000000000
+      internalID: 6892353992886417062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bob_sit2_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 21
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37042e399ec5097b0800000000000000
+      internalID: -5219569809844191117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

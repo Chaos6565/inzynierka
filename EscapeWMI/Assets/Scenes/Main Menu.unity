@@ -391,7 +391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &147111069
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3493,7 +3493,7 @@ MonoBehaviour:
   mainPanel: {fileID: 1392096342}
   settingsPanel: {fileID: 1520923938}
   creditsPanel: {fileID: 644700686}
-  quitPanel: {fileID: 0}
+  quitPanel: {fileID: 147111068}
 --- !u!1 &1313461356
 GameObject:
   m_ObjectHideFlags: 0
@@ -3820,7 +3820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1392096343
 RectTransform:
   m_ObjectHideFlags: 0

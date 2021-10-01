@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TriggerScript : MonoBehaviour
 {
     public Text pointText;
+    public bool win = false;
 
     public float speed;
 
@@ -15,12 +16,13 @@ public class TriggerScript : MonoBehaviour
 
     bool test = true;
 
+  
+
 
     // Start is called before the first frame update
     void Start()
     {
         camera = Camera.main;
-
         topLeft = (Vector2)camera.ScreenToWorldPoint(new Vector3(0, camera.pixelHeight, camera.nearClipPlane));
         topRight = (Vector2)camera.ScreenToWorldPoint(new Vector3(camera.pixelWidth, camera.pixelHeight, camera.nearClipPlane));
     }
@@ -37,12 +39,17 @@ public class TriggerScript : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position, new Vector3(topLeft.x, transform.position.y, transform.position.z), Time.deltaTime * speed);
         if(test == false)
             transform.position = Vector3.Lerp(transform.position, new Vector3(topRight.x, transform.position.y, transform.position.z), Time.deltaTime * speed);
+
+      
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         pointText.text = "1";
+        win = true;
     }
+
+   
 
 }
 

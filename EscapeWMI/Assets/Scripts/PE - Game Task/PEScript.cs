@@ -10,25 +10,30 @@ public class PEScript : MonoBehaviour
     public Vector2 minPower;
     public Vector2 maxPower;
 
+
     Camera camera;
-    Vector2 force;
-    Vector3 startPos;
-    Vector3 endPos;
+    public Vector2 force;
+    public Vector3 startPos;
+    public Vector3 endPos;
 
     TrajectoryLine tl;
 
-    bool end = true;
+    public bool end = true;
 
     // Start is called before the first frame update
     void Start()
     {
         camera = Camera.main;
         tl = GetComponent<TrajectoryLine>();
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+
+
         if (end == true)
         {
             if (Input.GetMouseButtonDown(0))

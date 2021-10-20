@@ -4,11 +4,12 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
+using UnityEngine.UI;
 
 public class CreateRoomMenu : MonoBehaviourPunCallbacks
 {
     [SerializeField]
-    private TMP_InputField _roomName;
+    private InputField _roomName;
 
     [SerializeField] private const int MaxPlayersPerRoom = 3;
 

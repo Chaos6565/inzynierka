@@ -4,13 +4,14 @@ using TMPro;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.UI;
 
 public class PlayerListing : MonoBehaviourPun
 {
     [SerializeField]
-    private TMP_Text _playerNickName;
+    private Text _playerNickName;
     [SerializeField]
-    private TMP_Text _readyStatusText;
+    private Text _readyStatusText;
 
     public Player Player { get; private set; }
     public bool readyStatus = false;

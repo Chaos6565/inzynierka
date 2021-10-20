@@ -8,7 +8,7 @@ namespace WMI.Menus
     public class PlayerLogIn : MonoBehaviour
     {
         [SerializeField]
-        private TMP_InputField nameInputField = null;
+        private InputField nameInputField = null;
         [SerializeField]
         private Button loginButton = null;
 

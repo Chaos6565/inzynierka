@@ -4,13 +4,14 @@ using TMPro;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.UI;
 
 public class RoomListing : MonoBehaviour
 {
     [SerializeField]
-    private TMP_Text _roomName;
+    private Text _roomName;
     [SerializeField]
-    private TMP_Text _playerCount;
+    private Text _playerCount;
 
     public RoomInfo RoomInfo { get; private set; }
 

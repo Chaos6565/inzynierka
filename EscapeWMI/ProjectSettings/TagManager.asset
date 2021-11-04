@@ -73,3 +73,6 @@ TagManager:
   - name: Objects_2
     uniqueID: 2163856455
     locked: 0
+  - name: NPC
+    uniqueID: 1937548013
+    locked: 0

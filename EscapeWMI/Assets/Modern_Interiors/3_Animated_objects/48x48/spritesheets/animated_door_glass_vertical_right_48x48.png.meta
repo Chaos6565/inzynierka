@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: ec559ea52edf1064b9cc1ddc8ecdf226
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7832385972097874594
+    second: animated_door_glass_vertical_right_48x48_0
+  - first:
+      213: 9186524728709301008
+    second: animated_door_glass_vertical_right_48x48_1
+  - first:
+      213: 6985418885783694978
+    second: animated_door_glass_vertical_right_48x48_2
+  - first:
+      213: -8132029299442389464
+    second: animated_door_glass_vertical_right_48x48_3
+  - first:
+      213: 7008213630811576693
+    second: animated_door_glass_vertical_right_48x48_4
+  - first:
+      213: 3282106233271340568
+    second: animated_door_glass_vertical_right_48x48_5
+  - first:
+      213: -7213626181902263307
+    second: animated_door_glass_vertical_right_48x48_6
+  - first:
+      213: -6229863262176847666
+    second: animated_door_glass_vertical_right_48x48_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +65,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -68,7 +92,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +113,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: animated_door_glass_vertical_right_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 9
+        height: 123
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e558a55c476cd4390800000000000000
+      internalID: -7832385972097874594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_glass_vertical_right_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 33
+        height: 123
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0134f0781971d7f70800000000000000
+      internalID: 9186524728709301008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_glass_vertical_right_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 3
+        width: 42
+        height: 120
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e217e577131f060800000000000000
+      internalID: 6985418885783694978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_glass_vertical_right_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 18
+        width: 48
+        height: 105
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82eeaafff6a352f80800000000000000
+      internalID: -8132029299442389464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_glass_vertical_right_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 36
+        width: 54
+        height: 87
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57913968a2d224160800000000000000
+      internalID: 7008213630811576693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_glass_vertical_right_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 18
+        width: 48
+        height: 105
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ecb35da326c8d20800000000000000
+      internalID: 3282106233271340568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_glass_vertical_right_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 3
+        width: 42
+        height: 120
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb124df43d04eb90800000000000000
+      internalID: -7213626181902263307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_glass_vertical_right_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 0
+        width: 33
+        height: 123
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec851bace541b89a0800000000000000
+      internalID: -6229863262176847666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

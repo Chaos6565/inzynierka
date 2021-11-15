@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LectureTrigger : MonoBehaviour
+public class LectureTrigger : InteractableObject
 {
     public string name;
     public string subject;
@@ -11,28 +11,14 @@ public class LectureTrigger : MonoBehaviour
     [TextArea(3, 30)]
     public List<string> slides;
 
-    bool triggerEnter = false;
-
-    public void Update()
+    public override void PerformAction()
     {
-        if (Input.GetKeyDown(KeyCode.E) && triggerEnter == true)
-        {
-            TriggerLecture();
-        }
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        triggerEnter = true;
+        TriggerLecture();
+        GetComponentInParent<ModuleContentScript>().ModuleCompleted();
     }
 
     public void TriggerLecture()
     {
         FindObjectOfType<LectureManager>().StartLecture(slides, name, subject);
-    }
-
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        triggerEnter = false;
     }
 }

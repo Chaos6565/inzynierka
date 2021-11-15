@@ -2,33 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour
+public class DialogueTrigger : InteractableObject
 {
     public Dialogue dialogue;
 
-    bool triggerEnter = false;
-
-    public void Update()
+    public override void PerformAction()
     {
-        if (Input.GetKeyDown(KeyCode.E) && triggerEnter == true)
-        {
-            TriggerDialogue();
-        }
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        triggerEnter = true;
+        TriggerDialogue();
+        GetComponentInParent<ModuleContentScript>().ModuleCompleted();
     }
 
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-    }
-
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        triggerEnter = false;
     }
 
 }

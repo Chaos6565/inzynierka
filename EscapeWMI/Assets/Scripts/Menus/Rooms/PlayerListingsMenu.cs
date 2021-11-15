@@ -10,13 +10,17 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
 {
     [SerializeField] private Transform _content;
     [SerializeField] private PlayerListing _playerListing;
-    [SerializeField] private const int MinPlayersPerRoom = 1;
-
+    [SerializeField] private int _minPlayersPerRoom = 0;
     private MainMenuScript _mainMenuScript;
 
     private List<PlayerListing> _listings = new List<PlayerListing>();
 
     private bool _ready = false;
+
+    private void Awake()
+    {
+        _minPlayersPerRoom = MasterManager.ConnectionSettings.MinPlayersPerRoom;
+    }
 
     public override void OnEnable()
     {
@@ -102,7 +106,7 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
 
         public void OnClick_StartGame()
     {
-        if (PhotonNetwork.CountOfPlayers < MinPlayersPerRoom) { Debug.Log("Not enough players in room"); return; }
+        if (PhotonNetwork.CountOfPlayers < _minPlayersPerRoom) { Debug.Log("Not enough players in room"); return; }
         if (PhotonNetwork.IsMasterClient)
         {
             for (int i = 0; i < _listings.Count; i++)

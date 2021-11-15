@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: d56ed2d428cbb2b45b995f3f0d0fa7b6
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2828795228642122722
+    second: animated_door_vertical_right_1_48x48_0
+  - first:
+      213: -7657041742229423974
+    second: animated_door_vertical_right_1_48x48_1
+  - first:
+      213: -5871138832042863939
+    second: animated_door_vertical_right_1_48x48_2
+  - first:
+      213: -6521692919230340801
+    second: animated_door_vertical_right_1_48x48_3
+  - first:
+      213: 6488491790771683903
+    second: animated_door_vertical_right_1_48x48_4
+  - first:
+      213: 795518704237797207
+    second: animated_door_vertical_right_1_48x48_5
+  - first:
+      213: -4392555337594395063
+    second: animated_door_vertical_right_1_48x48_6
+  - first:
+      213: -5796780546795281424
+    second: animated_door_vertical_right_1_48x48_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +65,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -68,7 +92,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +113,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: animated_door_vertical_right_1_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 0
+        width: 12
+        height: 123
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1467762ab91eb8d0800000000000000
+      internalID: -2828795228642122722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_vertical_right_1_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 3
+        width: 30
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98b31caa19bcb590800000000000000
+      internalID: -7657041742229423974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_vertical_right_1_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 6
+        width: 45
+        height: 117
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db25511c656858ea0800000000000000
+      internalID: -5871138832042863939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_vertical_right_1_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 18
+        width: 54
+        height: 105
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f316817e7da4e75a0800000000000000
+      internalID: -6521692919230340801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_vertical_right_1_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 39
+        width: 54
+        height: 84
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f320cfcf7e0cb0a50800000000000000
+      internalID: 6488491790771683903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_vertical_right_1_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 18
+        width: 54
+        height: 105
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75fd542fb004a0b00800000000000000
+      internalID: 795518704237797207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_vertical_right_1_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 6
+        width: 45
+        height: 117
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946a07671328a03c0800000000000000
+      internalID: -4392555337594395063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_door_vertical_right_1_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 3
+        width: 30
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f36f5b2ec2bd8fa0800000000000000
+      internalID: -5796780546795281424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviourPun
     // List of all interactable objects in player's vicinity
     List<InteractableObject> interactableObjects;
 
+    //player's inventory
+    private Inventory inventory;
+    [SerializeField] private InventoryUI inventoryUI;
+
 
     // Start is called before the first frame update - yes
     void Start()
@@ -28,11 +32,17 @@ public class PlayerController : MonoBehaviourPun
         if (photonView.IsMine)
         {
             localPlayer = this;
+
+            inventory = new Inventory(UseInventoryItem);
+            inventoryUI.SetPlayer(localPlayer);
+            inventoryUI.CreateInventory(inventory);
         }
         animation2d = GetComponent<Animator>();
         rigidbody2d = GetComponent<Rigidbody2D>();
         spriteRen = GetComponent<SpriteRenderer>();
         interactableObjects = new List<InteractableObject>();
+
+        
 
         if (!photonView.IsMine)
         {
@@ -131,6 +141,23 @@ public class PlayerController : MonoBehaviourPun
                 InteractableObject interactableObject = other.gameObject.GetComponent<InteractableObject>();
                 interactableObjects.Remove(interactableObject);
             }
+        }
+    }
+
+    private void UseInventoryItem(Item item)
+    {
+        switch (item.itemType)
+        {
+            case Item.ItemType.Item1:
+
+                break;
+            case Item.ItemType.Item2:
+
+                break;
+            case Item.ItemType.Item3:
+
+                break;
+
         }
     }
 

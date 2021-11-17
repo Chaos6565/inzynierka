@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 7
+  inventoryUI: {fileID: 4338960757932684368, guid: bd7cdd9e3c87ccb46ad7f3cf828a5229, type: 3}
 --- !u!58 &8269186091894831988
 CircleCollider2D:
   m_ObjectHideFlags: 0

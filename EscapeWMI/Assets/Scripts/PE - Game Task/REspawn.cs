@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class REspawn : MonoBehaviour
 {
-
-    private PEScript PE;
-    private TriggerScript TS;
+    private BallScript BS;
+    private GoalScript TS;
     public GameObject Capsule;
     public GameObject Ball;
     GlobalTime GT;
-    
-    
 
+    PEManager PM;
+    public GameObject PMMan;
+
+    public Camera camera;
+    public RectTransform rectTransform_canvas;
+    public RectTransform rectTransform_ball;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
-        PE = Ball.GetComponent<PEScript>();
-        TS = Capsule.GetComponent<TriggerScript>();
+        BS = Ball.GetComponent<BallScript>();
+        TS = Capsule.GetComponent<GoalScript>();
         GT = GetComponent<GlobalTime>();
+
+        PM = PMMan.GetComponent<PEManager>();
     }
 
     // Update is called once per frame
@@ -32,9 +39,15 @@ public class REspawn : MonoBehaviour
         if (GT.seconds <= 0 && TS.win == false)
         {
             GT.seconds = 11;
-            PE.end = true;
-            PE.transform.position = new Vector3(0.37f, -7.23f, 0f);
-            PE.rb.velocity = new Vector2(0f, 0f);
+            BS.end = true;
+
+            Vector2 anchoredPos;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform_canvas, new Vector2(960f, 270f), camera, out anchoredPos);
+            rectTransform_ball.anchoredPosition = anchoredPos;
+
+            BS.rb.velocity = new Vector2(0f, 0f);
+
+            PM.Result(false);
         }
     }
 }

@@ -5,22 +5,19 @@ using UnityEngine.UI;
 
 public class GlobalTime : MonoBehaviour
 {
-
     public GameObject timeDisplay;
     public int seconds = 10;
     public bool deductingTime;
-    
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject PETask;
+    public GameObject succedPanel;
+    public GameObject failedPanel;
+    
 
     // Update is called once per frame
     void Update()
     {
-        if (deductingTime == false)
+        if (deductingTime == false && PETask.active == true && succedPanel.active == false && failedPanel.active == false)
         {
             deductingTime = true;
             StartCoroutine(DeductSecond());

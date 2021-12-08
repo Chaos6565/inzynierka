@@ -10,8 +10,8 @@ public class ModuleContentScript : MonoBehaviourPun
 
 
     // Is completing a task by everyone necessary for whole module completion?
+    [SerializeField]  private bool moduleCompletionByEveryone = false;
 
-    private bool moduleCompletionByEveryone = false;
     private int completionCounter = 0;
 
     public void ModuleCompleted()

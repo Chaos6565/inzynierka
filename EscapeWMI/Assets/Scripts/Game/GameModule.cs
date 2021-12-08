@@ -13,6 +13,9 @@ public class GameModule : MonoBehaviourPun
     private bool _moduleActiveState = false;
     public bool ModuleActiveState { get { return _moduleActiveState; } }
 
+    // Deactivate this module after completion?
+    [SerializeField] public bool deactivateModuleAfterCompletion = true;
+
 
     // State of module completion, when set to true, this module should not be recycled.
 
@@ -31,7 +34,8 @@ public class GameModule : MonoBehaviourPun
                 GetComponentInParent<GameStateManager>().ActivateNextModule();
 
                 Debug.Log("MODULE COMPLETED!");
-                DisableModule();
+                if (deactivateModuleAfterCompletion)
+                    DisableModule();
             } 
         }
     }

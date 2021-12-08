@@ -7,7 +7,6 @@ public class GameStateManager : MonoBehaviourPun
 {
     // Current Game state, can be increased to 'skip' modules when debugging.
     [SerializeField] public int _gameState = 1;
-    //private int _gameState = gameState - 1;
     public int GameState { get { return _gameState; } }
 
 

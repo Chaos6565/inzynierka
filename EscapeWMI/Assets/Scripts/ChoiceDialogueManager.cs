@@ -31,6 +31,8 @@ public class ChoiceDialogueManager : MonoBehaviour
 
     public void StartDialogue(ChoiceDialogue dialogue)
     {
+        GameStateManager.instance.choiceDialog = true;
+
         dialogCanvas.SetActive(true);
 
 
@@ -98,6 +100,8 @@ public class ChoiceDialogueManager : MonoBehaviour
     {
         dialogCanvas.SetActive(false);
         EndButton.SetActive(false);
+
+        GameStateManager.instance.choiceDialog = false;
     }
 
 }

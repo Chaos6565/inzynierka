@@ -14,8 +14,12 @@ public class PlayerController : MonoBehaviourPun
     public static PlayerController localPlayer;
 
     // Movement parameters
-    [SerializeField] float runSpeed = 7;
+    [SerializeField] float baseSpeed = 7;
     Vector2 movementVelocity;
+
+    // TURBOOO For debbugggging
+    [SerializeField] float turbo = 20;
+    float runSpeed = 0;
 
     // List of all interactable objects in player's vicinity
     List<InteractableObject> interactableObjects;
@@ -30,7 +34,6 @@ public class PlayerController : MonoBehaviourPun
     // Start is called before the first frame update - yes
     void Start()
     {
-            
         if (photonView.IsMine)
         {
             localPlayer = this;
@@ -44,7 +47,7 @@ public class PlayerController : MonoBehaviourPun
         spriteRen = GetComponent<SpriteRenderer>();
         interactableObjects = new List<InteractableObject>();
 
-        
+        runSpeed = baseSpeed; // do turbo, mozna usunac potem
 
         if (!photonView.IsMine)
         {
@@ -80,7 +83,20 @@ public class PlayerController : MonoBehaviourPun
                     }
                 }
             }
-
+            //turrbbo
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Debug.Log("TURBOOOOOOOOOOOOOOOOO");
+                if(runSpeed < baseSpeed + turbo)
+                {
+                    runSpeed = baseSpeed + turbo;
+                } 
+            }
+            else if (Input.GetKeyUp(KeyCode.Space))
+            {
+                runSpeed = baseSpeed;
+            }
+            // koniec turrrbobo
             // Movement Keys Managment
             movementVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         }

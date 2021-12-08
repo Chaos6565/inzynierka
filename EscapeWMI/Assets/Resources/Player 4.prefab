@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 804275805
-  m_SortingLayer: 3
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: 3061622420333137476, guid: c4ac33ee63df01f45b13ba64148602e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -136,9 +136,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.011457868, y: -0.44790456}
+  m_Offset: {x: -0.011458543, y: -0.14910617}
   serializedVersion: 2
-  m_Radius: 0.35623392
+  m_Radius: 0.20309986
 --- !u!50 &390551813469570704
 Rigidbody2D:
   serializedVersion: 4

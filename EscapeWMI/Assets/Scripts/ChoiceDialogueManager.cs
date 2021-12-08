@@ -35,9 +35,6 @@ public class ChoiceDialogueManager : MonoBehaviour
 
 
         nameText.text = dialogue.name;
-        
-
-       
         Choice2.text = dialogue.Buttonchoice2;
 
         sentences.Clear();
@@ -52,33 +49,40 @@ public class ChoiceDialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
         DisplayNextSentence();
-        MakeaChoice();
+  
+        ButtonChoice1.SetActive(true);
+        ButtonChoice2.SetActive(true);
         EndButton.SetActive(false);
     }
 
-
-    void MakeaChoice()
+    public void ChoiceNext()
     {
-
-        ButtonChoice1.SetActive(true);
-        ButtonChoice2.SetActive(true);
-        
-    }
-    public void DisplayNextSentence()
-    {
-        
-        if (sentences.Count == 1)
+        string choice;
+        if (Choices.Count != 0)
         {
-            EndButton.SetActive(true);
+            choice = Choices.Dequeue();
+            Choice1.text = choice;
+            ButtonChoice1.SetActive(true);
+            ButtonChoice2.SetActive(true);
+            EndButton.SetActive(false);
+        }
+        else
+        {
             ButtonChoice1.SetActive(false);
             ButtonChoice2.SetActive(false);
-            return;
+            EndButton.SetActive(true);
         }
+    }
+   
+
+ 
+    public void DisplayNextSentence()
+    {
         string sentence = sentences.Dequeue();
-        string choice = Choices.Dequeue();
+        ChoiceNext();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
-        StartCoroutine(TypeChoice(choice));
+
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -87,15 +91,6 @@ public class ChoiceDialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
-        }
-    }
-    IEnumerator TypeChoice(string choice)
-    {
-        Choice1.text = "";
-        foreach (char letter in choice.ToCharArray())
-        {
-            Choice1.text += letter;
             yield return null;
         }
     }

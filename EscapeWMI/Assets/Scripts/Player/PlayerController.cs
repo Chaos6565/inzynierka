@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviourPun
     [SerializeField] private InventoryUI inventoryUI;
 
 
+    public bool canMove = true;
+
     // Start is called before the first frame update - yes
     void Start()
     {
@@ -102,7 +104,7 @@ public class PlayerController : MonoBehaviourPun
 
     private void MovePlayer()
     {
-        if (photonView.IsMine)
+        if (photonView.IsMine && canMove == true)
         {
             rigidbody2d.velocity = movementVelocity * runSpeed;
 

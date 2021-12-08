@@ -34,6 +34,8 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
         DisplayNextSentence();
+
+        GameStateManager.instance.dialogActive = true;
     }
 
     public void DisplayNextSentence()
@@ -61,6 +63,8 @@ public class DialogueManager : MonoBehaviour
     {
         dialogCanvas.SetActive(false);
         animator.SetBool("IsOpen", false);
+
+        GameStateManager.instance.dialogActive = false;
     }
   
 }

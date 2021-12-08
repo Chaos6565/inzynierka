@@ -13,10 +13,21 @@ public class GameStateManager : MonoBehaviourPun
 
     // List of all game modules, they need to be in the same order as they will be activated in the game.
     [SerializeField] private List<GameModule> gameModules = null;
-    
+
+
+    //Zmienne do sterowania ruchem postaci
+    public static GameStateManager instance;
+    public bool PEActive;
+    public bool dialogActive;
+    public bool lectureActive;
+
+
 
     private void Start()
     {
+        instance = this;
+
+
         if (gameModules.Count >= 1)
         {
             if (_gameState < gameModules.Count)
@@ -28,6 +39,15 @@ public class GameStateManager : MonoBehaviourPun
                 Debug.Log("Game State: " + _gameState.ToString());
             }
         }
+    }
+
+    //Do zatrzymywania graczas
+    private void Update()
+    {
+        if (PEActive || lectureActive || dialogActive)
+            PlayerController.localPlayer.canMove = false;
+        else
+            PlayerController.localPlayer.canMove = true;
     }
 
     public void ActivateNextModule()

@@ -16,6 +16,7 @@ public class PEManager : MonoBehaviour
     public void OpenTask()
     {
         PETask.SetActive(true);
+        GameStateManager.instance.PEActive = true;
     }
 
     public void Result(bool r)
@@ -35,6 +36,8 @@ public class PEManager : MonoBehaviour
         succedPanel.SetActive(false);
         failedPanel.SetActive(false);
         PETask.SetActive(false);
+
+        GameStateManager.instance.PEActive = false;
     }
 
     public void ReplayButtonClick()

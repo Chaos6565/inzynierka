@@ -23,6 +23,8 @@ public class LectureManager : MonoBehaviour
         slide.text = slides_[counter];
         profName.text = name;
         subject.text = subject_;
+
+        GameStateManager.instance.lectureActive = true;
     }
 
     public void ClickForward()
@@ -40,5 +42,7 @@ public class LectureManager : MonoBehaviour
     {
         counter = 0;
         lectureCanvas.SetActive(false);
+
+        GameStateManager.instance.lectureActive = false;
     }
 }

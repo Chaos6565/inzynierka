@@ -9,7 +9,9 @@ public class ChoiceDialogue
     [TextArea(3, 10)]
     public string[] sentences;
 
-    public string Buttonchoice1;
+    [TextArea(3, 10)]
+    public string[] Buttonchoice1;
+
     public string Buttonchoice2;
 
 

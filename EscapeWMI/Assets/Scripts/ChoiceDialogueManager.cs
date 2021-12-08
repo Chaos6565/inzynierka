@@ -12,6 +12,7 @@ public class ChoiceDialogueManager : MonoBehaviour
 
 
     private Queue<string> sentences;
+    private Queue<string> Choices;
 
     public GameObject dialogCanvas;
     public GameObject ButtonChoice1;
@@ -22,6 +23,7 @@ public class ChoiceDialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        Choices = new Queue<string>();
         ButtonChoice1.SetActive(false);
         ButtonChoice2.SetActive(false);
         EndButton.SetActive(false);
@@ -33,11 +35,18 @@ public class ChoiceDialogueManager : MonoBehaviour
 
 
         nameText.text = dialogue.name;
-        Choice1.text = dialogue.Buttonchoice1;
+        
+
+       
         Choice2.text = dialogue.Buttonchoice2;
 
         sentences.Clear();
+        Choices.Clear();
 
+        foreach (string choice in dialogue.Buttonchoice1)
+        {
+            Choices.Enqueue(choice);
+        }
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
@@ -57,18 +66,19 @@ public class ChoiceDialogueManager : MonoBehaviour
     }
     public void DisplayNextSentence()
     {
-        ButtonChoice1.SetActive(false);
-        ButtonChoice2.SetActive(false);
         
-        if (sentences.Count == 0)
+        if (sentences.Count == 1)
         {
-            EndDialogue();
+            EndButton.SetActive(true);
+            ButtonChoice1.SetActive(false);
+            ButtonChoice2.SetActive(false);
             return;
         }
         string sentence = sentences.Dequeue();
+        string choice = Choices.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
-        EndButton.SetActive(true);
+        StartCoroutine(TypeChoice(choice));
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -77,6 +87,15 @@ public class ChoiceDialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
+            yield return null;
+        }
+    }
+    IEnumerator TypeChoice(string choice)
+    {
+        Choice1.text = "";
+        foreach (char letter in choice.ToCharArray())
+        {
+            Choice1.text += letter;
             yield return null;
         }
     }

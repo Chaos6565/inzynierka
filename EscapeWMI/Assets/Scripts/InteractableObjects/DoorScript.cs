@@ -8,9 +8,9 @@ namespace WMI
     public class DoorScript : MonoBehaviourPun
     {
         // Components
-        private Animator doorAnimation = null;
-        private BoxCollider2D doorCollider = null;
-        private SpriteRenderer doorSpriteRenderer = null;
+        public Animator doorAnimation;
+        public BoxCollider2D doorCollider;
+        public SpriteRenderer doorSpriteRenderer;
 
         // Parameter
         bool isOpen = false;
@@ -63,6 +63,14 @@ namespace WMI
         public bool IsTheDoorOpen()
         {
             return isOpen;
+        }
+
+        public void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                OpenTheDoor();
+            }
         }
 
     }

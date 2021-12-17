@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -12,18 +9,17 @@ public class InventoryUI : MonoBehaviour
     private Transform itemSlotTemplate;
     public PlayerController player;
 
-
-    private void Start()
+    public void Init()
     {
-        itemSlotContainer = transform.Find("itemSlotContainer");
-        itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
-        Debug.Log(itemSlotContainer);
+        itemSlotContainer = transform.Find("ItemSlotContainer");
+        itemSlotTemplate = itemSlotContainer.Find("ItemSlotTemplate");
     }
 
     public void CreateInventory(Inventory inventory)
     {
         this.inventory = inventory;
         inventory.OnItemListChanged += Inventory_OnItemListChanged;
+
         RefreshInventoryItems();
     }
 
@@ -34,7 +30,6 @@ public class InventoryUI : MonoBehaviour
 
     private void RefreshInventoryItems()
     {
-        Debug.Log(itemSlotContainer);
         foreach (Transform child in itemSlotContainer.transform)
         {
             if (child == itemSlotTemplate)
@@ -48,7 +43,8 @@ public class InventoryUI : MonoBehaviour
             }
 
         }
-
+        
+        Debug.Log("Item quantity: " + inventory.GetItemList().Count);
         int x = 0;
         int y = 0;
         float itemSlotCellSize = 50f;
@@ -58,7 +54,7 @@ public class InventoryUI : MonoBehaviour
             itemSlotRectTransform.gameObject.SetActive(true);
 
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, -y * itemSlotCellSize);
-            Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
+            Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
 
             x++;

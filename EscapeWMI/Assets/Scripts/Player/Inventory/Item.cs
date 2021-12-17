@@ -19,12 +19,13 @@ public class Item
 
     public Sprite GetSprite()
     {
-        return itemType switch
+        switch (itemType)
         {
-            ItemType.Item2 => ItemData.Instance.item2Sprite,
-            ItemType.Item3 => ItemData.Instance.item3Sprite,
-            _ => ItemData.Instance.item1Sprite,
-        };
+            default:
+            case ItemType.Item1: return ItemData.Instance.item1Sprite;
+            case ItemType.Item2: return ItemData.Instance.item2Sprite;
+            case ItemType.Item3: return ItemData.Instance.item3Sprite;
+        }
     }
 
 }

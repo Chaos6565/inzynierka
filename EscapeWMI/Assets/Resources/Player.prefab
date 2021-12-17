@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSpeed: 7
   turbo: 20
-  inventoryUI: {fileID: 4338960757932684368, guid: bd7cdd9e3c87ccb46ad7f3cf828a5229, type: 3}
+  inventoryUIPrefab: {fileID: 6052003115392982168, guid: bd7cdd9e3c87ccb46ad7f3cf828a5229, type: 3}
   canMove: 1
 --- !u!50 &1516193525732413030
 Rigidbody2D:

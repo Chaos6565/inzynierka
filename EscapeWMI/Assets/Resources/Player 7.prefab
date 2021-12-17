@@ -120,8 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63fa4b5cf74289e4fbe964893d61ad15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 7
-  inventoryUI: {fileID: 4338960757932684368, guid: bd7cdd9e3c87ccb46ad7f3cf828a5229, type: 3}
+  baseSpeed: 7
+  turbo: 20
+  inventoryUIPrefab: {fileID: 6052003115392982168, guid: bd7cdd9e3c87ccb46ad7f3cf828a5229, type: 3}
   canMove: 1
 --- !u!58 &4221483746340147736
 CircleCollider2D:

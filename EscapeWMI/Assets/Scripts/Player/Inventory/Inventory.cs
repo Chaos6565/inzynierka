@@ -31,6 +31,10 @@ public class Inventory
     {
         itemList = new List<Item>();
 
+        AddItemToList(new Item { itemType = Item.ItemType.Item1 });
+        AddItemToList(new Item { itemType = Item.ItemType.Item2 });
+        AddItemToList(new Item { itemType = Item.ItemType.Item3 });
+
         this.useItemAction = useItemAction;
     }
 

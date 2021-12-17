@@ -26,7 +26,8 @@ public class PlayerController : MonoBehaviourPun
 
     //player's inventory
     private Inventory inventory;
-    [SerializeField] private InventoryUI inventoryUI;
+    private InventoryUI inventoryUI;
+    [SerializeField] private GameObject inventoryUIPrefab;
 
 
     public bool canMove = true;
@@ -37,10 +38,6 @@ public class PlayerController : MonoBehaviourPun
         if (photonView.IsMine)
         {
             localPlayer = this;
-
-            
-            inventoryUI.SetPlayer(localPlayer);
-            
         }
         animation2d = GetComponent<Animator>();
         rigidbody2d = GetComponent<Rigidbody2D>();
@@ -49,14 +46,26 @@ public class PlayerController : MonoBehaviourPun
 
         runSpeed = baseSpeed; // do turbo, mozna usunac potem
 
-
         inventory = new Inventory(UseInventoryItem);
-        inventoryUI.CreateInventory(inventory);
+        InitializeInventory();
+
 
         if (!photonView.IsMine)
         {
             Destroy(GetComponent<PlayerController>());
             return;
+        }
+    }
+
+    private void InitializeInventory()
+    {
+        GameObject inventoryUIgameObject = Instantiate(inventoryUIPrefab, GameObject.Find("Inventory UI Canvas").transform.position, Quaternion.identity, GameObject.Find("Inventory UI Canvas").transform);
+        inventoryUI = inventoryUIgameObject.GetComponent<InventoryUI>();
+        inventoryUI.Init();
+        inventoryUI.CreateInventory(inventory);
+        if (photonView.IsMine)
+        {
+            inventoryUI.SetPlayer(localPlayer);
         }
     }
 
@@ -90,7 +99,6 @@ public class PlayerController : MonoBehaviourPun
             //turrbbo
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("TURBOOOOOOOOOOOOOOOOO");
                 if(runSpeed < baseSpeed + turbo)
                 {
                     runSpeed = baseSpeed + turbo;

@@ -61,9 +61,6 @@ TagManager:
   - name: Walls no col
     uniqueID: 4057022175
     locked: 0
-  - name: Stairs
-    uniqueID: 1960912405
-    locked: 0
   - name: Objects_Dead
     uniqueID: 1070131085
     locked: 0
@@ -78,7 +75,4 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 804275805
-    locked: 0
-  - name: Stairs2
-    uniqueID: 3295812217
     locked: 0

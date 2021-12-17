@@ -13,7 +13,7 @@ public class InventoryUI : MonoBehaviour
     public PlayerController player;
 
 
-    private void Awake()
+    private void Start()
     {
         itemSlotContainer = transform.Find("itemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
@@ -22,7 +22,6 @@ public class InventoryUI : MonoBehaviour
 
     public void CreateInventory(Inventory inventory)
     {
-        Debug.Log("Create Inventory");
         this.inventory = inventory;
         inventory.OnItemListChanged += Inventory_OnItemListChanged;
         RefreshInventoryItems();
@@ -35,19 +34,20 @@ public class InventoryUI : MonoBehaviour
 
     private void RefreshInventoryItems()
     {
-        //foreach (Transform child in itemSlotContainer)
-        //{
-        //    if (child != itemSlotTemplate)
-        //    {
-        //        Destroy(child.gameObject);
-        //    }
+        Debug.Log(itemSlotContainer);
+        foreach (Transform child in itemSlotContainer.transform)
+        {
+            if (child == itemSlotTemplate)
+            {
+                continue;
+            }
 
-        //    else
-        //    {
-        //        continue;
-        //    }
+            else
+            {
+                Destroy(child.gameObject);
+            }
 
-        //}
+        }
 
         int x = 0;
         int y = 0;

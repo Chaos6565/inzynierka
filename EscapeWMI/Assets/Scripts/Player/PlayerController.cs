@@ -38,9 +38,9 @@ public class PlayerController : MonoBehaviourPun
         {
             localPlayer = this;
 
-            inventory = new Inventory(UseInventoryItem);
+            
             inventoryUI.SetPlayer(localPlayer);
-            inventoryUI.CreateInventory(inventory);
+            
         }
         animation2d = GetComponent<Animator>();
         rigidbody2d = GetComponent<Rigidbody2D>();
@@ -48,6 +48,10 @@ public class PlayerController : MonoBehaviourPun
         interactableObjects = new List<InteractableObject>();
 
         runSpeed = baseSpeed; // do turbo, mozna usunac potem
+
+
+        inventory = new Inventory(UseInventoryItem);
+        inventoryUI.CreateInventory(inventory);
 
         if (!photonView.IsMine)
         {

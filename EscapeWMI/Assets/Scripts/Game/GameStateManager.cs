@@ -52,7 +52,8 @@ public class GameStateManager : MonoBehaviourPun
 
     public void ActivateNextModule()
     {
-        photonView.RPC("ActivateNextModuleRPC", RpcTarget.All);
+        if (PhotonNetwork.IsMasterClient)
+            photonView.RPC("ActivateNextModuleRPC", RpcTarget.All);
     }
 
     [PunRPC]

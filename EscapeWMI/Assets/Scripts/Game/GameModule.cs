@@ -43,13 +43,15 @@ public class GameModule : MonoBehaviourPun
     public void EnableModule()
     {
         if (!_moduleActiveState)
-            photonView.RPC("EnableModuleRPC", RpcTarget.All);  
+            if (PhotonNetwork.IsMasterClient) 
+                photonView.RPC("EnableModuleRPC", RpcTarget.All);  
     }
 
     public void DisableModule()
     {
         if (_moduleActiveState)
-            photonView.RPC("DisableModuleRPC", RpcTarget.All);
+            if (PhotonNetwork.IsMasterClient)
+                photonView.RPC("DisableModuleRPC", RpcTarget.All);
     }
 
     [PunRPC]

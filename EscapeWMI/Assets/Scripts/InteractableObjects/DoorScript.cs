@@ -5,20 +5,26 @@ using UnityEngine;
 
 namespace WMI
 {
-    public class DoorScript : MonoBehaviourPun
+    public class DoorScript : InteractableObject
     {
         // Components
         public GameObject[] doors;
 
-        // Parameter
+        // Parameters
         bool isOpen = false;
         bool key = false;
+        [SerializeField] bool operatedManually = false;
 
-        private void Update()
+
+
+        public override void PerformAction()
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (operatedManually)
             {
-                key = true;
+                if (!isOpen)
+                    OpenTheDoor();
+                else
+                    CloseTheDoor();
             }
         }
 
@@ -69,12 +75,6 @@ namespace WMI
         public bool IsTheDoorOpen()
         {
             return isOpen;
-        }
-
-        public void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.CompareTag("Player") && key == true)
-                OpenTheDoor();
         }
 
     }

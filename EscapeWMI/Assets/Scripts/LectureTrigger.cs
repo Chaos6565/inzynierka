@@ -15,6 +15,7 @@ public class LectureTrigger : InteractableObject
     {
         TriggerLecture();
         GetComponentInParent<ModuleContentScript>().ModuleCompleted();
+        this.DisableInteraction();
     }
 
     public void TriggerLecture()

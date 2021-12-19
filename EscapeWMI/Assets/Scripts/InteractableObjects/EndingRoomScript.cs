@@ -21,7 +21,7 @@ namespace WMI
             {
                 if (door.gameObject.GetComponent<DoorScript>().IsTheDoorOpen() && playersInTheRoom >= PhotonNetwork.CurrentRoom.PlayerCount)
                 {
-                    NPC.gameObject.GetComponent<InteractableObject>().EnableInteraction();
+                    NPC.gameObject.GetComponent<InteractableObject>().EnableInteractionForAll();
                     StartCoroutine(CloseTheDoorCoroutine());
                     interacted = true;
                 }

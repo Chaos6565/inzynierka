@@ -15,14 +15,14 @@ namespace WMI
 
         private void Start()
         {
-            this.DisableInteraction();
+            this.DisableInteractionForAll();
         }
 
         public override void PerformAction()
         {
             photonView.RPC("ShowPopup", RpcTarget.All);
             door.gameObject.GetComponent<DoorScript>().OpenTheDoor();
-            this.DisableInteraction();
+            this.DisableInteractionForAll();
         }
 
         [PunRPC]

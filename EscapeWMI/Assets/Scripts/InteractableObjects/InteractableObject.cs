@@ -10,29 +10,39 @@ public class InteractableObject : MonoBehaviourPun
 
     public virtual void PerformAction() { }
 
-    public void EnableInteraction()
-    {
-        photonView.RPC("EnableInteractionRPC", RpcTarget.All);
-    }
-
-    public void DisableInteraction()
-    {
-        photonView.RPC("DisableInteractionRPC", RpcTarget.All);
-    }
-
     public bool IsEnabled()
     {
         return enabledState;
     }
 
+    public void EnableIntaraction()
+    {
+        enabledState = true;
+    }
+
+    public void DisableInteraction()
+    {
+        enabledState = false;
+    }
+
+    public void EnableInteractionForAll()
+    {
+        photonView.RPC("EnableInteractionForAllRPC", RpcTarget.All);
+    }
+
+    public void DisableInteractionForAll()
+    {
+        photonView.RPC("DisableInteractionForAllRPC", RpcTarget.All);
+    }
+
     [PunRPC]
-    public void EnableInteractionRPC()
+    public void EnableInteractionForAllRPC()
     {
         enabledState = true;
     }
 
     [PunRPC]
-    public void DisableInteractionRPC()
+    public void DisableInteractionForAllRPC()
     {
         enabledState = false;
     }

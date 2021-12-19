@@ -21,7 +21,7 @@ namespace WMI
             {
                 door.gameObject.GetComponent<DoorScript>().OpenTheDoor();
             }
-            this.DisableInteraction();
+            this.DisableInteractionForAll();
             trigger.enabled = false;
         }
 

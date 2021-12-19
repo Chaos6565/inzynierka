@@ -8,18 +8,18 @@ namespace WMI
     public class DoorScript : MonoBehaviourPun
     {
         // Components
-        public Animator doorAnimation;
-        public BoxCollider2D doorCollider;
-        public SpriteRenderer doorSpriteRenderer;
+        public GameObject[] doors;
 
         // Parameter
         bool isOpen = false;
+        bool key = false;
 
-        private void Start()
+        private void Update()
         {
-            doorAnimation = this.GetComponent<Animator>();
-            doorCollider = this.GetComponent<BoxCollider2D>();
-            doorSpriteRenderer = this.GetComponent<SpriteRenderer>();
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                key = true;
+            }
         }
 
         public void OpenTheDoor()
@@ -43,9 +43,12 @@ namespace WMI
         {
             if (!isOpen)
             {
-                doorAnimation.SetBool("isOpen", true);
-                doorCollider.enabled = false;
-                isOpen = true;
+                for (int i = 0; i < doors.Length; i++)
+                {
+                    doors[i].GetComponent<Animator>().SetBool("isOpen", true);
+                    doors[i].GetComponent<BoxCollider2D>().enabled = false;
+                    isOpen = true;
+                }
             }
         }
 
@@ -54,9 +57,12 @@ namespace WMI
         {
             if (isOpen)
             {
-                doorAnimation.SetBool("isOpen", false);
-                doorCollider.enabled = true;
-                isOpen = false;
+                for (int i = 0; i < doors.Length; i++)
+                {
+                    doors[i].GetComponent<Animator>().SetBool("isOpen", false);
+                    doors[i].GetComponent<BoxCollider2D>().enabled = true;
+                    isOpen = false;
+                }
             }
         }
 
@@ -67,10 +73,8 @@ namespace WMI
 
         public void OnTriggerEnter2D(Collider2D collision)
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
+            if (collision.CompareTag("Player") && key == true)
                 OpenTheDoor();
-            }
         }
 
     }

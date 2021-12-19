@@ -15,6 +15,8 @@ public class ProgrammingScript : MonoBehaviour
     private List<string> results = new List<string>();
     bool check = false;
 
+    public bool Complete;
+
     private void Start()
     {
         results.Add("return n * Silnia(n-1);");
@@ -28,7 +30,11 @@ public class ProgrammingScript : MonoBehaviour
         taskCanvas.SetActive(true);
         taskText.text = "";
         check = false;
+
+        Complete = false;
+        GameStateManager.instance.programmingActive = true;
     }
+
 
 
     public void SubmitClick()
@@ -59,5 +65,7 @@ public class ProgrammingScript : MonoBehaviour
         resultPanel.SetActive(false);
 
         taskCanvas.SetActive(false);
+
+        GameStateManager.instance.programmingActive = false;
     }
 }

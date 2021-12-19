@@ -8,7 +8,7 @@ public class LectureManager : MonoBehaviour
     public Text profName;
     public Text subject;
     public Text slide;
-
+    public bool Complete;
 
     List<string> slides;
 
@@ -23,6 +23,7 @@ public class LectureManager : MonoBehaviour
         slide.text = slides_[counter];
         profName.text = name;
         subject.text = subject_;
+        Complete = false;
 
         GameStateManager.instance.lectureActive = true;
     }
@@ -42,7 +43,7 @@ public class LectureManager : MonoBehaviour
     {
         counter = 0;
         lectureCanvas.SetActive(false);
-
+        Complete = true;
         GameStateManager.instance.lectureActive = false;
     }
 }

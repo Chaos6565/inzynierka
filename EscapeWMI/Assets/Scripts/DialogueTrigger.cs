@@ -13,7 +13,7 @@ public class DialogueTrigger : InteractableObject
     {
         if (EndModule == true)
         {
-            if (Manager.End == true)
+            if (Manager.Complete == true)
             {
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
             }

@@ -9,6 +9,7 @@ public class ChoiceDialogueManager : MonoBehaviour
     public Text dialogueText;
     public Text Choice1;
     public Text Choice2;
+    public bool Complete;
 
 
     private Queue<string> sentences;
@@ -34,7 +35,7 @@ public class ChoiceDialogueManager : MonoBehaviour
         GameStateManager.instance.choiceDialog = true;
 
         dialogCanvas.SetActive(true);
-
+        Complete = false;
 
         nameText.text = dialogue.name;
         Choice2.text = dialogue.Buttonchoice2;
@@ -100,7 +101,7 @@ public class ChoiceDialogueManager : MonoBehaviour
     {
         dialogCanvas.SetActive(false);
         EndButton.SetActive(false);
-
+        Complete = true;
         GameStateManager.instance.choiceDialog = false;
     }
 

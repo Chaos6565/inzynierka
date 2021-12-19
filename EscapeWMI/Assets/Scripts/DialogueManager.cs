@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
     public Text EndButtonText;
     public GameObject NextButton;
     public GameObject EndBut;
-    public bool End;
+    public bool Complete;
     public Animator animator;
 
     private Queue<string> sentences;
@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
         dialogCanvas.SetActive(true);
         NextButton.SetActive(true);
         EndBut.SetActive(false);
-        End = false;
+        Complete = false;
         animator.SetBool("IsOpen", true);
 
         EndButtonText.text = dialogue.EndButtonText;
@@ -72,7 +72,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogCanvas.SetActive(false);
         animator.SetBool("IsOpen", false);
-        End = true;
+        Complete = true;
         GameStateManager.instance.dialogActive = false;
     }
   

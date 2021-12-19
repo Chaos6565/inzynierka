@@ -19,7 +19,7 @@ public class PETrigger : InteractableObject
     {
         if (EndModule == true)
         {
-            if (Manager.End == true)
+            if (Manager.Complete == true)
             {
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
             }

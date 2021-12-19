@@ -7,7 +7,10 @@ public class DialogueManager : MonoBehaviour
 {
     public Text nameText;
     public Text dialogueText;
-
+    public Text EndButtonText;
+    public GameObject NextButton;
+    public GameObject EndBut;
+    public bool End;
     public Animator animator;
 
     private Queue<string> sentences;
@@ -23,9 +26,12 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue (Dialogue dialogue)
     {
         dialogCanvas.SetActive(true);
-
+        NextButton.SetActive(true);
+        EndBut.SetActive(false);
+        End = false;
         animator.SetBool("IsOpen", true);
 
+        EndButtonText.text = dialogue.EndButtonText;
         nameText.text = dialogue.name;
         sentences.Clear();
 
@@ -38,11 +44,14 @@ public class DialogueManager : MonoBehaviour
         GameStateManager.instance.dialogActive = true;
     }
 
+
+
     public void DisplayNextSentence()
     {
         if(sentences.Count == 0)
         {
-            EndDialogue();
+            NextButton.SetActive(false);
+            EndBut.SetActive(true);
             return;
         }
         string sentence = sentences.Dequeue();
@@ -59,11 +68,11 @@ public class DialogueManager : MonoBehaviour
             yield return null;
         }
     }
-    void EndDialogue()
+    public void EndDialogue()
     {
         dialogCanvas.SetActive(false);
         animator.SetBool("IsOpen", false);
-
+        End = true;
         GameStateManager.instance.dialogActive = false;
     }
   

@@ -41,9 +41,7 @@ public class REspawn : MonoBehaviour
             GT.seconds = 11;
             BS.end = true;
 
-            Vector2 anchoredPos;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform_canvas, new Vector2(960f, 270f), camera, out anchoredPos);
-            rectTransform_ball.anchoredPosition = anchoredPos;
+          
 
             BS.rb.velocity = new Vector2(0f, 0f);
 

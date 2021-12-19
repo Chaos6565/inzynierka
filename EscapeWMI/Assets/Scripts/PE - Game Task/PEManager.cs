@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class PEManager : MonoBehaviour
 {
@@ -10,12 +11,18 @@ public class PEManager : MonoBehaviour
     public GameObject succedPanel;
     public GameObject failedPanel;
     public GameObject background;
+    public GameObject Ball;
     public Text resultText;
+    public bool End;
 
-
+    private void Reset()
+    {
+    }
     public void OpenTask()
     {
         PETask.SetActive(true);
+        
+        End = false;
         GameStateManager.instance.PEActive = true;
     }
 
@@ -24,9 +31,14 @@ public class PEManager : MonoBehaviour
         background.SetActive(true);
 
         if (r == true)
+        {
             succedPanel.SetActive(true);
+        }
         else
+        {
             failedPanel.SetActive(true);
+        }
+            
             
     }
 
@@ -36,6 +48,7 @@ public class PEManager : MonoBehaviour
         succedPanel.SetActive(false);
         failedPanel.SetActive(false);
         PETask.SetActive(false);
+        End = true;
 
         GameStateManager.instance.PEActive = false;
     }
@@ -45,5 +58,10 @@ public class PEManager : MonoBehaviour
         background.SetActive(false);
         succedPanel.SetActive(false);
         failedPanel.SetActive(false);
+        PETask.SetActive(false);
+        End = false;
+        
+        GameStateManager.instance.PEActive = false;
+        OpenTask();
     }
 }

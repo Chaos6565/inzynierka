@@ -67,7 +67,7 @@ public class InventoryUI : MonoBehaviour
             image.sprite = item.GetSprite();
 
             itemDisplay = itemSlotRectTransform.Find("ItemDisplay");
-            itemDisplay.gameObject.SetActive(true);
+            itemDisplay.gameObject.SetActive(false);
             Image note = itemDisplay.Find("Note").GetComponent<Image>();
             note.sprite = item.GetDisplay();
             

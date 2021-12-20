@@ -21,6 +21,5 @@ public class ItemData : MonoBehaviour
     public Sprite ulotkaDisplay;
     public Sprite item2Sprite;
     public Sprite item3Sprite;
-    public Transform itemWorld;
 
 }

@@ -18,10 +18,8 @@ public class Inventory
 
     public void AddItemToList(Item item)
     {
-        
             itemList.Add(item);
             OnItemListChanged?.Invoke(this, EventArgs.Empty);
-        
     }
 
     public void RemoveItemFromList(Item item)

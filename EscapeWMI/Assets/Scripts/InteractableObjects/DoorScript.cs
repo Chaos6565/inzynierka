@@ -12,7 +12,6 @@ namespace WMI
 
         // Parameters
         bool isOpen = false;
-        bool key = false;
         [SerializeField] bool operatedManually = false;
 
 

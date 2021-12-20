@@ -49,6 +49,9 @@ MonoBehaviour:
   - RPC_ChangeReadyState
   - ShowPopup
   - SpawnPlayers
+  - DestroySelfRPC
+  - SpawnItemWorldRPC
+  - RPCDestroyOnMaster
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

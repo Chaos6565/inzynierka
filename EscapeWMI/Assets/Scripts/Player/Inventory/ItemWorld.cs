@@ -1,27 +1,9 @@
 using UnityEngine;
+using Photon.Pun;
 using TMPro;
 
-public class ItemWorld : MonoBehaviour
+public class ItemWorld : MonoBehaviourPun
 {
-
-    public static ItemWorld SpawnItemWorld(Vector3 position, Item item)
-    {
-        Transform transform = Instantiate(ItemData.Instance.itemWorld, position, Quaternion.identity);
-
-        ItemWorld itemWorld = transform.GetComponent<ItemWorld>();
-        itemWorld.SetItem(item);
-
-        return itemWorld;
-    }
-
-    public static ItemWorld DropItem(Vector3 dropPosition, Item item)
-    {
-        Vector3 randomDir = new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized;
-        ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 8f, item);
-        itemWorld.GetComponent<Rigidbody2D>().AddForce(randomDir * 40f, ForceMode2D.Impulse);
-        return itemWorld;
-    }
-
     private Item item;
     private SpriteRenderer spriteRenderer;
     //private TextMeshPro textMeshPro;
@@ -46,7 +28,13 @@ public class ItemWorld : MonoBehaviour
 
     public void DestroySelf()
     {
-        Destroy(gameObject);
+        photonView.RPC("RPCDestroyOnMaster", RpcTarget.MasterClient, gameObject.GetComponent<PhotonView>().ViewID);
     }
 
+    [PunRPC]
+    public void RPCDestroyOnMaster(int id)
+    {
+        if (PhotonNetwork.IsMasterClient)
+            PhotonNetwork.Destroy(PhotonView.Find(id));
+    }
 }

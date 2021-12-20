@@ -188,20 +188,20 @@ public class PlayerController : MonoBehaviourPun
 
     private void UseInventoryItem(Item item)
     {
-        switch (item.itemType)
-        {
-            case Item.ItemType.Ulotka:
-                //GameObject itemDisplayGameObject = Instantiate(itemDisplayPrefab, GameObject.Find("ItemDisplayCanvas").transform.position, Quaternion.identity, GameObject.Find("ItemDisplayCanvas").transform);
-                //itemDisplayGameObject.SetActive(true);
-                break;
-            case Item.ItemType.Item2:
+        //switch (item.itemType)
+        //{
+        //    case Item.ItemType.Ulotka:
+        //        //GameObject itemDisplayGameObject = Instantiate(itemDisplayPrefab, GameObject.Find("ItemDisplayCanvas").transform.position, Quaternion.identity, GameObject.Find("ItemDisplayCanvas").transform);
+        //        //itemDisplayGameObject.SetActive(true);
+        //        break;
+        //    case Item.ItemType.Item2:
 
-                break;
-            case Item.ItemType.Item3:
+        //        break;
+        //    case Item.ItemType.Item3:
 
-                break;
+        //        break;
 
-        }
+        //}
     }
 
 }

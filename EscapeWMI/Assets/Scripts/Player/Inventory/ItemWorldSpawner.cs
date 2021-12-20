@@ -21,14 +21,30 @@ public class ItemWorldSpawner : MonoBehaviourPun
                 Debug.Log("Position: " + itemSpawnPoints[i].transform.position);
             }*/
             SpawnItemWorld(0);
-            Debug.Log("Position: " + itemSpawnPoints[0].transform.position);
+            SpawnItemWorld(1);
+            SpawnItemWorld(2);
+            SpawnItemWorld(3);
+            SpawnItemWorld(4);
+            SpawnItemWorld(5);
+            SpawnItemWorld(6);
+            SpawnItemWorld(7);
+            SpawnItemWorld(8);
+
         }
     }
 
     public void InitializeItemsList()
     {
         // Add items here
-        itemsList.Add(new Item { itemType = Item.ItemType.Ulotka }); // ULOTKA index 0
+        itemsList.Add(new Item { itemType = Item.ItemType.Ulotka });            // ULOTKA           index 0
+        itemsList.Add(new Item { itemType = Item.ItemType.Tablica });           // TABLICA          index 1
+        itemsList.Add(new Item { itemType = Item.ItemType.AnalizaNotatki });    // ANALIZA_NOTATKI  index 2
+        itemsList.Add(new Item { itemType = Item.ItemType.Analiza });           // ANALIZA          index 3
+        itemsList.Add(new Item { itemType = Item.ItemType.Algebra });           // ALGEBRA          index 4
+        itemsList.Add(new Item { itemType = Item.ItemType.Statystyka });        // STATYSTYKA       index 5
+        itemsList.Add(new Item { itemType = Item.ItemType.Grafy });             // GRAFY            index 6
+        itemsList.Add(new Item { itemType = Item.ItemType.Matematyka });        // MATEMATYKA       index 7
+        itemsList.Add(new Item { itemType = Item.ItemType.Fibonacci });         // FIBONACCI        index 8
     }
 
     public void SpawnItemWorld(int itemIndex)

@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 804275805
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 8089796999639662012, guid: 0c155616c6bcc2f40874fd6940fb41d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -104,6 +104,7 @@ MonoBehaviour:
   baseSpeed: 7
   turbo: 20
   inventoryUIPrefab: {fileID: 6052003115392982168, guid: bd7cdd9e3c87ccb46ad7f3cf828a5229, type: 3}
+  itemDisplayPrefab: {fileID: 6274443378548174595, guid: adf6359a919a00542809699f0bc4f9ca, type: 3}
   canMove: 1
 --- !u!50 &1516193525732413030
 Rigidbody2D:

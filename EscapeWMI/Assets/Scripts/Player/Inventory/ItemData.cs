@@ -11,13 +11,16 @@ public class ItemData : MonoBehaviour
         get; 
     }
 
+
     private void Awake()
     {
         Instance = this;
     }
 
-    public Sprite item1Sprite;
+    public Sprite ulotkaSprite;
+    public Sprite ulotkaDisplay;
     public Sprite item2Sprite;
     public Sprite item3Sprite;
+    public Transform itemWorld;
 
 }

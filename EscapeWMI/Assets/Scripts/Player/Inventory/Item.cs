@@ -9,7 +9,7 @@ public class Item
 
     public enum ItemType
     {
-        Item1,
+        Ulotka,
         Item2,
         Item3,
     }
@@ -22,7 +22,18 @@ public class Item
         switch (itemType)
         {
             default:
-            case ItemType.Item1: return ItemData.Instance.item1Sprite;
+            case ItemType.Ulotka: return ItemData.Instance.ulotkaSprite;
+            case ItemType.Item2: return ItemData.Instance.item2Sprite;
+            case ItemType.Item3: return ItemData.Instance.item3Sprite;
+        }
+    }
+
+    public Sprite GetDisplay()
+    {
+        switch (itemType)
+        {
+            default:
+            case ItemType.Ulotka: return ItemData.Instance.ulotkaDisplay;
             case ItemType.Item2: return ItemData.Instance.item2Sprite;
             case ItemType.Item3: return ItemData.Instance.item3Sprite;
         }

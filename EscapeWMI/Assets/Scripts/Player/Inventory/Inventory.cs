@@ -18,8 +18,10 @@ public class Inventory
 
     public void AddItemToList(Item item)
     {
-        itemList.Add(item);
-        OnItemListChanged?.Invoke(this, EventArgs.Empty);
+        
+            itemList.Add(item);
+            OnItemListChanged?.Invoke(this, EventArgs.Empty);
+        
     }
 
     public void RemoveItemFromList(Item item)
@@ -30,10 +32,6 @@ public class Inventory
     public Inventory(Action<Item> useItemAction)
     {
         itemList = new List<Item>();
-
-        AddItemToList(new Item { itemType = Item.ItemType.Item1 });
-        AddItemToList(new Item { itemType = Item.ItemType.Item2 });
-        AddItemToList(new Item { itemType = Item.ItemType.Item3 });
 
         this.useItemAction = useItemAction;
     }

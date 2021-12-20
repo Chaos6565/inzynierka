@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviourPun
     private Inventory inventory;
     private InventoryUI inventoryUI;
     [SerializeField] private GameObject inventoryUIPrefab;
+    [SerializeField] private GameObject itemDisplayPrefab;
 
 
     public bool canMove = true;
@@ -67,6 +68,7 @@ public class PlayerController : MonoBehaviourPun
         {
             inventoryUI.SetPlayer(localPlayer);
         }
+
     }
 
     private void Update()
@@ -159,7 +161,18 @@ public class PlayerController : MonoBehaviourPun
                 interactableObjects.Add(interactableObject);
                 Debug.Log($"Interactable is enabled? : {interactableObject.IsEnabled()}");
             }
+            else if (other.CompareTag("ItemWorld"))
+            {
+                ItemWorld itemWorld = other.GetComponent<ItemWorld>();
+                if (itemWorld != null)
+                {
+                    inventory.AddItemToList(itemWorld.GetItem());
+                    itemWorld.DestroySelf();
+                }
+            }
         }
+
+        
     }
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -178,8 +191,9 @@ public class PlayerController : MonoBehaviourPun
     {
         switch (item.itemType)
         {
-            case Item.ItemType.Item1:
-
+            case Item.ItemType.Ulotka:
+                //GameObject itemDisplayGameObject = Instantiate(itemDisplayPrefab, GameObject.Find("ItemDisplayCanvas").transform.position, Quaternion.identity, GameObject.Find("ItemDisplayCanvas").transform);
+                //itemDisplayGameObject.SetActive(true);
                 break;
             case Item.ItemType.Item2:
 

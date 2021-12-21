@@ -22,6 +22,7 @@ public class GameStateManager : MonoBehaviourPun
     public bool choiceDialog;
     public bool programmingActive;
     public bool examActive;
+    public bool menuActive;
 
 
 
@@ -46,7 +47,7 @@ public class GameStateManager : MonoBehaviourPun
     //Do zatrzymywania graczas
     private void Update()
     {
-        if (PEActive || lectureActive || dialogActive || choiceDialog || programmingActive || examActive)
+        if (PEActive || lectureActive || dialogActive || choiceDialog || programmingActive || examActive || menuActive)
             PlayerController.localPlayer.canMove = false;
         else
             PlayerController.localPlayer.canMove = true;

@@ -51,6 +51,8 @@ MonoBehaviour:
   - ShowPopup
   - SpawnItemWorldRPC
   - SpawnPlayers
+  - ShareNote
+  - RpcShareNote
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 0

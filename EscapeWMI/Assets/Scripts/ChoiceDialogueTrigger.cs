@@ -47,7 +47,7 @@ public class ChoiceDialogueTrigger : InteractableObject
                 this.DisableInteractionForAll();
                 break;
         }
-        FindObjectOfType<ChoiceDialogueManager>().StartDialogue(dialogue);
+        Manager.StartDialogue(dialogue);
     }
 
 }

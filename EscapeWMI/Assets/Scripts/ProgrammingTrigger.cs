@@ -26,14 +26,12 @@ public class ProgrammingTrigger : MonoBehaviour
             {
                 isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
-                Debug.Log("PROGRAMMING MANAGER COMPLETED STATE: " + Manager.Complete);
             }
         }
     }
 
     public void TriggerProgramming()
     {
-       
-        FindObjectOfType<ProgrammingScript>().OpenTask();
+        Manager.OpenTask();
     }
 }

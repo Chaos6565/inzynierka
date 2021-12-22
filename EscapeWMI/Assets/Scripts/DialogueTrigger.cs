@@ -47,7 +47,7 @@ public class DialogueTrigger : InteractableObject
                 this.DisableInteractionForAll();
                 break;
         }
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        Manager.StartDialogue(dialogue);
     }
 
 }

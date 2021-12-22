@@ -30,6 +30,6 @@ public class ExamTrigger : MonoBehaviour
     public void TriggerExam()
     {
         
-        FindObjectOfType<ExamManager>().OpenTask();
+        Manager.OpenTask();
     }
 }

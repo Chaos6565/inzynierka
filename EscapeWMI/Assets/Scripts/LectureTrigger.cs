@@ -49,6 +49,6 @@ public class LectureTrigger : InteractableObject
                 this.DisableInteractionForAll();
                 break;
         }
-        FindObjectOfType<LectureManager>().StartLecture(slides, name, subject);
+        Manager.StartLecture(slides, name, subject);
     }
 }

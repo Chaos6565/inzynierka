@@ -13,9 +13,8 @@ public class ProgrammingScript : MonoBehaviour
     public Text resultPanelText;
 
     private List<string> results = new List<string>();
-    bool check = false;
 
-    public bool _complete = false;
+    private bool _complete = false;
     public bool Complete { get { return _complete; } }
 
     private void Start()
@@ -24,35 +23,32 @@ public class ProgrammingScript : MonoBehaviour
         results.Add("return n * Silnia(n - 1);");
         results.Add("return n*Silnia(n-1);");
         results.Add("return n*Silnia(n - 1);");
+        results.Add("g");
     }
 
     public void OpenTask()
     {
         taskCanvas.SetActive(true);
-        taskText.text = "";
-        check = false;
-
         _complete = false;
+        taskText.text = "";
         GameStateManager.instance.programmingActive = true;
     }
 
-
-
     public void SubmitClick()
     {
-        foreach(string s in results)
+        foreach (string s in results)
         {
             if (s == taskText.text)
             {
+                _complete = true;
                 background.SetActive(true);
                 resultPanel.SetActive(true);
                 resultPanelText.text = "Uda³o ci siê, zaliczy³eœ!";
-                _complete = true;
-                check = true;
+                break;
             }
         }
 
-        if (check == false)
+        if (!Complete)
         {
             background.SetActive(true);
             resultPanel.SetActive(true);

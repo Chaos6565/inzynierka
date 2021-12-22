@@ -32,7 +32,6 @@ public class PETrigger : MonoBehaviour
 
     public void TriggerPE()
     {
-       
-        FindObjectOfType<PEManager>().OpenTask();
+        Manager.OpenTask();
     }
 }

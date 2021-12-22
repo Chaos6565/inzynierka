@@ -8,6 +8,7 @@ public class DialogueTrigger : InteractableObject
     public DialogueManager Manager;
     public bool EndModule;
     public int ToDisable;
+    
 
     private void Update()
     {
@@ -31,6 +32,7 @@ public class DialogueTrigger : InteractableObject
     {
         switch (ToDisable)
         {
+            case 0: break;
             case 1:
                 this.EnableIntaraction();
                 break;

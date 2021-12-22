@@ -29,6 +29,7 @@ public class ChoiceDialogueTrigger : InteractableObject
     {
         switch (ToDisable)
         {
+            case 0: break;
             case 1:
                 this.EnableIntaraction();
                 break;

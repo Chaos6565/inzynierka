@@ -40,6 +40,7 @@ public class ProgrammingTrigger : InteractableObject
     {
         switch (ToDisable)
         {
+            case 0: break;
             case 1:
                 this.EnableIntaraction();
                 break;

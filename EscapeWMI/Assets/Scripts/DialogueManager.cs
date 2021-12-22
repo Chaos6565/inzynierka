@@ -8,10 +8,13 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
     public Text EndButtonText;
+    public Text EndButtonTextNPC;
     public GameObject NextButton;
     public GameObject EndBut;
+    public GameObject EndButNPC;
     public bool Complete;
     public Animator animator;
+    bool IsNPC;
 
     private Queue<string> sentences;
 
@@ -25,13 +28,16 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue (Dialogue dialogue)
     {
+        IsNPC = dialogue.IsNPC;
         dialogCanvas.SetActive(true);
         NextButton.SetActive(true);
         EndBut.SetActive(false);
+        EndButNPC.SetActive(false);
         Complete = false;
         animator.SetBool("IsOpen", true);
 
         EndButtonText.text = dialogue.EndButtonText;
+        EndButtonTextNPC.text = dialogue.EndButtonText;
         nameText.text = dialogue.name;
         sentences.Clear();
 
@@ -51,7 +57,14 @@ public class DialogueManager : MonoBehaviour
         if(sentences.Count == 0)
         {
             NextButton.SetActive(false);
-            EndBut.SetActive(true);
+            if(IsNPC== true)
+            {
+                EndButNPC.SetActive(true);
+            }
+            else
+            {
+                EndBut.SetActive(true);
+            }  
             return;
         }
         string sentence = sentences.Dequeue();

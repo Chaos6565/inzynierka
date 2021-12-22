@@ -9,6 +9,7 @@ public class ExamTrigger : InteractableObject
     public bool ActivateOnClick;
     public bool EndModule;
     public ExamManager Manager;
+    public int ToDisable;
     void Start()
     {
         Button btn = trigger.GetComponent<Button>();
@@ -37,6 +38,22 @@ public class ExamTrigger : InteractableObject
     }
     public void TriggerExam()
     {
+        switch (ToDisable)
+        {
+            case 0: break;
+            case 1:
+                this.EnableIntaraction();
+                break;
+            case 2:
+                this.DisableInteraction();
+                break;
+            case 3:
+                this.EnableInteractionForAll();
+                break;
+            case 4:
+                this.DisableInteractionForAll();
+                break;
+        }
         FindObjectOfType<ExamManager>().OpenTask();
     }
 }

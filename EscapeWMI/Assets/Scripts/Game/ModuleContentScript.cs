@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using WMI;
 
 public class ModuleContentScript : MonoBehaviourPun
 {
     private bool _isCompleted = false;
     public bool IsCompleted { get { return _isCompleted; } }
+
+    public DoorScript doorScript;
 
 
     // Is completing a task by everyone necessary for whole module completion?
@@ -16,6 +19,7 @@ public class ModuleContentScript : MonoBehaviourPun
 
     public void ModuleCompleted()
     {
+        doorScript.OpenTheDoor();
         photonView.RPC("ModuleCompletedRPC", RpcTarget.All);
     }
 

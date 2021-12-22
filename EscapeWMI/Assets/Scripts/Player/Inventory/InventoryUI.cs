@@ -13,7 +13,7 @@ public class InventoryUI : MonoBehaviourPun
     private Transform itemDisplay;
 
 
-    public List<Sprite> itemDisplayList;
+    public List<Item> itemList;
     public PlayerController player;
     
     [SerializeField] GameObject sharedItemDisplayPrefab;
@@ -99,26 +99,42 @@ public class InventoryUI : MonoBehaviourPun
         this.player = player;
     }
 
+
     public void InitializeItemsList()
     {
         // Add items here
-        itemDisplayList.Add((new Item { itemType = Item.ItemType.Ulotka }).GetDisplay());            // ULOTKA           index 0
-        itemDisplayList.Add((new Item { itemType = Item.ItemType.Tablica }).GetDisplay());           // TABLICA          index 1
-        itemDisplayList.Add((new Item { itemType = Item.ItemType.AnalizaNotatki }).GetDisplay());    // ANALIZA_NOTATKI  index 2
-        itemDisplayList.Add((new Item { itemType = Item.ItemType.Analiza }).GetDisplay());           // ANALIZA          index 3
-        itemDisplayList.Add((new Item { itemType = Item.ItemType.Algebra }).GetDisplay());           // ALGEBRA          index 4
-        itemDisplayList.Add((new Item { itemType = Item.ItemType.Statystyka }).GetDisplay());        // STATYSTYKA       index 5
-        itemDisplayList.Add((new Item { itemType = Item.ItemType.Grafy }).GetDisplay());             // GRAFY            index 6
-        itemDisplayList.Add((new Item { itemType = Item.ItemType.Matematyka }).GetDisplay());        // MATEMATYKA       index 7
-        itemDisplayList.Add((new Item { itemType = Item.ItemType.Fibonacci }).GetDisplay());         // FIBONACCI        index 8
+        itemList.Add(new Item { itemType = Item.ItemType.Ulotka });            // ULOTKA           index 0
+        itemList.Add(new Item { itemType = Item.ItemType.Tablica });           // TABLICA          index 1
+        itemList.Add(new Item { itemType = Item.ItemType.AnalizaNotatki });    // ANALIZA_NOTATKI  index 2
+        itemList.Add(new Item { itemType = Item.ItemType.Analiza });           // ANALIZA          index 3
+        itemList.Add(new Item { itemType = Item.ItemType.Algebra });           // ALGEBRA          index 4
+        itemList.Add(new Item { itemType = Item.ItemType.Statystyka });        // STATYSTYKA       index 5
+        itemList.Add(new Item { itemType = Item.ItemType.Grafy });             // GRAFY            index 6
+        itemList.Add(new Item { itemType = Item.ItemType.Matematyka });        // MATEMATYKA       index 7
+        itemList.Add(new Item { itemType = Item.ItemType.Fibonacci });         // FIBONACCI        index 8
+    }
+
+
+    public void DestroyNote(Image note)
+    {
+
+        foreach (Item item in inventory.GetItemList())
+        {
+            if (item.GetDisplay() == note.sprite)
+            {
+                inventory.RemoveItemFromList(item);
+                break;
+            }
+        }
+        
     }
 
 
     public void ShareNote(Image note)
     {
         int itemIndex = 0;
-        foreach (Sprite itemDisplay in itemDisplayList) {
-            if (itemDisplay == note.sprite) break;
+        foreach (Item item in itemList) {
+            if (item.GetDisplay() == note.sprite) break;
             else itemIndex++;  
         }
         photonView.RPC("RpcShareNote", RpcTarget.Others, itemIndex);
@@ -130,7 +146,7 @@ public class InventoryUI : MonoBehaviourPun
         Debug.Log("RPCShareNote");
         GameObject sharedItemDisplay = Instantiate(sharedItemDisplayPrefab, GameObject.Find("Shared Item Display Canvas").transform.position, Quaternion.identity, GameObject.Find("Shared Item Display Canvas").transform);
         sharedItemDisplay.gameObject.SetActive(true);
-        sharedItemDisplay.transform.Find("Note").GetComponent<Image>().sprite = itemDisplayList[itemIndex];   
+        sharedItemDisplay.transform.Find("Note").GetComponent<Image>().sprite = itemList[itemIndex].GetDisplay();   
     }
 
 }

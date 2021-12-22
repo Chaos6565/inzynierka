@@ -20,12 +20,13 @@ public class PETrigger : MonoBehaviour
 
     private void Update()
     {
-        if (EndModule == true)
+        if (EndModule)
         {
-            if (!isCompleted && Manager.Complete == true)
+            if (!isCompleted && Manager.Complete)
             {
                 isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
+                Destroy(this);
             }
         }
     }

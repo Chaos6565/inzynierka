@@ -64,5 +64,10 @@ public class ProgrammingScript : MonoBehaviour
         taskCanvas.SetActive(false);
 
         GameStateManager.instance.programmingActive = false;
+        if (Complete)
+        { 
+            Destroy(taskCanvas);
+            Destroy(gameObject);
+        }
     }
 }

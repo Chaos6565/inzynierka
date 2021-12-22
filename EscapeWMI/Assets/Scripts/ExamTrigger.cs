@@ -9,6 +9,8 @@ public class ExamTrigger : MonoBehaviour
  
     public bool EndModule;
     public ExamManager Manager;
+    private bool isCompleted = false;
+
     void Start()
     {
         Button btn = trigger.GetComponent<Button>();
@@ -17,11 +19,13 @@ public class ExamTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (EndModule == true)
+        if (EndModule)
         {
-            if (Manager.Complete == true)
+            if (!isCompleted && Manager.Complete)
             {
+                isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
+                Destroy(this);
             }
         }
 

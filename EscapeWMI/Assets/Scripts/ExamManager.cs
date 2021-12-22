@@ -23,15 +23,17 @@ public class ExamManager : MonoBehaviour
     public Toggle answer3b;
     public Toggle answer3c;
 
-    public bool Complete;
     int points;
 
+    private bool _complete = false;
+    public bool Complete { get { return _complete; } }
+    
     public void OpenTask()
     {
         taskCanvas.SetActive(true);
         points = 0;
 
-        Complete = false;
+        _complete = false;
         GameStateManager.instance.examActive = true;
     }
 
@@ -49,7 +51,7 @@ public class ExamManager : MonoBehaviour
             resultPanel.SetActive(true);
             resultPanelText.text = "Uda³o ci siê, zaliczy³eœ!";
 
-            Complete = true;
+            _complete = true;
         }
         else
         {
@@ -68,6 +70,11 @@ public class ExamManager : MonoBehaviour
         taskCanvas.SetActive(false);
 
         GameStateManager.instance.examActive = false;
+        if (Complete)
+        {
+            Destroy(taskCanvas);
+            Destroy(gameObject);
+        }
     }
 
 }

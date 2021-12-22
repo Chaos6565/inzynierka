@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 2
-  baseSpeed: 7
-  turbo: 20
+  baseSpeed: 10
+  turbo: 16
   inventoryUIPrefab: {fileID: 6052003115392982168, guid: bd7cdd9e3c87ccb46ad7f3cf828a5229, type: 3}
   canMove: 1
 --- !u!58 &-427369887859468560
@@ -138,9 +138,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0040596696, y: -0.11185383}
+  m_Offset: {x: -0.0011422267, y: -0.11185381}
   serializedVersion: 2
-  m_Radius: 0.1283964
+  m_Radius: 0.1975069
 --- !u!50 &-3333408813653584771
 Rigidbody2D:
   serializedVersion: 4
@@ -231,4 +231,4 @@ MonoBehaviour:
   m_SynchronizeVelocity: 1
   m_SynchronizeAngularVelocity: 0
   m_TeleportEnabled: 1
-  m_TeleportIfDistanceGreaterThan: 10
+  m_TeleportIfDistanceGreaterThan: 100

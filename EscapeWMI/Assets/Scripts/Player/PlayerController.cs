@@ -16,11 +16,11 @@ public class PlayerController : MonoBehaviourPun
     [SerializeField] public int playerNumber;
 
     // Movement parameters
-    [SerializeField] float baseSpeed = 7;
+    [SerializeField] float baseSpeed = 10;
     Vector2 movementVelocity;
 
     // TURBOOO For debbugggging
-    [SerializeField] float turbo = 20;
+    [SerializeField] float turbo = 16;
     float runSpeed = 0;
 
     // List of all interactable objects in player's vicinity
@@ -31,9 +31,6 @@ public class PlayerController : MonoBehaviourPun
     private InventoryUI inventoryUI;
     private int inventoryLimit;
     [SerializeField] private GameObject inventoryUIPrefab;
-
-
-    
 
 
     public bool canMove = true;
@@ -89,13 +86,13 @@ public class PlayerController : MonoBehaviourPun
     {
         if (photonView.IsMine)
         {
+
             // tp do obajtka
             if (Input.GetKeyDown(KeyCode.T))
             {
                 Debug.Log("Yo obajtek whats up");
                 this.transform.position = new Vector3(0, -1, 0);
             }
-
             // Action Key Managment
             if (!(interactableObjects.Count == 0))
             {

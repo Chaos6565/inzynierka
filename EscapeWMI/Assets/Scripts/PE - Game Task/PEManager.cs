@@ -13,7 +13,9 @@ public class PEManager : MonoBehaviour
     public GameObject background;
     public GameObject Ball;
     public Text resultText;
-    public bool Complete;
+
+    private bool _complete = false;
+    public bool Complete { get { return _complete; } }
 
     private void Reset()
     {
@@ -21,8 +23,8 @@ public class PEManager : MonoBehaviour
     public void OpenTask()
     {
         PETask.SetActive(true);
-        
-        Complete = false;
+
+        _complete = false;
         GameStateManager.instance.PEActive = true;
     }
 
@@ -48,9 +50,14 @@ public class PEManager : MonoBehaviour
         succedPanel.SetActive(false);
         failedPanel.SetActive(false);
         PETask.SetActive(false);
-        Complete = true;
+        _complete = true;
 
         GameStateManager.instance.PEActive = false;
+        if (Complete)
+        {
+            Destroy(PETask);
+            Destroy(gameObject);
+        }
     }
 
     public void ReplayButtonClick()
@@ -59,7 +66,7 @@ public class PEManager : MonoBehaviour
         succedPanel.SetActive(false);
         failedPanel.SetActive(false);
         PETask.SetActive(false);
-        Complete = false;
+        _complete = false;
         
         GameStateManager.instance.PEActive = false;
         OpenTask();

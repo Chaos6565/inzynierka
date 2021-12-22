@@ -17,7 +17,7 @@ public class InventoryUI : MonoBehaviourPun
     public PlayerController player;
     
     [SerializeField] GameObject sharedItemDisplayPrefab;
-    public void Init(int photonViewId)
+    public void Init()
     {
 
         itemSlotContainer = transform.Find("ItemSlotContainer");
@@ -25,7 +25,7 @@ public class InventoryUI : MonoBehaviourPun
 
         itemSlotTemplate.gameObject.SetActive(false);
 
-        photonView.ViewID = photonViewId;
+        photonView.ViewID = 600;
 
         InitializeItemsList();
 
@@ -121,18 +121,16 @@ public class InventoryUI : MonoBehaviourPun
             if (itemDisplay == note.sprite) break;
             else itemIndex++;  
         }
-        PhotonView.Get(gameObject).RPC("RpcShareNote", RpcTarget.Others, itemIndex);
+        photonView.RPC("RpcShareNote", RpcTarget.Others, itemIndex);
     }
 
     [PunRPC]
     public void RpcShareNote(int itemIndex)
     {
         Debug.Log("RPCShareNote");
-        GameObject sharedItemDisplay = Instantiate(sharedItemDisplayPrefab);
-       // sharedItemDisplay.GetComponent<PhotonView>().ViewID = photonView.ViewID + itemIndex + 1;
+        GameObject sharedItemDisplay = Instantiate(sharedItemDisplayPrefab, GameObject.Find("Shared Item Display Canvas").transform.position, Quaternion.identity, GameObject.Find("Shared Item Display Canvas").transform);
         sharedItemDisplay.gameObject.SetActive(true);
         sharedItemDisplay.transform.Find("Note").GetComponent<Image>().sprite = itemDisplayList[itemIndex];   
-
     }
 
 }

@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviourPun
         {
             GameObject inventoryUIgameObject = Instantiate(inventoryUIPrefab, GameObject.Find("Inventory UI Canvas").transform.position, Quaternion.identity, GameObject.Find("Inventory UI Canvas").transform);
             inventoryUI = inventoryUIgameObject.GetComponent<InventoryUI>();
-            inventoryUI.Init(600 + playerNumber * 10);
+            inventoryUI.Init();
             inventoryUI.CreateInventory(inventory);
             inventoryUI.SetPlayer(localPlayer);
         }

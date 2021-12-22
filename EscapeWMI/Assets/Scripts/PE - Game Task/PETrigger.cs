@@ -9,6 +9,7 @@ public class PETrigger : InteractableObject
     public bool ActivateOnClick;
     public bool EndModule;
     public PEManager Manager;
+    public int ToDisable;
     void Start()
     {
         Button btn = trigger.GetComponent<Button>();
@@ -37,6 +38,21 @@ public class PETrigger : InteractableObject
     }
     public void TriggerPE()
     {
+        switch (ToDisable)
+        {
+            case 1:
+                this.EnableIntaraction();
+                break;
+            case 2:
+                this.DisableInteraction();
+                break;
+            case 3:
+                this.EnableInteractionForAll();
+                break;
+            case 4:
+                this.DisableInteractionForAll();
+                break;
+        }
         FindObjectOfType<PEManager>().OpenTask();
     }
 }

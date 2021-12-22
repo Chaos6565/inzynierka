@@ -58,14 +58,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: fac1c93724147a34fbc28844aa04d39d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -85,7 +85,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1919120091279218047}
   - component: {fileID: 6616953227227074633}
-  - component: {fileID: 8049801390920781970}
   m_Layer: 5
   m_Name: SharedItemDisplay
   m_TagString: Untagged
@@ -126,28 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429458e5b629f364bb15e44440157b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8049801390920781970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5117778999485736582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &9115595234573087678
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +247,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6616953227227074633}
         m_TargetAssemblyTypeName: sharedItemDisplay, Assembly-CSharp
-        m_MethodName: Destroy
+        m_MethodName: DestroySelf
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

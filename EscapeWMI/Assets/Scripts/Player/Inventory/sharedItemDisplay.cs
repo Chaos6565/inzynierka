@@ -16,7 +16,7 @@ public class sharedItemDisplay : MonoBehaviour
         
     }
 
-    public void Destroy()
+    public void DestroySelf()
     {
         Destroy(this.gameObject);
     }

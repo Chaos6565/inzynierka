@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviourPun
 
     public static PlayerController localPlayer;
 
+    [SerializeField] public int playerNumber;
+
     // Movement parameters
     [SerializeField] float baseSpeed = 7;
     Vector2 movementVelocity;
@@ -27,9 +29,11 @@ public class PlayerController : MonoBehaviourPun
     //player's inventory
     private Inventory inventory;
     private InventoryUI inventoryUI;
+    private int inventoryLimit;
     [SerializeField] private GameObject inventoryUIPrefab;
 
-    [SerializeField] public int playerNumber;
+
+    
 
 
     public bool canMove = true;
@@ -166,8 +170,15 @@ public class PlayerController : MonoBehaviourPun
                 ItemWorld itemWorld = other.GetComponent<ItemWorld>();
                 if (itemWorld != null)
                 {
-                    inventory.AddItemToList(itemWorld.GetItem());
-                    itemWorld.DestroySelf();
+                    if (PhotonNetwork.CountOfPlayers < 4) { inventoryLimit = 6; }
+                    else if (PhotonNetwork.CountOfPlayers < 6) { inventoryLimit = 4; }
+                    else if (PhotonNetwork.CountOfPlayers < 8) { inventoryLimit = 3; }
+                    else inventoryLimit = 2;
+                    if (inventory.GetItemList().Count < inventoryLimit) {
+                        inventory.AddItemToList(itemWorld.GetItem());
+                        itemWorld.DestroySelf();
+                    }
+                    
                 }
             }
         }

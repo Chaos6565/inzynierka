@@ -10,6 +10,8 @@ public class PETrigger : MonoBehaviour
     public bool EndModule;
     public PEManager Manager;
 
+    private bool isCompleted = false;
+
     void Start()
     {
         Button btn = trigger.GetComponent<Button>();
@@ -20,14 +22,14 @@ public class PETrigger : MonoBehaviour
     {
         if (EndModule == true)
         {
-            if (Manager.Complete == true)
+            if (!isCompleted && Manager.Complete == true)
             {
+                isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
             }
         }
-
     }
-    
+
     public void TriggerPE()
     {
        

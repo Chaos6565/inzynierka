@@ -10,22 +10,23 @@ public class LectureTrigger : InteractableObject
     public int ToDisable;
     public LectureManager Manager;
     public bool EndModule;
-
     [TextArea(3, 30)]
     public List<string> slides;
 
+    private bool isCompleted = false;
 
     private void Update()
     {
         if (EndModule == true)
         {
-            if (Manager.Complete == true)
+            if (!isCompleted && Manager.Complete == true)
             {
+                isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
             }
         }
-
     }
+
     public override void PerformAction()
     {
         TriggerLecture();

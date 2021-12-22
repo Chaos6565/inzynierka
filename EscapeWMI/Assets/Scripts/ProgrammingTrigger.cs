@@ -10,6 +10,8 @@ public class ProgrammingTrigger : MonoBehaviour
     public bool EndModule;
     public ProgrammingScript Manager;
 
+    private bool isCompleted = false;
+
     void Start()
     {
         Button btn = trigger.GetComponent<Button>();
@@ -20,14 +22,15 @@ public class ProgrammingTrigger : MonoBehaviour
     {
         if (EndModule == true)
         {
-            if (Manager.Complete == true)
+            if (!isCompleted && Manager.Complete == true)
             {
+                isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
+                Debug.Log("PROGRAMMING MANAGER COMPLETED STATE: " + Manager.Complete);
             }
         }
-
     }
-    
+
     public void TriggerProgramming()
     {
        

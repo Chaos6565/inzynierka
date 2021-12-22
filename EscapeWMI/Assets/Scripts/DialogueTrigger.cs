@@ -8,18 +8,19 @@ public class DialogueTrigger : InteractableObject
     public DialogueManager Manager;
     public bool EndModule;
     public int ToDisable;
-    
+
+    private bool isCompleted = false;
 
     private void Update()
     {
         if (EndModule == true)
         {
-            if (Manager.Complete == true)
+            if (!isCompleted && Manager.Complete == true)
             {
+                isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
             }
         }
-        
     }
 
     public override void PerformAction()

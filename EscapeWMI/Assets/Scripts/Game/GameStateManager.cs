@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameStateManager : MonoBehaviourPun
 {
     // Current Game state, can be increased to 'skip' modules when debugging.
-    [SerializeField] public int _gameState = 1;
+    [SerializeField] public int _gameState = 0;
     public int GameState { get { return _gameState; } }
 
 
@@ -31,7 +31,7 @@ public class GameStateManager : MonoBehaviourPun
         instance = this;
 
 
-        if (gameModules.Count >= 1)
+        /*if (gameModules.Count >= 1)
         {
             if (_gameState < gameModules.Count)
             {
@@ -41,16 +41,20 @@ public class GameStateManager : MonoBehaviourPun
                 }
                 Debug.Log("Game State: " + _gameState.ToString());
             }
-        }
+        }*/
+        gameModules[_gameState].EnableModule();
     }
 
-    //Do zatrzymywania graczas
+    //Do zatrzymywania gracza
     private void Update()
     {
-        if (PEActive || lectureActive || dialogActive || choiceDialog || programmingActive || examActive || menuActive)
-            PlayerController.localPlayer.canMove = false;
-        else
-            PlayerController.localPlayer.canMove = true;
+        if (PhotonNetwork.LocalPlayer.IsLocal)
+        {
+            if (PEActive || lectureActive || dialogActive || choiceDialog || programmingActive || examActive || menuActive)
+                PlayerController.localPlayer.canMove = false;
+            else
+                PlayerController.localPlayer.canMove = true;
+        }
     }
 
     public void ActivateNextModule()

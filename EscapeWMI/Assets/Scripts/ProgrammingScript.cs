@@ -15,7 +15,8 @@ public class ProgrammingScript : MonoBehaviour
     private List<string> results = new List<string>();
     bool check = false;
 
-    public bool Complete;
+    public bool _complete = false;
+    public bool Complete { get { return _complete; } }
 
     private void Start()
     {
@@ -31,7 +32,7 @@ public class ProgrammingScript : MonoBehaviour
         taskText.text = "";
         check = false;
 
-        Complete = false;
+        _complete = false;
         GameStateManager.instance.programmingActive = true;
     }
 
@@ -46,7 +47,7 @@ public class ProgrammingScript : MonoBehaviour
                 background.SetActive(true);
                 resultPanel.SetActive(true);
                 resultPanelText.text = "Uda³o ci siê, zaliczy³eœ!";
-                Complete = true;
+                _complete = true;
                 check = true;
             }
         }

@@ -8,17 +8,21 @@ public class ChoiceDialogueTrigger : InteractableObject
     public bool EndModule;
     public int ToDisable;
     public ChoiceDialogueManager Manager;
+
+    private bool isCompleted = false;
+
     private void Update()
     {
         if (EndModule == true)
         {
-            if (Manager.Complete == true)
+            if (!isCompleted && Manager.Complete == true)
             {
+                isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
             }
         }
-
     }
+
     public override void PerformAction()
     {
         TriggerDialogue();

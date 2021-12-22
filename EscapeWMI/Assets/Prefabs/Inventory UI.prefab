@@ -422,6 +422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3137189089740555992}
   - component: {fileID: 4338960757932684368}
+  - component: {fileID: 5310592219921447382}
   m_Layer: 5
   m_Name: Inventory UI
   m_TagString: Untagged
@@ -462,10 +463,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b409b84fcb30b6f4d9cc8f6f90bd5dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedItemDisplayNote: {fileID: 0}
-  sharedItemDisplayCloseButton: {fileID: 0}
+  itemDisplayList: []
   player: {fileID: 1694850845544319376, guid: 15707c49a491837429db26620dced6d8, type: 3}
-  instance: {fileID: 0}
+  sharedItemDisplayPrefab: {fileID: 5117778999485736582, guid: a503cfa62e1daa24aa596df6cdf7a161, type: 3}
+--- !u!114 &5310592219921447382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6052003115392982168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &6098436271590727053
 GameObject:
   m_ObjectHideFlags: 0

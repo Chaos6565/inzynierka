@@ -28,7 +28,8 @@ public class PlayerController : MonoBehaviourPun
     private Inventory inventory;
     private InventoryUI inventoryUI;
     [SerializeField] private GameObject inventoryUIPrefab;
-    [SerializeField] private GameObject itemDisplayPrefab;
+
+    [SerializeField] public int playerNumber;
 
 
     public bool canMove = true;
@@ -64,7 +65,7 @@ public class PlayerController : MonoBehaviourPun
         {
             GameObject inventoryUIgameObject = Instantiate(inventoryUIPrefab, GameObject.Find("Inventory UI Canvas").transform.position, Quaternion.identity, GameObject.Find("Inventory UI Canvas").transform);
             inventoryUI = inventoryUIgameObject.GetComponent<InventoryUI>();
-            inventoryUI.Init();
+            inventoryUI.Init(600 + playerNumber * 10);
             inventoryUI.CreateInventory(inventory);
             inventoryUI.SetPlayer(localPlayer);
         }

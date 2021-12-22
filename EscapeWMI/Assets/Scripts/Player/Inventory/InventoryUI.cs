@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using Photon.Pun;
+using System.Collections.Generic;
 
 public class InventoryUI : MonoBehaviourPun
 {
@@ -10,20 +11,21 @@ public class InventoryUI : MonoBehaviourPun
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
     private Transform itemDisplay;
-    public Transform sharedItemDisplayNote;
-    public Transform sharedItemDisplayCloseButton;
-    public PlayerController player;
 
-    public void Init()
+
+    public List<Sprite> itemDisplayList;
+    public PlayerController player;
+    
+    [SerializeField] GameObject sharedItemDisplayPrefab;
+    public void Init(int photonViewId)
     {
+
         itemSlotContainer = transform.Find("ItemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("ItemSlotTemplate");
-        sharedItemDisplayNote = GameObject.Find("Shared Item Display Canvas").transform.Find("SharedItemDisplay").Find("Note");
-        sharedItemDisplayCloseButton = GameObject.Find("Shared Item Display Canvas").transform.Find("SharedItemDisplay").Find("CloseButton");
 
         itemSlotTemplate.gameObject.SetActive(false);
-        sharedItemDisplayNote.gameObject.SetActive(false);
-        sharedItemDisplayCloseButton.gameObject.SetActive(false);
+
+        photonView.ViewID = photonViewId;
 
     }
 
@@ -90,25 +92,45 @@ public class InventoryUI : MonoBehaviourPun
     }
 
 
-    public void ShareNote(Image note)
-    {
-        photonView.RPC("RpcShareNote", RpcTarget.Others, note.sprite);
-    }
-
-    [PunRPC]
-    public void RpcShareNote(Sprite sharedNote)
-    {
-        
-        
-        GameObject.Find("Shared Item Display Canvas").transform.Find("SharedItemDisplay").GetChild(0).GetComponent<Image>().sprite = sharedNote;    //GetChild(0) = sharedItemDisplayNote
-        GameObject.Find("Shared Item Display Canvas").transform.Find("SharedItemDisplay").GetChild(0).gameObject.SetActive(true);
-        GameObject.Find("Shared Item Display Canvas").transform.Find("SharedItemDisplay").GetChild(1).gameObject.SetActive(true);                   //GetChild(1) = sharedItemDisplayCloseButton
-
-    }
-
     public void SetPlayer(PlayerController player)
     {
         this.player = player;
+    }
+
+    public void InitializeItemsList()
+    {
+        // Add items here
+        itemDisplayList.Add((new Item { itemType = Item.ItemType.Ulotka }).GetDisplay());            // ULOTKA           index 0
+        itemDisplayList.Add((new Item { itemType = Item.ItemType.Tablica }).GetDisplay());           // TABLICA          index 1
+        itemDisplayList.Add((new Item { itemType = Item.ItemType.AnalizaNotatki }).GetDisplay());    // ANALIZA_NOTATKI  index 2
+        itemDisplayList.Add((new Item { itemType = Item.ItemType.Analiza }).GetDisplay());           // ANALIZA          index 3
+        itemDisplayList.Add((new Item { itemType = Item.ItemType.Algebra }).GetDisplay());           // ALGEBRA          index 4
+        itemDisplayList.Add((new Item { itemType = Item.ItemType.Statystyka }).GetDisplay());        // STATYSTYKA       index 5
+        itemDisplayList.Add((new Item { itemType = Item.ItemType.Grafy }).GetDisplay());             // GRAFY            index 6
+        itemDisplayList.Add((new Item { itemType = Item.ItemType.Matematyka }).GetDisplay());        // MATEMATYKA       index 7
+        itemDisplayList.Add((new Item { itemType = Item.ItemType.Fibonacci }).GetDisplay());         // FIBONACCI        index 8
+    }
+
+
+    public void ShareNote(Image note)
+    {
+        int itemIndex = 0;
+        foreach (Sprite itemDisplay in itemDisplayList) {
+            if (itemDisplay == note.sprite) break;
+            else itemIndex++;  
+        }
+        PhotonView.Get(gameObject).RPC("RpcShareNote", RpcTarget.Others, itemIndex);
+    }
+
+    [PunRPC]
+    public void RpcShareNote(int itemIndex)
+    {
+        Debug.Log("RPCShareNote");
+        GameObject sharedItemDisplay = Instantiate(sharedItemDisplayPrefab);
+       // sharedItemDisplay.GetComponent<PhotonView>().ViewID = photonView.ViewID + itemIndex + 1;
+        sharedItemDisplay.gameObject.SetActive(true);
+        sharedItemDisplay.transform.Find("Note").GetComponent<Image>().sprite = itemDisplayList[itemIndex];   
+
     }
 
 }

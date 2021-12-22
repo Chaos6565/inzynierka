@@ -46,7 +46,7 @@ public class ProgrammingScript : MonoBehaviour
                 background.SetActive(true);
                 resultPanel.SetActive(true);
                 resultPanelText.text = "Uda³o ci siê, zaliczy³eœ!";
-
+                Complete = true;
                 check = true;
             }
         }

@@ -27,6 +27,8 @@ public class InventoryUI : MonoBehaviourPun
 
         photonView.ViewID = photonViewId;
 
+        InitializeItemsList();
+
     }
 
     public void CreateInventory(Inventory inventory)

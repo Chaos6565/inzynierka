@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviourPun
     private Inventory inventory;
     private InventoryUI inventoryUI;
     private int inventoryLimit;
+    public bool itemDisplayViewAvaliable;
     [SerializeField] private GameObject inventoryUIPrefab;
 
 
@@ -69,6 +70,7 @@ public class PlayerController : MonoBehaviourPun
             inventoryUI.Init();
             inventoryUI.CreateInventory(inventory);
             inventoryUI.SetPlayer(localPlayer);
+            itemDisplayViewAvaliable = true;
         }
     }
 
@@ -174,10 +176,9 @@ public class PlayerController : MonoBehaviourPun
                 ItemWorld itemWorld = other.GetComponent<ItemWorld>();
                 if (itemWorld != null)
                 {
-                    if (PhotonNetwork.CountOfPlayers < 4) { inventoryLimit = 6; }
-                    else if (PhotonNetwork.CountOfPlayers < 6) { inventoryLimit = 4; }
-                    else if (PhotonNetwork.CountOfPlayers < 8) { inventoryLimit = 3; }
-                    else inventoryLimit = 2;
+                    if (PhotonNetwork.CountOfPlayers < 4) { inventoryLimit = 3; }
+                    else if (PhotonNetwork.CountOfPlayers < 8) { inventoryLimit = 2; }
+                    else inventoryLimit = 1;
                     if (inventory.GetItemList().Count < inventoryLimit) {
                         inventory.AddItemToList(itemWorld.GetItem());
                         itemWorld.DestroySelf();

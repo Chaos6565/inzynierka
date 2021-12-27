@@ -17,6 +17,8 @@ public class InventoryUI : MonoBehaviourPun
     public PlayerController player;
     
     [SerializeField] GameObject sharedItemDisplayPrefab;
+
+
     public void Init()
     {
 
@@ -115,6 +117,23 @@ public class InventoryUI : MonoBehaviourPun
     }
 
 
+    public void DisplayItem(GameObject itemDisplayObject)
+    {
+        if (this.player.itemDisplayViewAvaliable)
+        {
+            itemDisplayObject.SetActive(true);
+            this.player.itemDisplayViewAvaliable = false;
+        }
+    }
+
+
+    public void HideItem(GameObject itemDisplayObject)
+    {
+        itemDisplayObject.SetActive(false);
+        this.player.itemDisplayViewAvaliable = true;
+    }
+
+
     public void DestroyNote(Image note)
     {
 
@@ -125,6 +144,8 @@ public class InventoryUI : MonoBehaviourPun
                 inventory.RemoveItemFromList(item);
                 break;
             }
+
+
         }
         
     }
@@ -143,10 +164,14 @@ public class InventoryUI : MonoBehaviourPun
     [PunRPC]
     public void RpcShareNote(int itemIndex)
     {
-        Debug.Log("RPCShareNote");
-        GameObject sharedItemDisplay = Instantiate(sharedItemDisplayPrefab, GameObject.Find("Shared Item Display Canvas").transform.position, Quaternion.identity, GameObject.Find("Shared Item Display Canvas").transform);
-        sharedItemDisplay.gameObject.SetActive(true);
-        sharedItemDisplay.transform.Find("Note").GetComponent<Image>().sprite = itemList[itemIndex].GetDisplay();   
+        if (this.player.itemDisplayViewAvaliable)
+        {
+            GameObject sharedItemDisplay = Instantiate(sharedItemDisplayPrefab, GameObject.Find("Shared Item Display Canvas").transform.position, Quaternion.identity, GameObject.Find("Shared Item Display Canvas").transform);
+            sharedItemDisplay.gameObject.SetActive(true);
+            sharedItemDisplay.transform.Find("Note").GetComponent<Image>().sprite = itemList[itemIndex].GetDisplay();
+            sharedItemDisplay.GetComponent<sharedItemDisplay>().SetPlayer(this.player);
+            this.player.itemDisplayViewAvaliable = false;
+        }
     }
 
 }

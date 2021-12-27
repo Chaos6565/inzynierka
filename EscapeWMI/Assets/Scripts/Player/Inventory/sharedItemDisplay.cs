@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class sharedItemDisplay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public PlayerController player;
+
+
+    public void SetPlayer(PlayerController player)
     {
-        
+        this.player = player;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void DestroySelf()
     {
+        this.player.itemDisplayViewAvaliable = true;
         Destroy(this.gameObject);
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using Photon.Pun;
 using System.Collections.Generic;
+using System;
 
 public class InventoryUI : MonoBehaviourPun
 {
@@ -158,13 +159,15 @@ public class InventoryUI : MonoBehaviourPun
             if (item.GetDisplay() == note.sprite) break;
             else itemIndex++;  
         }
-        photonView.RPC("RpcShareNote", RpcTarget.Others, itemIndex);
+        photonView.RPC("RpcShareNote", RpcTarget.Others, itemIndex, this.player.transform.position.x, this.player.transform.position.y);
     }
 
     [PunRPC]
-    public void RpcShareNote(int itemIndex)
-    {
-        if (this.player.itemDisplayViewAvaliable)
+    public void RpcShareNote(int itemIndex, float originX, float originY)
+    { 
+        float distanceToOriginX = Math.Abs(this.player.transform.position.x - originX);
+        float distanceToOriginY = Math.Abs(this.player.transform.position.y - originY);
+        if (distanceToOriginX <= 3.0 && distanceToOriginY <= 3.0 && this.player.itemDisplayViewAvaliable)
         {
             GameObject sharedItemDisplay = Instantiate(sharedItemDisplayPrefab, GameObject.Find("Shared Item Display Canvas").transform.position, Quaternion.identity, GameObject.Find("Shared Item Display Canvas").transform);
             sharedItemDisplay.gameObject.SetActive(true);

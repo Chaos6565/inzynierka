@@ -9,6 +9,7 @@ public class TeleportationScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        other.transform.position = destiny.transform.position;
+        //other.transform.position = destiny.transform.position;
+        other.GetComponent<Rigidbody2D>().position = destiny.transform.position;
     }
 }

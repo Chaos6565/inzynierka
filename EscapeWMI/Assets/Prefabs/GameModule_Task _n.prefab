@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395307ee376197346ad84257bb35ac96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorScript: {fileID: 0}
+  moduleCompletionByEveryone: 0
 --- !u!114 &2991414870389279074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moduleContentScript: {fileID: 7208852413998378140}
+  deactivateModuleAfterCompletion: 1
 --- !u!114 &4644963537952595848
 MonoBehaviour:
   m_ObjectHideFlags: 0

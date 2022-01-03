@@ -8,29 +8,12 @@ public class ItemWorldSpawner : MonoBehaviourPun
     [SerializeField] public GameObject itemWorldPrefab;
     [SerializeField] public GameObject[] itemSpawnPoints = null;
     List<Item> itemsList = new List<Item>();
+    List<ItemWorld> itemsWorldList = new List<ItemWorld>();
 
     void Start()
     {
         InitializeItemsList();
 
-        if (PhotonNetwork.IsMasterClient)
-        {
-            /*for (int i = 0; i < itemsList.Count; i++)
-            {
-                SpawnItemWorld(i);
-                Debug.Log("Position: " + itemSpawnPoints[i].transform.position);
-            }*/
-            SpawnItemWorld(0);
-            SpawnItemWorld(1);
-            SpawnItemWorld(2);
-            SpawnItemWorld(3);
-            SpawnItemWorld(4);
-            SpawnItemWorld(5);
-            SpawnItemWorld(6);
-            SpawnItemWorld(7);
-            SpawnItemWorld(8);
-
-        }
     }
 
     public void InitializeItemsList()
@@ -49,16 +32,32 @@ public class ItemWorldSpawner : MonoBehaviourPun
 
     public void SpawnItemWorld(int itemIndex)
     {
-        photonView.RPC("SpawnItemWorldRPC", RpcTarget.All, itemIndex);
-    }
-
-    [PunRPC]
-    public void SpawnItemWorldRPC(int itemIndex)
-    {
-
         GameObject itemWorldGM = Instantiate(itemWorldPrefab, itemSpawnPoints[itemIndex].transform.position, Quaternion.identity);
         itemWorldGM.GetComponent<PhotonView>().ViewID = 700 + itemIndex;
         ItemWorld itemWorld = itemWorldGM.transform.GetComponent<ItemWorld>();
         itemWorld.SetItem(itemsList[itemIndex]);
+        itemsWorldList.Add(itemWorld);
+        Debug.Log("Itemki zespawnowane");
+        //photonView.RPC("SpawnItemWorldRPC", RpcTarget.All, itemIndex);
     }
+
+    public void DestroyAllItemsWorld()
+    {
+        foreach (ItemWorld itemWorld in itemsWorldList)
+        {
+            if (itemWorld != null) { itemWorld.DestroySelf(); }
+        }
+        itemsWorldList.Clear();
+        Debug.Log("Itemki zniszczono");
+    }
+
+    //[PunRPC]
+    //public void SpawnItemWorldRPC(int itemIndex)
+    //{
+
+    //    GameObject itemWorldGM = Instantiate(itemWorldPrefab, itemSpawnPoints[itemIndex].transform.position, Quaternion.identity);
+    //    itemWorldGM.GetComponent<PhotonView>().ViewID = 700 + itemIndex;
+    //    ItemWorld itemWorld = itemWorldGM.transform.GetComponent<ItemWorld>();
+    //    itemWorld.SetItem(itemsList[itemIndex]);
+    //}
 }

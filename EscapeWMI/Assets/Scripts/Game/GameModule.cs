@@ -6,6 +6,8 @@ using UnityEngine;
 public class GameModule : MonoBehaviourPun
 {
     [SerializeField] ModuleContentScript _moduleContentScript;
+    [SerializeField] public int[] itemIndices = null;
+    ItemWorldSpawner itemWorldSpawner;
 
     // Active state of CONTENT (child) of this Game Module, can be enabled/disabled throughout the duration of the game.
     // Default is false, first time enabled through GameStateManager.
@@ -22,7 +24,10 @@ public class GameModule : MonoBehaviourPun
     private bool _moduleStateOfCompletion = false;
     public bool ModuleStateOfCompletion { get { return _moduleStateOfCompletion; } }
 
-
+    private void Start()
+    {
+        itemWorldSpawner = GameObject.Find("ItemWorldSpawner").GetComponent<ItemWorldSpawner>();
+    }
     private void Update()
     {
         if (!_moduleStateOfCompletion)
@@ -31,11 +36,13 @@ public class GameModule : MonoBehaviourPun
             {
                 _moduleStateOfCompletion = true;
 
-                GetComponentInParent<GameStateManager>().ActivateNextModule();
-
                 Debug.Log("MODULE COMPLETED!");
                 if (deactivateModuleAfterCompletion)
                     DisableModule();
+
+                GetComponentInParent<GameStateManager>().ActivateNextModule();
+
+
             } 
         }
     }
@@ -61,12 +68,23 @@ public class GameModule : MonoBehaviourPun
         {
             child.gameObject.SetActive(true);
         }
+
+        if (this.itemIndices.Length > 0)
+        {
+
+            foreach (int index in this.itemIndices)
+            {
+                itemWorldSpawner.SpawnItemWorld(index);
+            }
+        }
+
         _moduleActiveState = true;
     }
 
     [PunRPC]
     public void DisableModuleRPC()
     {
+        itemWorldSpawner.DestroyAllItemsWorld();
         foreach (Transform child in this.transform)
         {
             child.gameObject.SetActive(false);

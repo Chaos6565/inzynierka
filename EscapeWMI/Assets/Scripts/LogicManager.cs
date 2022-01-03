@@ -56,12 +56,16 @@ public class LogicManager : MonoBehaviour
             background.SetActive(true);
             resultPanel.SetActive(true);
             resultPanelText.text = "Brawo otrzymuje Pan/Pani czwórkê.";
+
+            _complete = true;
         }
         else if (points == 1)
         {
             background.SetActive(true);
             resultPanel.SetActive(true);
             resultPanelText.text = "Brawo otrzymuje Pan/Pani trójkê.";
+
+            _complete = true;
         }
         else
         {

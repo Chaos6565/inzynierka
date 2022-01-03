@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ExamTrigger : MonoBehaviour
+public class ExamTrigger : InteractableObject
 {
     public Button trigger;
  

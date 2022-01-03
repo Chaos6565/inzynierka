@@ -24,6 +24,7 @@ public class GameStateManager : MonoBehaviourPun
     public bool examActive;
     public bool menuActive;
     public bool logicActive;
+    public bool networkActive;
 
 
 
@@ -51,7 +52,7 @@ public class GameStateManager : MonoBehaviourPun
     {
         if (PhotonNetwork.LocalPlayer.IsLocal)
         {
-            if (PEActive || lectureActive || dialogActive || choiceDialog || programmingActive || examActive || menuActive || logicActive)
+            if (PEActive || lectureActive || dialogActive || choiceDialog || programmingActive || examActive || menuActive || logicActive || networkActive)
                 PlayerController.localPlayer.canMove = false;
             else
                 PlayerController.localPlayer.canMove = true;

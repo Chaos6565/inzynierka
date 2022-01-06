@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviourPun
             if (Input.GetKeyDown(KeyCode.T))
             {
                 Debug.Log("Yo obajtek whats up");
-                this.transform.position = new Vector3(0, -1, 0);
+                //this.transform.position = new Vector3(0, -1, 0);
             }
             // Action Key Managment
             if (!(interactableObjects.Count == 0))

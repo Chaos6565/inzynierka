@@ -32,7 +32,7 @@ public class EnglishManager : MonoBehaviour
     public void SubmitClick()
     {
 
-        if (answer1.text == "Do trzech razy sztuka" || answer2.text == "Pierwsze koty za p³oty" || answer3.text == "Coœ jest nie tak")
+        if (answer1.text.ToLower() == "do trzech razy sztuka" || answer2.text.ToLower() == "pierwsze koty za p³oty" || answer3.text.ToLower() == "coœ jest nie tak")
         {
             _complete = true;
             background.SetActive(true);

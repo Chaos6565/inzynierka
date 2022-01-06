@@ -181,7 +181,7 @@ public class PlayerController : MonoBehaviourPun
                     else inventoryLimit = 1;
                     if (inventory.GetItemList().Count < inventoryLimit) {
                         inventory.AddItemToList(itemWorld.GetItem());
-                        itemWorld.DestroySelf();
+                        //itemWorld.DestroySelf();
                     }
                     
                 }

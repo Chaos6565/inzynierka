@@ -35,6 +35,8 @@ public class ItemData : MonoBehaviour
     public Sprite matematykaDisplay;
     public Sprite fibonacciSprite;
     public Sprite fibonacciDisplay;
+    public Sprite plan2Sprite;
+    public Sprite plan2Display;
 
 
 }

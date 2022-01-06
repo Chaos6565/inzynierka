@@ -28,6 +28,7 @@ public class ItemWorldSpawner : MonoBehaviourPun
         itemsList.Add(new Item { itemType = Item.ItemType.Grafy });             // GRAFY            index 6
         itemsList.Add(new Item { itemType = Item.ItemType.Matematyka });        // MATEMATYKA       index 7
         itemsList.Add(new Item { itemType = Item.ItemType.Fibonacci });         // FIBONACCI        index 8
+        itemsList.Add(new Item { itemType = Item.ItemType.Plan2 });             // PLAN2            index 9
     }
 
     public void SpawnItemWorld(int itemIndex)

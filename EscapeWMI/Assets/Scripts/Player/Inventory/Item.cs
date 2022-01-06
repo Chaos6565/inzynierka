@@ -18,6 +18,7 @@ public class Item
         Grafy,
         Matematyka,
         Fibonacci,
+        Plan2,
 }
 
     public ItemType itemType;
@@ -37,6 +38,7 @@ public class Item
             case ItemType.Grafy:            return ItemData.Instance.grafySprite;
             case ItemType.Matematyka:       return ItemData.Instance.matematykaSprite;
             case ItemType.Fibonacci:        return ItemData.Instance.fibonacciSprite;
+            case ItemType.Plan2:            return ItemData.Instance.plan2Sprite;
         }
     }
 
@@ -54,6 +56,7 @@ public class Item
             case ItemType.Grafy:            return ItemData.Instance.grafyDisplay;
             case ItemType.Matematyka:       return ItemData.Instance.matematykaDisplay;
             case ItemType.Fibonacci:        return ItemData.Instance.fibonacciDisplay;
+            case ItemType.Plan2:            return ItemData.Instance.plan2Display;
         }
     }
 

@@ -116,6 +116,9 @@ public class InventoryUI : MonoBehaviourPun
         itemList.Add(new Item { itemType = Item.ItemType.Matematyka });        // MATEMATYKA       index 7
         itemList.Add(new Item { itemType = Item.ItemType.Fibonacci });         // FIBONACCI        index 8
         itemList.Add(new Item { itemType = Item.ItemType.Plan2 });             // PLAN2            index 9
+        itemList.Add(new Item { itemType = Item.ItemType.LogikaNotatki });     // LOGIKA NOTATKI   index 10
+        itemList.Add(new Item { itemType = Item.ItemType.TautologieA });       // TAUTOLOGIE A     index 11
+        itemList.Add(new Item { itemType = Item.ItemType.TautologieB });       // TAUTOLOGIE B     index 12
     }
 
 

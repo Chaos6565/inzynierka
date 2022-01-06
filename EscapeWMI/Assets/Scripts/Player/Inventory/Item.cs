@@ -19,6 +19,9 @@ public class Item
         Matematyka,
         Fibonacci,
         Plan2,
+        LogikaNotatki,
+        TautologieA,
+        TautologieB,
 }
 
     public ItemType itemType;
@@ -39,6 +42,9 @@ public class Item
             case ItemType.Matematyka:       return ItemData.Instance.matematykaSprite;
             case ItemType.Fibonacci:        return ItemData.Instance.fibonacciSprite;
             case ItemType.Plan2:            return ItemData.Instance.plan2Sprite;
+            case ItemType.LogikaNotatki:    return ItemData.Instance.logikaNotatkiSprite;
+            case ItemType.TautologieA:      return ItemData.Instance.tautologieASprite;
+            case ItemType.TautologieB:      return ItemData.Instance.tautologieBSprite;
         }
     }
 
@@ -57,6 +63,9 @@ public class Item
             case ItemType.Matematyka:       return ItemData.Instance.matematykaDisplay;
             case ItemType.Fibonacci:        return ItemData.Instance.fibonacciDisplay;
             case ItemType.Plan2:            return ItemData.Instance.plan2Display;
+            case ItemType.LogikaNotatki:    return ItemData.Instance.logikaNotatkiDisplay;
+            case ItemType.TautologieA:      return ItemData.Instance.tautologieADisplay;
+            case ItemType.TautologieB:      return ItemData.Instance.tautologieBDisplay;
         }
     }
 

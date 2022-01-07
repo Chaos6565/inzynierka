@@ -9,7 +9,9 @@ public class ModuleContentScript : MonoBehaviourPun
     private bool _isCompleted = false;
     public bool IsCompleted { get { return _isCompleted; } }
 
-    public DoorScript doorScript;
+    //public DoorScript doorScript;
+    [SerializeField] public bool openDoorWhenCompleted = false;
+    [SerializeField] public List<GameObject> doors = null;
 
 
     // Is completing a task by everyone necessary for whole module completion?
@@ -19,7 +21,14 @@ public class ModuleContentScript : MonoBehaviourPun
 
     public void ModuleCompleted()
     {
-        doorScript.OpenTheDoor();
+        //doorScript.OpenTheDoor();
+        if (openDoorWhenCompleted)
+        {
+            foreach (GameObject door in doors)
+            {
+                door.GetComponent<DoorScript>().OpenTheDoor();
+            }
+        }
         photonView.RPC("ModuleCompletedRPC", RpcTarget.All);
     }
 

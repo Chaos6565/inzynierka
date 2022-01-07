@@ -19,10 +19,19 @@ public class ProgrammingScript : MonoBehaviour
 
     private void Start()
     {
+        // Jak ktoœ umie dodaæ to tu jest regex dla sprawdzenia: return\sn\s*\*\s*Silnia\(\s*n\s*-\s*1\s*\);
         results.Add("return n * Silnia(n-1);");
         results.Add("return n * Silnia(n - 1);");
         results.Add("return n*Silnia(n-1);");
         results.Add("return n*Silnia(n - 1);");
+        results.Add("return n *Silnia(n - 1);");
+        results.Add("return n* Silnia(n - 1);");
+        results.Add("return n*Silnia(n- 1);");
+        results.Add("return n*Silnia(n -1);");
+        results.Add("return n *Silnia(n- 1);");
+        results.Add("return n *Silnia(n -1);");
+        results.Add("return n* Silnia(n- 1);");
+        results.Add("return n* Silnia(n -1);");
         results.Add("g");
     }
 

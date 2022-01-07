@@ -8,7 +8,6 @@ public class MenuScriot : MonoBehaviour
 
     public GameObject mainPanel;
     public GameObject settingsPanel;
-    public GameObject creditsPanel;
     public GameObject quitPanel;
 
     public bool isActive = false;
@@ -19,7 +18,6 @@ public class MenuScriot : MonoBehaviour
         {
             mainPanel.SetActive(true);
             settingsPanel.SetActive(false);
-            creditsPanel.SetActive(false);
             quitPanel.SetActive(false);
 
             menuCanvas.SetActive(!isActive);
@@ -36,7 +34,6 @@ public class MenuScriot : MonoBehaviour
         {
             mainPanel.SetActive(true);
             settingsPanel.SetActive(false);
-            creditsPanel.SetActive(false);
             quitPanel.SetActive(false);
 
             menuCanvas.SetActive(false);
@@ -48,21 +45,12 @@ public class MenuScriot : MonoBehaviour
         {
             mainPanel.SetActive(false);
             settingsPanel.SetActive(true);
-            creditsPanel.SetActive(false);
-            quitPanel.SetActive(false);
-        }
-        else if (buttonName == "Credits Button")
-        {
-            mainPanel.SetActive(false);
-            settingsPanel.SetActive(false);
-            creditsPanel.SetActive(true);
             quitPanel.SetActive(false);
         }
         else if (buttonName == "Quit Button")
         {
             mainPanel.SetActive(false);
             settingsPanel.SetActive(false);
-            creditsPanel.SetActive(false);
             quitPanel.SetActive(true);
         }
     }
@@ -75,9 +63,12 @@ public class MenuScriot : MonoBehaviour
         {
             mainPanel.SetActive(true);
             settingsPanel.SetActive(false);
-            creditsPanel.SetActive(false);
             quitPanel.SetActive(false);
         }
 
+    }
+    public void GoBack()
+    {
+        quitPanel.SetActive(false);
     }
 }

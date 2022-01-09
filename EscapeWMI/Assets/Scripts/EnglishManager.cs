@@ -26,7 +26,7 @@ public class EnglishManager : MonoBehaviour
         answer1.text = "";
         answer2.text = "";
         answer3.text = "";
-        GameStateManager.instance.networkActive = true;
+        GameStateManager.instance.taskActive = true;
     }
 
     public void SubmitClick()
@@ -55,7 +55,7 @@ public class EnglishManager : MonoBehaviour
 
         taskCanvas.SetActive(false);
 
-        GameStateManager.instance.networkActive = false;
+        GameStateManager.instance.taskActive = false;
         if (Complete)
         {
             Destroy(taskCanvas);

@@ -24,7 +24,7 @@ public class LogicExamManager : MonoBehaviour
         taskCanvas.SetActive(true);
 
         _complete = false;
-        GameStateManager.instance.examActive = true;
+        GameStateManager.instance.taskActive = true;
     }
 
     public void SubmitClick()
@@ -53,7 +53,7 @@ public class LogicExamManager : MonoBehaviour
 
         taskCanvas.SetActive(false);
 
-        GameStateManager.instance.examActive = false;
+        GameStateManager.instance.taskActive = false;
         if (Complete)
         {
             Destroy(taskCanvas);

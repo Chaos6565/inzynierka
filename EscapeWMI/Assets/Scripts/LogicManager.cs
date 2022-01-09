@@ -28,20 +28,20 @@ public class LogicManager : MonoBehaviour
         points = 0;
 
         _complete = false;
-        GameStateManager.instance.logicActive = true;
+        GameStateManager.instance.taskActive = true;
     }
 
     public void SubmitClick()
     {
-        if (answer1.isOn && !answer2.isOn && !answer3.isOn && answer4.isOn && answer5.isOn) points = 3;
+        if ((answer1.isOn && answer4.isOn && answer5.isOn) && (!answer2.isOn && !answer3.isOn)) points = 3;
 
-        if ((answer1.isOn && !answer2.isOn && !answer3.isOn && !answer4.isOn && answer5.isOn) ||
-            (answer1.isOn && !answer2.isOn && !answer3.isOn && answer4.isOn && !answer5.isOn) ||
-            (!answer1.isOn && !answer2.isOn && !answer3.isOn && answer4.isOn && answer5.isOn)) points = 2;
+        if (((answer1.isOn && answer4.isOn) && (!answer2.isOn && !answer3.isOn && !answer5.isOn) ||
+            (answer1.isOn && answer5.isOn) && (!answer2.isOn && !answer3.isOn && !answer4.isOn) ||
+            (answer4.isOn && answer5.isOn) && (!answer1.isOn && !answer2.isOn && !answer3.isOn))) points = 2;
 
-        if ((answer1.isOn && !answer2.isOn && !answer3.isOn && !answer4.isOn && !answer5.isOn) ||
-            (!answer1.isOn && !answer2.isOn && !answer3.isOn && !answer4.isOn && answer5.isOn) ||
-            (!answer1.isOn && !answer2.isOn && !answer3.isOn && answer4.isOn && !answer5.isOn)) points = 1;
+        if ((answer1.isOn && (!answer2.isOn && !answer3.isOn && !answer4.isOn && !answer5.isOn)) ||
+            (answer4.isOn && (!answer1.isOn && !answer2.isOn && !answer3.isOn && !answer5.isOn)) ||
+            (answer5.isOn && (!answer1.isOn && !answer2.isOn && !answer3.isOn && !answer4.isOn))) points = 1;
 
         if (points == 3)
         {
@@ -84,7 +84,7 @@ public class LogicManager : MonoBehaviour
 
         taskCanvas.SetActive(false);
 
-        GameStateManager.instance.logicActive = false;
+        GameStateManager.instance.taskActive = false;
         if (Complete)
         {
             Destroy(taskCanvas);

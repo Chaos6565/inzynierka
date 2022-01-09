@@ -43,6 +43,14 @@ public class ItemData : MonoBehaviour
     public Sprite tautologieADisplay;
     public Sprite tautologieBSprite;
     public Sprite tautologieBDisplay;
+    public Sprite golebiaSmietankaSprite;
+    public Sprite golebiaSmietankaDisplay;
+    public Sprite podanieSprite;
+    public Sprite podanieDisplay;
+    public Sprite hasloSprite;
+    public Sprite hasloDisplay;
+    public Sprite plan3Sprite;
+    public Sprite plan3Display;
 
 
 

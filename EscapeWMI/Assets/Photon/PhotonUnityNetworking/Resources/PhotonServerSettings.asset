@@ -22,7 +22,7 @@ MonoBehaviour:
     Server: 
     Port: 0
     ProxyServer: 
-    Protocol: 1
+    Protocol: 0
     EnableProtocolFallback: 1
     AuthMode: 0
     EnableLobbyStatistics: 0
@@ -48,11 +48,10 @@ MonoBehaviour:
   - RespawnSpaceship
   - RPC_ChangeReadyState
   - RPCDestroyOnMaster
-  - RpcShareNote
-  - ShowPopup
-  - SpawnPlayers
-  - RPCTriggerLecture
   - RPCSetManualOperation
+  - RpcShareNote
+  - RPCTriggerLecture
+  - SpawnPlayers
   DisableAutoOpenWizard: 1
-  ShowSettings: 1
+  ShowSettings: 0
   DevRegionSetOnce: 1

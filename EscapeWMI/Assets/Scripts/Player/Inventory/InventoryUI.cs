@@ -106,24 +106,30 @@ public class InventoryUI : MonoBehaviourPun
     public void InitializeItemsList()
     {
         // Add items here
-        itemList.Add(new Item { itemType = Item.ItemType.Ulotka });            // ULOTKA           index 0
-        itemList.Add(new Item { itemType = Item.ItemType.Tablica });           // TABLICA          index 1
-        itemList.Add(new Item { itemType = Item.ItemType.AnalizaNotatki });    // ANALIZA_NOTATKI  index 2
-        itemList.Add(new Item { itemType = Item.ItemType.Analiza });           // ANALIZA          index 3
-        itemList.Add(new Item { itemType = Item.ItemType.Algebra });           // ALGEBRA          index 4
-        itemList.Add(new Item { itemType = Item.ItemType.Statystyka });        // STATYSTYKA       index 5
-        itemList.Add(new Item { itemType = Item.ItemType.Grafy });             // GRAFY            index 6
-        itemList.Add(new Item { itemType = Item.ItemType.Matematyka });        // MATEMATYKA       index 7
-        itemList.Add(new Item { itemType = Item.ItemType.Fibonacci });         // FIBONACCI        index 8
-        itemList.Add(new Item { itemType = Item.ItemType.Plan2 });             // PLAN2            index 9
-        itemList.Add(new Item { itemType = Item.ItemType.LogikaNotatki });     // LOGIKA NOTATKI   index 10
-        itemList.Add(new Item { itemType = Item.ItemType.TautologieA });       // TAUTOLOGIE A     index 11
-        itemList.Add(new Item { itemType = Item.ItemType.TautologieB });       // TAUTOLOGIE B     index 12
+        itemList.Add(new Item { itemType = Item.ItemType.Ulotka });            // ULOTKA            index 0
+        itemList.Add(new Item { itemType = Item.ItemType.Tablica });           // TABLICA           index 1
+        itemList.Add(new Item { itemType = Item.ItemType.AnalizaNotatki });    // ANALIZA_NOTATKI   index 2
+        itemList.Add(new Item { itemType = Item.ItemType.Analiza });           // ANALIZA           index 3
+        itemList.Add(new Item { itemType = Item.ItemType.Algebra });           // ALGEBRA           index 4
+        itemList.Add(new Item { itemType = Item.ItemType.Statystyka });        // STATYSTYKA        index 5
+        itemList.Add(new Item { itemType = Item.ItemType.Grafy });             // GRAFY             index 6
+        itemList.Add(new Item { itemType = Item.ItemType.Matematyka });        // MATEMATYKA        index 7
+        itemList.Add(new Item { itemType = Item.ItemType.Fibonacci });         // FIBONACCI         index 8
+        itemList.Add(new Item { itemType = Item.ItemType.Plan2 });             // PLAN2             index 9
+        itemList.Add(new Item { itemType = Item.ItemType.LogikaNotatki });     // LOGIKA NOTATKI    index 10
+        itemList.Add(new Item { itemType = Item.ItemType.TautologieA });       // TAUTOLOGIE A      index 11
+        itemList.Add(new Item { itemType = Item.ItemType.TautologieB });       // TAUTOLOGIE B      index 12
+        itemList.Add(new Item { itemType = Item.ItemType.GolebiaSmietanka });  // GOLEBIA SMIETANKA index 13
+        itemList.Add(new Item { itemType = Item.ItemType.Podanie });           // PODANIE           index 14
+        itemList.Add(new Item { itemType = Item.ItemType.Haslo });             // HASLO             index 15
+        itemList.Add(new Item { itemType = Item.ItemType.Plan3 });             // PLAN 3            index 16
     }
 
 
     public void DisplayItem(GameObject itemDisplayObject)
     {
+        Debug.Log("itemDisplayViewAvaliable = ");
+        Debug.Log(this.player.itemDisplayViewAvaliable);
         if (this.player.itemDisplayViewAvaliable)
         {
             itemDisplayObject.SetActive(true);
@@ -174,9 +180,9 @@ public class InventoryUI : MonoBehaviourPun
         if (distanceToOriginX <= 3.0 && distanceToOriginY <= 3.0 && this.player.itemDisplayViewAvaliable)
         {
             GameObject sharedItemDisplay = Instantiate(sharedItemDisplayPrefab, GameObject.Find("Shared Item Display Canvas").transform.position, Quaternion.identity, GameObject.Find("Shared Item Display Canvas").transform);
+            sharedItemDisplay.GetComponent<SharedItemDisplay>().SetPlayer(this.player, this);
             sharedItemDisplay.gameObject.SetActive(true);
             sharedItemDisplay.transform.Find("Note").GetComponent<Image>().sprite = itemList[itemIndex].GetDisplay();
-            sharedItemDisplay.GetComponent<sharedItemDisplay>().SetPlayer(this.player);
             this.player.itemDisplayViewAvaliable = false;
         }
     }

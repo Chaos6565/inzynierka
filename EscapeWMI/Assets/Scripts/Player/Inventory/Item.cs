@@ -22,6 +22,10 @@ public class Item
         LogikaNotatki,
         TautologieA,
         TautologieB,
+        GolebiaSmietanka,
+        Podanie,
+        Haslo,
+        Plan3,
 }
 
     public ItemType itemType;
@@ -45,6 +49,10 @@ public class Item
             case ItemType.LogikaNotatki:    return ItemData.Instance.logikaNotatkiSprite;
             case ItemType.TautologieA:      return ItemData.Instance.tautologieASprite;
             case ItemType.TautologieB:      return ItemData.Instance.tautologieBSprite;
+            case ItemType.GolebiaSmietanka: return ItemData.Instance.golebiaSmietankaSprite;
+            case ItemType.Podanie:          return ItemData.Instance.podanieSprite;
+            case ItemType.Haslo:            return ItemData.Instance.hasloSprite;
+            case ItemType.Plan3:            return ItemData.Instance.plan3Sprite;
         }
     }
 
@@ -66,6 +74,10 @@ public class Item
             case ItemType.LogikaNotatki:    return ItemData.Instance.logikaNotatkiDisplay;
             case ItemType.TautologieA:      return ItemData.Instance.tautologieADisplay;
             case ItemType.TautologieB:      return ItemData.Instance.tautologieBDisplay;
+            case ItemType.GolebiaSmietanka: return ItemData.Instance.golebiaSmietankaDisplay;
+            case ItemType.Podanie:          return ItemData.Instance.podanieDisplay;
+            case ItemType.Haslo:            return ItemData.Instance.hasloDisplay;
+            case ItemType.Plan3:            return ItemData.Instance.plan3Display;
         }
     }
 

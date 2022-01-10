@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 1
   baseSpeed: 10
-  turbo: 16
+  sprint: 16
   itemDisplayViewAvaliable: 0
   inventoryUIPrefab: {fileID: 6052003115392982168, guid: bd7cdd9e3c87ccb46ad7f3cf828a5229, type: 3}
   canMove: 1

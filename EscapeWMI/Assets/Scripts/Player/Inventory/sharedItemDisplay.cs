@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
+using Photon.Pun;
+using System;
 
 public class SharedItemDisplay : MonoBehaviour
 {

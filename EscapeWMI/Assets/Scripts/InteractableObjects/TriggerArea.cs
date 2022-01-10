@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 
-public class TriggerArea : MonoBehaviourPun, IPunObservable
+public class TriggerArea : MonoBehaviourPun
 {
     [SerializeField] public List<GameObject> doors = null;
     [SerializeField] public List<Collider2D> playerColliders = null;
@@ -18,40 +18,46 @@ public class TriggerArea : MonoBehaviourPun, IPunObservable
     private void Update()
     {
         //Debug.Log($"Players In The Room: {playersInsideRoomNumber}");
-        if (playersInsideRoomNumber >= PhotonNetwork.CurrentRoom.PlayerCount)
-        {
-            everyoneInside = true;
-        }
-        else
-        {
-            everyoneInside = false;
-        }
 
-        if (everyoneInside)
+        if (PhotonNetwork.IsMasterClient)
         {
-            //gameObject.GetComponent<BoxCollider2D>().enabled = false;
-
-            if (closeTheDoorWhenEveryoneInside && doorsOpen && doors != null)
+            if (playersInsideRoomNumber >= PhotonNetwork.CurrentRoom.PlayerCount)
             {
-                StartCoroutine(CloseTheDoorCoroutine());
-                //closeTheDoorWhenEveryoneInside = false;
-                doorsOpen = false;
+                if (!everyoneInside)
+                {
+                    everyoneInside = true;
+                    UpdatePlayerInsideFlag(everyoneInside);
+
+                    //gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+                    if (closeTheDoorWhenEveryoneInside && doorsOpen && doors != null)
+                    {
+                        StartCoroutine(CloseTheDoorCoroutine());
+                        doorsOpen = false;
+                    }
+
+                    if (destroyAfterUse)
+                        PhotonNetwork.Destroy(gameObject);
+                }
             }
-
-            if (destroyAfterUse)
-                Destroy(gameObject);
-        }
-        else
-        {
-            //gameObject.GetComponent<BoxCollider2D>().enabled = true;
-
-            if (!doorsOpen && doors != null)
+            else
             {
-                StartCoroutine(OpenTheDoorCoroutine());
-                doorsOpen = true;
+                if (everyoneInside)
+                {
+                    everyoneInside = false;
+                    UpdatePlayerInsideFlag(everyoneInside);
+
+                    //gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
+                    if (!doorsOpen && doors != null)
+                    {
+                        StartCoroutine(OpenTheDoorCoroutine());
+                        doorsOpen = true;
+                    }
+
+                }
             }
         }
-        
     }
 
     IEnumerator CloseTheDoorCoroutine()
@@ -81,32 +87,27 @@ public class TriggerArea : MonoBehaviourPun, IPunObservable
             }
         }
     }
-
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+ 
+    private void UpdatePlayerInsideFlag(bool flag)
     {
-        //if (!everyoneInside)
-        //{
-            if (stream.IsWriting)
-            {
-                // We own this player: send the others our data
-                stream.SendNext(playersInsideRoomNumber);
-            }
-            else
-            {
-                // Network player, receive data
-                this.playersInsideRoomNumber = (int)stream.ReceiveNext();
-
-                Debug.Log($"Players In The Room: {playersInsideRoomNumber}");
-            }
-        //}
+        if (PhotonNetwork.IsMasterClient)
+            photonView.RPC("RPCUpdatePlayerInsideFlag", RpcTarget.Others, flag);
     }
+
+    [PunRPC]
+    private void RPCUpdatePlayerInsideFlag(bool flag)
+    {
+        everyoneInside = flag;
+    }
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player Has Entered The Room");
-            playersInsideRoomNumber++;
+            if (PhotonNetwork.IsMasterClient)
+                playersInsideRoomNumber++;
             playerColliders.Add(other);
 
             //Debug.LogError("Photon View ID of a player inside room: " + other.GetComponent<PhotonView>().ViewID);
@@ -118,7 +119,8 @@ public class TriggerArea : MonoBehaviourPun, IPunObservable
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player Has Left The Room");
-            playersInsideRoomNumber--;
+            if (PhotonNetwork.IsMasterClient)
+                playersInsideRoomNumber--;
             playerColliders.Remove(other);
         }
     }

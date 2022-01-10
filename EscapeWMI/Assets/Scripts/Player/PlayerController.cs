@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviourPun
     [SerializeField] float baseSpeed = 10;
     Vector2 movementVelocity;
 
-    // TURBOOO For debbugggging
-    [SerializeField] float turbo = 16;
+    // Sprint
+    [SerializeField] float sprint = 16;
     float runSpeed = 0;
 
     // List of all interactable objects in player's vicinity
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviourPun
         spriteRen = GetComponent<SpriteRenderer>();
         interactableObjects = new List<InteractableObject>();
 
-        runSpeed = baseSpeed; // do turbo, mozna usunac potem
+        runSpeed = baseSpeed; // sprint
 
         inventory = new Inventory(UseInventoryItem);
         InitializeInventory();
@@ -89,12 +89,6 @@ public class PlayerController : MonoBehaviourPun
         if (photonView.IsMine)
         {
 
-            // tp do obajtka
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                Debug.Log("Yo obajtek whats up");
-                //this.transform.position = new Vector3(0, -1, 0);
-            }
             // Action Key Managment
             if (!(interactableObjects.Count == 0))
             {
@@ -108,19 +102,19 @@ public class PlayerController : MonoBehaviourPun
                     }
                 }
             }
-            //turrbbo
+            //sprint
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if(runSpeed < baseSpeed + turbo)
+                if(runSpeed < baseSpeed + sprint)
                 {
-                    runSpeed = baseSpeed + turbo;
+                    runSpeed = baseSpeed + sprint;
                 } 
             }
             else if (Input.GetKeyUp(KeyCode.Space))
             {
                 runSpeed = baseSpeed;
             }
-            // koniec turrrbobo
+
             // Movement Keys Managment
             movementVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         }

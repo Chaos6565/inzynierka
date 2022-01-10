@@ -24,8 +24,6 @@ public class GameStateManager : MonoBehaviourPun
     public bool taskActive;
     public bool menuActive;
 
-
-
     private void Start()
     {
         instance = this;
@@ -48,13 +46,20 @@ public class GameStateManager : MonoBehaviourPun
     //Do zatrzymywania gracza
     private void Update()
     {
-        if (PhotonNetwork.LocalPlayer.IsLocal)
+        try
         {
-            if (PEActive || lectureActive || dialogActive || choiceDialog || programmingActive || taskActive || menuActive)
-                PlayerController.localPlayer.canMove = false;
-            else
-                PlayerController.localPlayer.canMove = true;
+            if (PhotonNetwork.LocalPlayer.IsLocal)
+            {
+                if (PEActive || lectureActive || dialogActive || choiceDialog || programmingActive || taskActive || menuActive)
+                    PlayerController.localPlayer.canMove = false;
+                else
+                    PlayerController.localPlayer.canMove = true;
+            }
         }
+        catch
+        {
+        }
+        
     }
 
     public void ActivateNextModule()

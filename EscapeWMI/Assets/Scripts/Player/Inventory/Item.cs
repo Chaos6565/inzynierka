@@ -26,7 +26,7 @@ public class Item
         Podanie,
         Haslo,
         Plan3,
-}
+    }
 
     public ItemType itemType;
 

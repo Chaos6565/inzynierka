@@ -41,18 +41,18 @@ public class LectureTrigger : InteractableObject
         if (TriggerArea != null)
         {
             triggerArea = TriggerArea.GetComponent<TriggerArea>();
-            Debug.Log("Num of players inside room: " + triggerArea.playersInsideRoomNumber);
+
         }
         if (!waitForEveryone)
         {
-            DisplayLecture();
+            TriggerLecture();
         }
         else
         {
             if (triggerArea.IsEveryoneInside)
             {
                 Debug.Log("Everyone inside, starting lecture!");
-                DisplayLecture();
+                TriggerLecture();
             }
             else
             {
@@ -61,33 +61,26 @@ public class LectureTrigger : InteractableObject
         }
     }
 
-    private void DisplayLecture()
+    private void TriggerLecture()
     {
         if (displayToEveryoneInsideRoom)
         {
-            //photonView.RPC("RPCTriggerLecture", RpcTarget.All);
-
             if (TriggerArea != null)
             {
                 playerColliders = triggerArea.playerColliders;
-                Debug.Log("TARGET AREA IS NOT NULL");
-            }
-                
-            if (TriggerArea != null && playerColliders != null)
-            {
-                Debug.Log("playerColliders len is: " + playerColliders.Count);
-                foreach (Collider2D player in playerColliders)
+
+                if (playerColliders != null)
                 {
-                    Debug.Log("Sent RPC at: " + player.GetComponent<PhotonView>().ViewID);
-
-
-                    Photon.Realtime.Player targetedPlayer = player.GetComponent<PhotonView>().Owner;
-                    photonView.RPC("RPCTriggerLecture", targetedPlayer);
+                    foreach (Collider2D player in playerColliders)
+                    {
+                        Photon.Realtime.Player targetedPlayer = player.GetComponent<PhotonView>().Owner;
+                        photonView.RPC("RPCTriggerLecture", targetedPlayer);
+                    }
                 }
-            }
-            else
-            {
-                Debug.LogError("Couldn't obtain list of players in specified area.");
+                else
+                {
+                    Debug.LogError("Couldn't obtain list of players in specified area.");
+                }
             }
         }
         else

@@ -17,7 +17,7 @@ public class GlobalTime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (deductingTime == false && PETask.active == true && succedPanel.active == false && failedPanel.active == false)
+        if (deductingTime == false && PETask.activeSelf == true && succedPanel.activeSelf == false && failedPanel.activeSelf == false)
         {
             deductingTime = true;
             StartCoroutine(DeductSecond());

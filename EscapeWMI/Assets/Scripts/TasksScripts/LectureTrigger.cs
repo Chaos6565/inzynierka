@@ -41,7 +41,6 @@ public class LectureTrigger : InteractableObject
         if (TriggerArea != null)
         {
             triggerArea = TriggerArea.GetComponent<TriggerArea>();
-
         }
         if (!waitForEveryone)
         {
@@ -49,14 +48,21 @@ public class LectureTrigger : InteractableObject
         }
         else
         {
-            if (triggerArea.IsEveryoneInside)
+            if (TriggerArea == null)
             {
-                Debug.Log("Everyone inside, starting lecture!");
-                TriggerLecture();
+                if (triggerArea.IsEveryoneInside && TriggerArea != null)
+                {
+                    Debug.Log("Everyone inside, starting lecture!");
+                    TriggerLecture();
+                }
+                else
+                {
+                    // Wyswietl komunikat o koniecznosci oczekiwania na reszte graczy
+                }
             }
             else
             {
-                // Wyswietl komunikat o koniecznosci oczekiwania na reszte graczy
+                Debug.LogError("Trigger area not found.");
             }
         }
     }

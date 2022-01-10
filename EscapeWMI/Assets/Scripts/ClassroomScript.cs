@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClassroomScript : MonoBehaviour
+public class ClassroomScript : MonoBehaviourPun
 {
     public GameObject classroomCanvas;
     public Text classNumber;
@@ -12,7 +13,7 @@ public class ClassroomScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && collision.GetComponent<PhotonView>().IsMine)
         {
             classroomCanvas.SetActive(true);
 
@@ -22,6 +23,7 @@ public class ClassroomScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        classroomCanvas.SetActive(false);
+        if (collision.GetComponent<PhotonView>().IsMine)
+            classroomCanvas.SetActive(false);
     }
 }

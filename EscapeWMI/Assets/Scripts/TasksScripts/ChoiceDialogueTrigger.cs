@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class ChoiceDialogueTrigger : InteractableObject
@@ -8,6 +9,14 @@ public class ChoiceDialogueTrigger : InteractableObject
     public bool EndModule;
     public int ToDisable;
     public ChoiceDialogueManager Manager;
+
+
+    [SerializeField] GameObject TriggerArea = null;
+    private TriggerArea triggerArea = null;
+    [SerializeField] List<Collider2D> playerColliders = null;
+    [SerializeField] bool displayToEveryoneInsideRoom = false;
+    [SerializeField] bool waitForEveryone = false;
+
 
     private bool isCompleted = false;
 
@@ -25,11 +34,65 @@ public class ChoiceDialogueTrigger : InteractableObject
 
     public override void PerformAction()
     {
-        TriggerDialogue();
-        
+        if (TriggerArea != null)
+        {
+            triggerArea = TriggerArea.GetComponent<TriggerArea>();
+        }
+        if (!waitForEveryone)
+        {
+            TriggerTask();
+        }
+        else
+        {
+            if (TriggerArea == null)
+            {
+                if (triggerArea.IsEveryoneInside && TriggerArea != null)
+                {
+                    Debug.Log("Everyone inside, starting lecture!");
+                    TriggerTask();
+                }
+                else
+                {
+                    // Wyswietl komunikat o koniecznosci oczekiwania na reszte graczy
+                }
+            }
+            else
+            {
+                Debug.LogError("Trigger area not found.");
+            }
+        }
     }
 
-    public void TriggerDialogue()
+    private void TriggerTask()
+    {
+        if (displayToEveryoneInsideRoom)
+        {
+            if (TriggerArea != null)
+            {
+                playerColliders = triggerArea.playerColliders;
+
+                if (playerColliders != null)
+                {
+                    foreach (Collider2D player in playerColliders)
+                    {
+                        Photon.Realtime.Player targetedPlayer = player.GetComponent<PhotonView>().Owner;
+                        photonView.RPC("RPCTriggerDialogue", targetedPlayer);
+                    }
+                }
+                else
+                {
+                    Debug.LogError("Couldn't obtain list of players in specified area.");
+                }
+            }
+        }
+        else
+        {
+            RPCTriggerDialogue();
+        }
+    }
+
+    [PunRPC]
+    public void RPCTriggerDialogue()
     {
         switch (ToDisable)
         {

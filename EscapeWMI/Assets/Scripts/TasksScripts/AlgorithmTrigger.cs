@@ -9,6 +9,7 @@ public class AlgorithmTrigger : InteractableObject
 
     public bool EndModule;
     public AlgorithmManager Manager;
+
     private bool isCompleted = false;
 
     void Start()

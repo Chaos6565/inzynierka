@@ -20,8 +20,6 @@ public class LectureTrigger : InteractableObject
     [SerializeField] bool displayToEveryoneInsideRoom = false;
     [SerializeField] bool waitForEveryone = false;
 
-
-
     private bool isCompleted = false;
 
     private void Update()
@@ -44,7 +42,7 @@ public class LectureTrigger : InteractableObject
         }
         if (!waitForEveryone)
         {
-            TriggerLecture();
+            TriggerTask();
         }
         else
         {
@@ -53,7 +51,7 @@ public class LectureTrigger : InteractableObject
                 if (triggerArea.IsEveryoneInside && TriggerArea != null)
                 {
                     Debug.Log("Everyone inside, starting lecture!");
-                    TriggerLecture();
+                    TriggerTask();
                 }
                 else
                 {
@@ -67,7 +65,7 @@ public class LectureTrigger : InteractableObject
         }
     }
 
-    private void TriggerLecture()
+    private void TriggerTask()
     {
         if (displayToEveryoneInsideRoom)
         {

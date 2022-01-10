@@ -13,6 +13,7 @@ public class GameStateManager : MonoBehaviourPun
     // List of all game modules, they need to be in the same order as they will be activated in the game.
     [SerializeField] private List<GameModule> gameModules = null;
 
+    [SerializeField] public List<int> idOfGameStatesToSkip = null;
 
     //Zmienne do sterowania ruchem postaci
     public static GameStateManager instance;
@@ -59,7 +60,11 @@ public class GameStateManager : MonoBehaviourPun
         catch
         {
         }
-        
+    }
+
+    public void AddToSkipList(int gameStateId)
+    {
+        idOfGameStatesToSkip.Add(gameStateId);
     }
 
     public void ActivateNextModule()
@@ -75,7 +80,10 @@ public class GameStateManager : MonoBehaviourPun
         {
             _gameState++;
             Debug.Log("Game State: " + (_gameState).ToString());
-            gameModules[_gameState].EnableModule();
+            if (idOfGameStatesToSkip != null && idOfGameStatesToSkip.Contains(_gameState) && _gameState + 1 < gameModules.Count)
+                gameModules[_gameState + 1].EnableModule();
+            else
+                gameModules[_gameState].EnableModule();
         }
         else
             Debug.Log("All game modules completed.");

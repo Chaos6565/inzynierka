@@ -44,9 +44,9 @@ public class DialogueTrigger : InteractableObject
         }
         else
         {
-            if (TriggerArea == null)
+            if (TriggerArea != null)
             {
-                if (triggerArea.IsEveryoneInside && TriggerArea != null)
+                if (triggerArea.IsEveryoneInside)
                 {
                     Debug.Log("Everyone inside, starting lecture!");
                     TriggerTask();

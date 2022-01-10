@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
   AppSettings:
-    AppIdRealtime: 
+    AppIdRealtime: 4a7e590c-7715-4eb8-a7b7-76d3bc8ad452
     AppIdChat: 
     AppIdVoice: 
     AppVersion: 
@@ -32,7 +32,28 @@ MonoBehaviour:
   EnableSupportLogger: 0
   RunInBackground: 1
   StartInOfflineMode: 0
-  RpcList: []
-  DisableAutoOpenWizard: 0
+  RpcList:
+  - ActivateNextModuleRPC
+  - ClickRpc
+  - CloseTheDoorRPC
+  - DestroyRpc
+  - DestroySpaceship
+  - DisableInteractionForAllRPC
+  - DisableModuleRPC
+  - EnableInteractionForAllRPC
+  - EnableModuleRPC
+  - Fire
+  - ModuleCompletedRPC
+  - OpenTheDoorRPC
+  - RespawnSpaceship
+  - RPC_ChangeReadyState
+  - RPCDestroyOnMaster
+  - RPCSetManualOperation
+  - RpcShareNote
+  - RPCTriggerDialogue
+  - RPCTriggerLecture
+  - RPCUpdatePlayerInsideFlag
+  - SpawnPlayers
+  DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 0

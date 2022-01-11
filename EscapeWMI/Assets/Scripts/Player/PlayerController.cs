@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviourPun
 
         runSpeed = baseSpeed; // sprint
 
-        inventory = new Inventory(UseInventoryItem);
+        inventory = new Inventory();
         InitializeInventory();
 
 
@@ -195,24 +195,6 @@ public class PlayerController : MonoBehaviourPun
                 interactableObjects.Remove(interactableObject);
             }
         }
-    }
-
-    private void UseInventoryItem(Item item)
-    {
-        //switch (item.itemType)
-        //{
-        //    case Item.ItemType.Ulotka:
-        //        //GameObject itemDisplayGameObject = Instantiate(itemDisplayPrefab, GameObject.Find("ItemDisplayCanvas").transform.position, Quaternion.identity, GameObject.Find("ItemDisplayCanvas").transform);
-        //        //itemDisplayGameObject.SetActive(true);
-        //        break;
-        //    case Item.ItemType.Item2:
-
-        //        break;
-        //    case Item.ItemType.Item3:
-
-        //        break;
-
-        //}
     }
 
 }

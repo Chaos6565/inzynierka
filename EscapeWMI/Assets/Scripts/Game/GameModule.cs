@@ -84,7 +84,8 @@ public class GameModule : MonoBehaviourPun
     [PunRPC]
     public void DisableModuleRPC()
     {
-        itemWorldSpawner.DestroyAllItemsWorld();
+        if (PhotonNetwork.IsMasterClient)
+            itemWorldSpawner.DestroyAllItemsWorld();
         foreach (Transform child in this.transform)
         {
             child.gameObject.SetActive(false);

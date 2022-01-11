@@ -9,7 +9,11 @@ public class Inventory
     public event EventHandler OnItemListChanged;
 
     private List<Item> itemList;
-    private Action<Item> useItemAction;
+
+    public Inventory()
+    {
+        itemList = new List<Item>();
+    }
 
     public List<Item> GetItemList()
     {
@@ -27,18 +31,6 @@ public class Inventory
         itemList.Remove(item);
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
-    public Inventory(Action<Item> useItemAction)
-    {
-        itemList = new List<Item>();
-
-        this.useItemAction = useItemAction;
-    }
-
-    public void UseItem(Item item)
-    {
-        useItemAction(item);
-    }
-
-
+    
 
 }

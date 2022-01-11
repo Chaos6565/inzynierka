@@ -46,8 +46,7 @@ public class ItemWorldSpawner : MonoBehaviourPun
         ItemWorld itemWorld = itemWorldGM.transform.GetComponent<ItemWorld>();
         itemWorld.SetItem(itemsList[itemIndex]);
         itemsWorldList.Add(itemWorld);
-        Debug.Log("Itemki zespawnowane");
-        //photonView.RPC("SpawnItemWorldRPC", RpcTarget.All, itemIndex);
+        Debug.Log("Item spawned, item index: " + itemIndex);
     }
 
     public void DestroyAllItemsWorld()
@@ -57,16 +56,6 @@ public class ItemWorldSpawner : MonoBehaviourPun
             if (itemWorld != null) { itemWorld.DestroySelf(); }
         }
         itemsWorldList.Clear();
-        Debug.Log("Itemki zniszczono");
+        Debug.Log("Items destroyed");
     }
-
-    //[PunRPC]
-    //public void SpawnItemWorldRPC(int itemIndex)
-    //{
-
-    //    GameObject itemWorldGM = Instantiate(itemWorldPrefab, itemSpawnPoints[itemIndex].transform.position, Quaternion.identity);
-    //    itemWorldGM.GetComponent<PhotonView>().ViewID = 700 + itemIndex;
-    //    ItemWorld itemWorld = itemWorldGM.transform.GetComponent<ItemWorld>();
-    //    itemWorld.SetItem(itemsList[itemIndex]);
-    //}
 }

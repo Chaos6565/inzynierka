@@ -22,6 +22,10 @@ public class Inventory
 
     public void AddItemToList(Item item)
     {
+            foreach (Item listItem in itemList)
+        {
+            if (listItem.itemType == item.itemType) return;
+        }
             itemList.Add(item);
             OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }

@@ -47,6 +47,7 @@ MonoBehaviour:
   - OpenTheDoorRPC
   - RespawnSpaceship
   - RPC_ChangeReadyState
+  - RPCAddToSkipList
   - RPCDestroyOnMaster
   - RPCSetManualOperation
   - RpcShareNote
@@ -54,7 +55,6 @@ MonoBehaviour:
   - RPCTriggerLecture
   - RPCUpdatePlayerInsideFlag
   - SpawnPlayers
-  - RPCAddToSkipList
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

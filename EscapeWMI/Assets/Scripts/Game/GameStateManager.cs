@@ -64,6 +64,12 @@ public class GameStateManager : MonoBehaviourPun
 
     public void AddToSkipList(int gameStateId)
     {
+        photonView.RPC("RPCAddToSkipList", RpcTarget.All, gameStateId);
+    }
+
+    [PunRPC]
+    public void RPCAddToSkipList(int gameStateId)
+    {
         idOfGameStatesToSkip.Add(gameStateId);
     }
 
@@ -80,8 +86,11 @@ public class GameStateManager : MonoBehaviourPun
         {
             _gameState++;
             Debug.Log("Game State: " + (_gameState).ToString());
-            if (idOfGameStatesToSkip != null && idOfGameStatesToSkip.Contains(_gameState) && _gameState + 1 < gameModules.Count)
-                gameModules[_gameState + 1].EnableModule();
+            if (idOfGameStatesToSkip != null && idOfGameStatesToSkip.Contains(_gameState))
+                if (_gameState + 1 < gameModules.Count)
+                    gameModules[_gameState + 1].EnableModule();
+                else
+                    Debug.Log("All game modules completed.");
             else
                 gameModules[_gameState].EnableModule();
         }

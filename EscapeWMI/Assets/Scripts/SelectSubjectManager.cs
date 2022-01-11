@@ -21,6 +21,9 @@ public class SelectSubjectManager : MonoBehaviour
     private bool _complete = false;
     public bool Complete { get { return _complete; } }
 
+    private int _choice = -1;
+    public int Choice { get { return _choice; } }
+
     public void OpenTask(int year)
     {
         if(year == 2)
@@ -42,17 +45,18 @@ public class SelectSubjectManager : MonoBehaviour
             warningSecondYear.text = "Trzeba wybraæ przedmiot";
         else if (firstSecondYear.isOn && !secondSecondYear.isOn)
         {
-            GetComponentInParent<GameStateManager>().AddToSkipList(9);
             chooseCanvasSecondYear.SetActive(false);
-
+            _choice = 9;
             _complete = true;
+            GameStateManager.instance.taskActive = false;
         }
         else if (secondSecondYear.isOn && !firstSecondYear.isOn)
         {
-            gameObject.GetComponentInParent<GameStateManager>().AddToSkipList(8);
             chooseCanvasSecondYear.SetActive(false);
 
+            _choice = 8;
             _complete = true;
+            GameStateManager.instance.taskActive = false;
         }
     }
 
@@ -64,17 +68,19 @@ public class SelectSubjectManager : MonoBehaviour
             warningThirdYear.text = "Trzeba wybraæ przedmiot";
         else if (firstThirdYear.isOn && !secondThirdYear.isOn)
         {
-            GetComponentInParent<GameStateManager>().AddToSkipList(17);
             chooseCanvasThirdYear.SetActive(false);
 
+            _choice = 17;
             _complete = true;
+            GameStateManager.instance.taskActive = false;
         }
         else if (secondThirdYear.isOn && !firstThirdYear.isOn)
         {
-            GetComponentInParent<GameStateManager>().AddToSkipList(16);
             chooseCanvasThirdYear.SetActive(false);
 
+            _choice = 16;
             _complete = true;
+            GameStateManager.instance.taskActive = false;
         }
     }
 }

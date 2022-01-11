@@ -140,8 +140,8 @@ public class InventoryUI : MonoBehaviourPun
 
     public void HideItem(GameObject itemDisplayObject)
     {
-        itemDisplayObject.SetActive(false);
         this.player.itemDisplayViewAvaliable = true;
+        itemDisplayObject.SetActive(false);
     }
 
 
@@ -153,10 +153,9 @@ public class InventoryUI : MonoBehaviourPun
             if (item.GetDisplay() == note.sprite)
             {
                 inventory.RemoveItemFromList(item);
+                this.player.itemDisplayViewAvaliable = true;
                 break;
             }
-
-
         }
         
     }

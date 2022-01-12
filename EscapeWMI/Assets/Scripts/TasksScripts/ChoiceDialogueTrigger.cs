@@ -9,6 +9,7 @@ public class ChoiceDialogueTrigger : InteractableObject
     public bool EndModule;
     public int ToDisable;
     public ChoiceDialogueManager Manager;
+    public GameObject notification;
 
 
     [SerializeField] GameObject TriggerArea = null;
@@ -53,6 +54,7 @@ public class ChoiceDialogueTrigger : InteractableObject
                 }
                 else
                 {
+                    notification.SetActive(true);
                     // Wyswietl komunikat o koniecznosci oczekiwania na reszte graczy
                 }
             }

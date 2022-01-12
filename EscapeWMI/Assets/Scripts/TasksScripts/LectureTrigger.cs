@@ -13,6 +13,7 @@ public class LectureTrigger : InteractableObject
     public bool EndModule;
     [TextArea(3, 30)]
     public List<string> slides;
+    public GameObject notification;
 
     [SerializeField] GameObject TriggerArea = null;
     private TriggerArea triggerArea = null;
@@ -55,6 +56,7 @@ public class LectureTrigger : InteractableObject
                 }
                 else
                 {
+                    notification.SetActive(true);
                     // Wyswietl komunikat o koniecznosci oczekiwania na reszte graczy
                 }
             }

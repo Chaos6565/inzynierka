@@ -49,7 +49,7 @@ public class MenuScriot : MonoBehaviour
         }
         else if (buttonName == "Quit Button")
         {
-            mainPanel.SetActive(false);
+            mainPanel.SetActive(true);
             settingsPanel.SetActive(false);
             quitPanel.SetActive(true);
         }

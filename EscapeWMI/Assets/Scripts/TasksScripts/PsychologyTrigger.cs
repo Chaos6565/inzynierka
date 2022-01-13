@@ -26,6 +26,7 @@ public class PsychologyTrigger : InteractableObject
             {
                 isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
+                Manager.SetCompleted(false);
                 Destroy(this);
             }
         }

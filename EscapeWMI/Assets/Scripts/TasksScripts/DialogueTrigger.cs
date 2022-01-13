@@ -29,6 +29,7 @@ public class DialogueTrigger : InteractableObject
             {
                 isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
+                Manager.SetCompleted(false);
             }
         }
     }

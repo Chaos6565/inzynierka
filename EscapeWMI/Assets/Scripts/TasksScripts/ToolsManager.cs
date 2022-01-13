@@ -29,6 +29,11 @@ public class ToolsManager : MonoBehaviour
         GameStateManager.instance.taskActive = true;
     }
 
+    public void SetCompleted(bool state)
+    {
+        _complete = state;
+    }
+
     public void SubmitClick()
     {
 

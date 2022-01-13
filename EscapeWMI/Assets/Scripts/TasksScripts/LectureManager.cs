@@ -8,13 +8,20 @@ public class LectureManager : MonoBehaviour
     public Text profName;
     public Text subject;
     public Text slide;
-    public bool Complete;
 
     List<string> slides;
 
     public GameObject lectureCanvas;
 
     int counter = 0;
+
+    private bool _complete = false;
+    public bool Complete { get { return _complete; } }
+
+    public void SetCompleted(bool state)
+    {
+        _complete = state;
+    }
 
     public void StartLecture(List<string> slides_, string name, string subject_)
     {
@@ -23,7 +30,7 @@ public class LectureManager : MonoBehaviour
         slide.text = slides_[counter];
         profName.text = name;
         subject.text = subject_;
-        Complete = false;
+        _complete = false;
 
         GameStateManager.instance.lectureActive = true;
     }
@@ -43,7 +50,7 @@ public class LectureManager : MonoBehaviour
     {
         counter = 0;
         lectureCanvas.SetActive(false);
-        Complete = true;
+        _complete = true;
         GameStateManager.instance.lectureActive = false;
     }
 }

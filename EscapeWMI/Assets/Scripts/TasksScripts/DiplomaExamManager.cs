@@ -39,11 +39,18 @@ public class DiplomaExamManager : MonoBehaviour
     int first;
     int second;
 
+
+    List<string[]> questionsList = new List<string[]>();
+
+
     private bool _complete = false;
     public bool Complete { get { return _complete; } }
 
+    public void SetCompleted(bool state)
+    {
+        _complete = state;
+    }
 
-    List<string[]> questionsList = new List<string[]>();
 
 
 

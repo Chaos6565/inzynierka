@@ -19,6 +19,11 @@ public class MarketingManager : MonoBehaviour
     private bool _complete = false;
     public bool Complete { get { return _complete; } }
 
+    public void SetCompleted(bool state)
+    {
+        _complete = state;
+    }
+
     public void OpenTask()
     {
         taskCanvas.SetActive(true);
@@ -26,6 +31,7 @@ public class MarketingManager : MonoBehaviour
         _complete = false;
         GameStateManager.instance.taskActive = true;
     }
+
 
     public void SubmitClick()
     {

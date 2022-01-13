@@ -9,7 +9,6 @@ public class ChoiceDialogueManager : MonoBehaviour
     public Text dialogueText;
     public Text Choice1;
     public Text Choice2;
-    public bool Complete;
 
 
     private Queue<string> sentences;
@@ -19,6 +18,14 @@ public class ChoiceDialogueManager : MonoBehaviour
     public GameObject ButtonChoice1;
     public GameObject ButtonChoice2;
     public GameObject EndButton;
+
+    private bool _complete = false;
+    public bool Complete { get { return _complete; } }
+
+    public void SetCompleted(bool state)
+    {
+        _complete = state;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +42,7 @@ public class ChoiceDialogueManager : MonoBehaviour
         GameStateManager.instance.choiceDialog = true;
 
         dialogCanvas.SetActive(true);
-        Complete = false;
+        _complete = false;
 
         nameText.text = dialogue.name;
         Choice2.text = dialogue.Buttonchoice2;
@@ -101,7 +108,7 @@ public class ChoiceDialogueManager : MonoBehaviour
     {
         dialogCanvas.SetActive(false);
         EndButton.SetActive(false);
-        Complete = true;
+        _complete = true;
         GameStateManager.instance.choiceDialog = false;
     }
 

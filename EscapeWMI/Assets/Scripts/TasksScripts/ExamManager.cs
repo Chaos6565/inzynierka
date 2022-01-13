@@ -37,6 +37,11 @@ public class ExamManager : MonoBehaviour
         GameStateManager.instance.taskActive = true;
     }
 
+    public void SetCompleted(bool state)
+    {
+        _complete = state;
+    }
+
     public void SubmitClick()
     {
         if (!answer1a.isOn && !answer1b.isOn && answer1c.isOn) points++;

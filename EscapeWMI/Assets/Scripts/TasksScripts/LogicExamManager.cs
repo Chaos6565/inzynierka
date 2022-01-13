@@ -27,6 +27,11 @@ public class LogicExamManager : MonoBehaviour
         GameStateManager.instance.taskActive = true;
     }
 
+    public void SetCompleted(bool state)
+    {
+        _complete = state;
+    }
+
     public void SubmitClick()
     {
         if (answer1.isOn && !answer2.isOn && !answer3.isOn && !answer4.isOn)

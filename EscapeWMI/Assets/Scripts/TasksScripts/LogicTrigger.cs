@@ -25,6 +25,7 @@ public class LogicTrigger : MonoBehaviour
             {
                 isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
+                Manager.SetCompleted(false);
                 Destroy(this);
             }
         }

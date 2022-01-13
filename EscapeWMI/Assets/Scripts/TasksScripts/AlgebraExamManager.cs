@@ -33,6 +33,11 @@ public class AlgebraExamManager : MonoBehaviour
         GameStateManager.instance.taskActive = true;
     }
 
+    public void SetCompleted(bool state)
+    {
+        _complete = state;
+    }
+
     public void SubmitClick()
     {
         if (answer1_1.isOn && !answer1_2.isOn && !answer1_3.isOn) points++;

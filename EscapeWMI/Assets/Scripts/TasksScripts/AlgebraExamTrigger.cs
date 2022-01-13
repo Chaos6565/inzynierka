@@ -25,6 +25,7 @@ public class AlgebraExamTrigger : InteractableObject
             {
                 isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
+                Manager.SetCompleted(false);
                 Destroy(this);
             }
         }

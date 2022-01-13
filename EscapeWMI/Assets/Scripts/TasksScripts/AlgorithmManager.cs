@@ -19,6 +19,11 @@ public class AlgorithmManager : MonoBehaviour
     private bool _complete = false;
     public bool Complete { get { return _complete; } }
 
+    public void SetCompleted(bool state)
+    {
+        _complete = state;
+    }
+
     public void OpenTask()
     {
         taskCanvas.SetActive(true);

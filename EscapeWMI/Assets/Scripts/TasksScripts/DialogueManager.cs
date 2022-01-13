@@ -12,13 +12,21 @@ public class DialogueManager : MonoBehaviour
     public GameObject NextButton;
     public GameObject EndBut;
     public GameObject EndButNPC;
-    public bool Complete;
     public Animator animator;
     bool IsNPC;
 
     private Queue<string> sentences;
 
     public GameObject dialogCanvas;
+
+    private bool _complete = false;
+    public bool Complete { get { return _complete; } }
+
+    public void SetCompleted(bool state)
+    {
+        _complete = state;
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +41,7 @@ public class DialogueManager : MonoBehaviour
         NextButton.SetActive(true);
         EndBut.SetActive(false);
         EndButNPC.SetActive(false);
-        Complete = false;
+        _complete = false;
         animator.SetBool("IsOpen", true);
 
         EndButtonText.text = dialogue.EndButtonText;
@@ -49,8 +57,6 @@ public class DialogueManager : MonoBehaviour
 
         GameStateManager.instance.dialogActive = true;
     }
-
-
 
     public void DisplayNextSentence()
     {
@@ -85,7 +91,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogCanvas.SetActive(false);
         animator.SetBool("IsOpen", false);
-        Complete = true;
+        _complete = true;
         GameStateManager.instance.dialogActive = false;
     }
   

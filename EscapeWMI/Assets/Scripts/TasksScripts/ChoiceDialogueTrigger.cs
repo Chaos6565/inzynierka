@@ -29,6 +29,7 @@ public class ChoiceDialogueTrigger : InteractableObject
             {
                 isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
+                Manager.SetCompleted(false);
             }
         }
     }

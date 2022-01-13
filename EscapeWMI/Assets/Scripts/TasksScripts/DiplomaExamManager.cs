@@ -68,7 +68,7 @@ public class DiplomaExamManager : MonoBehaviour
         questionsList.Add(new string[] { "Który przedmiot nie pojawi³ sie na studiach", "Analiza", "Algebra", "Geometria", "c" });
         questionsList.Add(new string[] { "Ilu ró¿nych prowadz¹cych spotka³eœ w czasie studiów", "9", "10", "11", "c" });
         questionsList.Add(new string[] { "Ile Auli posiada budynek Wydzia³u Matematyki i Informatyki UAM? ", "2", "3", "4", "b" });
-        questionsList.Add(new string[] { "Na którym poziomie znajduje siê sekretariat / dziekanat Wydzia³u Matematyki i Informatyki UAM ? ", "Zero", "Jeden", "Dwa", "b" });
+        questionsList.Add(new string[] { "Na którym poziomie znajduje siê dziekanat Wydzia³u Matematyki i Informatyki UAM ? ", "Zero", "Jeden", "Dwa", "b" });
         questionsList.Add(new string[] { "Na ilu ró¿nych poziomach znajduj¹ siê sale informatyczne na Wydziale Matematyki i Informatyki UAM? ", "1", "2", "3", "c" });
         questionsList.Add(new string[] { "Na jakim poziomie rozpoczê³a siê gra?  ", "Zero", "Jeden", "Dwa", "c" });
         questionsList.Add(new string[] { "Ile poziomów ma czêœæ B Wydzia³u Matematyki i Informatyki UAM? a", "Trzy", "Cztery", "Piêæ", "c" });
@@ -77,7 +77,7 @@ public class DiplomaExamManager : MonoBehaviour
         questionsList.Add(new string[] { "Na jakim poziomie znajduje siê barek / kafeteria Wydzia³u Matematyki i Informatyki UAM ?  ", "Zero", "Jeden", "Dwa", "a" });
         questionsList.Add(new string[] { "Czego uczy³ profesor Testow? ", "Analizy", "Logiki", "Algebry", "a" });
         questionsList.Add(new string[] { "Czego uczy³ profesor Implikacja? ", "Analizy", "Logiki", "Algebry", "b" });
-        questionsList.Add(new string[] { "Czego uczy³ profesor Pierœcieñ? ", "Analizy", "Algebry", "Logiki", "c" });
+        questionsList.Add(new string[] { "Czego uczy³ profesor Pierœcieñ? ", "Logiki", "Analizy", "Algebry",  "c" });
 
         points = 0;
 

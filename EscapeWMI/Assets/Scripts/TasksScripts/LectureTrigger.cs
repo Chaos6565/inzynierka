@@ -78,6 +78,7 @@ public class LectureTrigger : InteractableObject
 
                 if (playerColliders != null)
                 {
+                    displayToEveryoneInsideRoom = false;
                     foreach (Collider2D player in playerColliders)
                     {
                         Photon.Realtime.Player targetedPlayer = player.GetComponent<PhotonView>().Owner;

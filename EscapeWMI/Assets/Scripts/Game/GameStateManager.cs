@@ -88,7 +88,10 @@ public class GameStateManager : MonoBehaviourPun
             Debug.Log("Game State: " + (_gameState).ToString());
             if (idOfGameStatesToSkip != null && idOfGameStatesToSkip.Contains(_gameState))
                 if (_gameState + 1 < gameModules.Count)
+                {
                     gameModules[_gameState + 1].EnableModule();
+                    _gameState++;
+                }
                 else
                     Debug.Log("All game modules completed.");
             else

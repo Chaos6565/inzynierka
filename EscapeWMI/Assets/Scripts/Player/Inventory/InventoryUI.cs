@@ -123,6 +123,8 @@ public class InventoryUI : MonoBehaviourPun
         itemList.Add(new Item { itemType = Item.ItemType.Podanie });           // PODANIE           index 14
         itemList.Add(new Item { itemType = Item.ItemType.Haslo });             // HASLO             index 15
         itemList.Add(new Item { itemType = Item.ItemType.Plan3 });             // PLAN 3            index 16
+        itemList.Add(new Item { itemType = Item.ItemType.Mapka });             // MAPKA             index 17
+        itemList.Add(new Item { itemType = Item.ItemType.MapkaStartowa });     // MAPKA STARTOWA    index 18
     }
 
 

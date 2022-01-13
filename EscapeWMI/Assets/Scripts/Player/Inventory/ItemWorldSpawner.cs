@@ -36,6 +36,8 @@ public class ItemWorldSpawner : MonoBehaviourPun
         itemsList.Add(new Item { itemType = Item.ItemType.Podanie });           // PODANIE              index 14
         itemsList.Add(new Item { itemType = Item.ItemType.Haslo });             // HASLO                index 15
         itemsList.Add(new Item { itemType = Item.ItemType.Plan3 });             // PLAN 3               index 16
+        itemsList.Add(new Item { itemType = Item.ItemType.Mapka });             // MAPKA                index 17
+        itemsList.Add(new Item { itemType = Item.ItemType.MapkaStartowa });     // MAPKA STARTOWA       index 18
 
     }
 

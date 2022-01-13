@@ -31,7 +31,8 @@ public class DialogueTrigger : InteractableObject
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
                 DisableInteraction();
                 Manager.SetCompleted(false);
-                Destroy(this);
+                isCompleted = false;
+                //Destroy(this);
             }
         }
     }

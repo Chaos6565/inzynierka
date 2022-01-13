@@ -24,9 +24,9 @@ public class DiplomaExamTrigger : InteractableObject
             if (!isCompleted && Manager.Complete)
             {
                 isCompleted = true;
-                GetComponentInParent<ModuleContentScript>().ModuleCompleted();
+                DisableInteraction();
                 Manager.SetCompleted(false);
-                Destroy(this);
+                GetComponentInParent<ModuleContentScript>().ModuleCompleted();
             }
         }
 

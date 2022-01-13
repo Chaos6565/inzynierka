@@ -60,6 +60,9 @@ public class DiplomaExamManager : MonoBehaviour
         firstQuestion.SetActive(false);
         secondQuestion.SetActive(false);
 
+        drawButton.gameObject.SetActive(true);
+        welcomeText.gameObject.SetActive(true);
+
         welcomeText.text = "Aby wylosowaæ pytania z puli proszê wcisn¹æ strza³kê";
 
         questionsList.Add(new string[]{ "Ile lat trwa³y studia?", "1", "2", "3", "c"});

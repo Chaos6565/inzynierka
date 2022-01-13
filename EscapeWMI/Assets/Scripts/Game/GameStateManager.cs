@@ -41,6 +41,7 @@ public class GameStateManager : MonoBehaviourPun
                 Debug.Log("Game State: " + _gameState.ToString());
             }
         }*/
+        Debug.Log("Game State at Start: " + (_gameState).ToString());
         gameModules[_gameState].EnableModule();
     }
 
@@ -84,21 +85,31 @@ public class GameStateManager : MonoBehaviourPun
     {
         if (_gameState + 1 < gameModules.Count)
         {
-            _gameState++;
+            _gameState += 1;
 
-            if (idOfGameStatesToSkip != null && idOfGameStatesToSkip.Contains(_gameState))
+            if (idOfGameStatesToSkip != null)
             {
-                if (_gameState + 1 < gameModules.Count)
+                while (true)
                 {
-                    _gameState += 1;
-                    gameModules[_gameState].EnableModule();
+                    if (idOfGameStatesToSkip.Contains(_gameState))
+                    {
+                        if (_gameState + 1 < gameModules.Count)
+                        {
+                            _gameState += 1;
+                        }
+                        else
+                        {
+                            Debug.Log("All game modules completed.");
+                            break;
+                        }
+                    } else
+                    {
+                        break;
+                    }
                 }
-                else
-                    Debug.Log("All game modules completed.");
             }
-            else
-                gameModules[_gameState].EnableModule();
             Debug.Log("Game State: " + (_gameState).ToString());
+            gameModules[_gameState].EnableModule();
         }
         else
             Debug.Log("All game modules completed.");

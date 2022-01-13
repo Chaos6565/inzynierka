@@ -36,6 +36,11 @@ public class LectureTrigger : InteractableObject
                 //Destroy(this);
             }
         }
+        else
+        {
+            if (!isCompleted && Manager.Complete == true)
+                Manager.SetCompleted(false);
+        }
     }
 
     public void SetDisplayForEveryone(bool state)

@@ -27,7 +27,6 @@ public class DialogueManager : MonoBehaviour
         _complete = state;
     }
 
-
     // Start is called before the first frame update
     void Start()
     {

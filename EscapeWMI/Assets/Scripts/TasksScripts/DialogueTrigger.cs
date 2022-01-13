@@ -29,9 +29,15 @@ public class DialogueTrigger : InteractableObject
             {
                 isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
+                DisableInteraction();
                 Manager.SetCompleted(false);
             }
         }
+    }
+
+    public void SetDisplayForEveryone(bool state)
+    {
+        displayToEveryoneInsideRoom = state;
     }
 
     public override void PerformAction()
@@ -76,7 +82,6 @@ public class DialogueTrigger : InteractableObject
 
                 if (playerColliders != null)
                 {
-                    displayToEveryoneInsideRoom = false;
                     foreach (Collider2D player in playerColliders)
                     {
                         Photon.Realtime.Player targetedPlayer = player.GetComponent<PhotonView>().Owner;
@@ -114,7 +119,9 @@ public class DialogueTrigger : InteractableObject
                 this.DisableInteractionForAll();
                 break;
         }
+        SetDisplayForEveryone(false);
         Manager.StartDialogue(dialogue);
+
     }
 
 }

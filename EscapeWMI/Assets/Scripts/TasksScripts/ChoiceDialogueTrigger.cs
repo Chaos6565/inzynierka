@@ -29,6 +29,7 @@ public class ChoiceDialogueTrigger : InteractableObject
             {
                 isCompleted = true;
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
+                DisableInteraction();
                 Manager.SetCompleted(false);
             }
         }
@@ -66,6 +67,10 @@ public class ChoiceDialogueTrigger : InteractableObject
         }
     }
 
+    public void SetDisplayForEveryone(bool state)
+    {
+        displayToEveryoneInsideRoom = state;
+    }
     private void TriggerTask()
     {
         if (displayToEveryoneInsideRoom)
@@ -76,7 +81,6 @@ public class ChoiceDialogueTrigger : InteractableObject
 
                 if (playerColliders != null)
                 {
-                    displayToEveryoneInsideRoom = false;
                     foreach (Collider2D player in playerColliders)
                     {
                         Photon.Realtime.Player targetedPlayer = player.GetComponent<PhotonView>().Owner;
@@ -114,6 +118,7 @@ public class ChoiceDialogueTrigger : InteractableObject
                 this.DisableInteractionForAll();
                 break;
         }
+        SetDisplayForEveryone(false);
         Manager.StartDialogue(dialogue);
     }
 

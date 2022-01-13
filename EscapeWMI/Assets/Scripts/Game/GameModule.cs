@@ -36,7 +36,8 @@ public class GameModule : MonoBehaviourPun
             {
                 _moduleStateOfCompletion = true;
 
-                Debug.Log("MODULE COMPLETED!");
+                Debug.Log("MODULE COMPLETED");
+
                 if (deactivateModuleAfterCompletion)
                     DisableModule();
 
@@ -64,6 +65,8 @@ public class GameModule : MonoBehaviourPun
     [PunRPC]
     public void EnableModuleRPC()
     {
+        _moduleActiveState = true;
+
         foreach (Transform child in this.transform)
         {
             child.gameObject.SetActive(true);
@@ -78,15 +81,19 @@ public class GameModule : MonoBehaviourPun
             }
         }
 
-        _moduleActiveState = true;
     }
+
 
     [PunRPC]
     public void DisableModuleRPC()
     {
+        _moduleActiveState = false;
+
         //if (PhotonNetwork.IsMasterClient)
         //    itemWorldSpawner.DestroyAllItemsWorld();
+
         itemWorldSpawner.DestroyAllItemsWorld();
+
         foreach (Transform child in this.transform)
         {
             child.gameObject.SetActive(false);

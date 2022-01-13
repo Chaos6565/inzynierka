@@ -28,14 +28,14 @@ public class ItemWorld : MonoBehaviourPun
 
     public void DestroySelf()
     {
-        photonView.RPC("RPCDestroyOnMaster", RpcTarget.MasterClient, gameObject.GetComponent<PhotonView>().ViewID);
+        //photonView.RPC("RPCDestroyOnMaster", RpcTarget.MasterClient, gameObject.GetComponent<PhotonView>().ViewID);
+        Destroy(gameObject);
     }
 
     [PunRPC]
     public void RPCDestroyOnMaster(int id)
     {
-        //if (PhotonNetwork.IsMasterClient)
-        //    PhotonNetwork.Destroy(PhotonView.Find(id));
-        Destroy(PhotonView.Find(id));
+        if (PhotonNetwork.IsMasterClient)
+            PhotonNetwork.Destroy(PhotonView.Find(id));
     }
 }

@@ -37,7 +37,7 @@ public class EnglishManager : MonoBehaviour
     public void SubmitClick()
     {
 
-        if (answer1.text.ToLower() == "do trzech razy sztuka" || answer2.text.ToLower() == "pierwsze koty za p³oty" || answer3.text.ToLower() == "coœ jest nie tak")
+        if (answer1.text.ToLower() == "czas p³ynie wolno" || answer2.text.ToLower() == "tak dzia³a wolny rynek" || answer3.text.ToLower() == "coœ jest nie tak")
         {
             _complete = true;
             background.SetActive(true);

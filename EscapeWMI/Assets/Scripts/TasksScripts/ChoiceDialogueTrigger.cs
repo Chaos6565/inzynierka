@@ -34,6 +34,11 @@ public class ChoiceDialogueTrigger : InteractableObject
                 //Destroy(this);
             }
         }
+        else
+        {
+            if (!isCompleted && Manager.Complete == true)
+                Manager.SetCompleted(false);
+        }
     }
 
     public override void PerformAction()

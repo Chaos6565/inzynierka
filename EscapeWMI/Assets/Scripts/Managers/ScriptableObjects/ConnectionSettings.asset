@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ConnectionSettings
   m_EditorClassIdentifier: 
   _gameVersion: 0.0.0
-  _nickName: Player1
-  _minPlayersPerRoom: 1
+  _nickName: Robertt
+  _minPlayersPerRoom: 3

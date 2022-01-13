@@ -30,6 +30,8 @@ public class SelectSubjectTrigger : InteractableObject
                 isCompleted = true;
                 GetComponentInParent<GameStateManager>().AddToSkipList(Manager.Choice);
                 GetComponentInParent<ModuleContentScript>().ModuleCompleted();
+
+                Manager.SetCompleted(false);
             }
         }
     }

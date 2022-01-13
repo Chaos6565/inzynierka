@@ -35,7 +35,10 @@ public class SelectSubjectManager : MonoBehaviour
         GameStateManager.instance.taskActive = true;
     }
 
-
+    public void SetCompleted(bool state)
+    {
+        _complete = state;
+    }
 
     public void SubmitForSecondYear()
     {

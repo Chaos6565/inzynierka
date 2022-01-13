@@ -13,7 +13,7 @@ public class InventoryUI : MonoBehaviourPun
     private Transform itemSlotTemplate;
     private Transform itemDisplay;
 
-
+    public GameObject Map;
     public List<Item> itemList;
     public PlayerController player;
     
@@ -187,5 +187,15 @@ public class InventoryUI : MonoBehaviourPun
             this.player.itemDisplayViewAvaliable = false;
         }
     }
-
+    public void ShowMap()
+    {
+        Map.SetActive(true);
+        this.player.itemDisplayViewAvaliable = false;
+        Debug.Log("Click Mapy");
+    }
+    public void QuitMap()
+    {
+        Map.SetActive(false);
+        this.player.itemDisplayViewAvaliable = true;
+    }
 }

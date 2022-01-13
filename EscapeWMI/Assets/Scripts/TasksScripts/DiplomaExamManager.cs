@@ -9,12 +9,14 @@ public class DiplomaExamManager : MonoBehaviour
     public GameObject background;
     public GameObject resultPanel;
 
+    public GameObject questions;
+    public GameObject welcomeDraw;
+
     public Text resultPanelText;
 
     public Text welcomeText;
 
     [Header("Pierwsze pytanie")]
-    public GameObject firstQuestion;
     public Text firstQuestionText;
     public Toggle answer1a;
     public Text answer1aText;
@@ -24,7 +26,6 @@ public class DiplomaExamManager : MonoBehaviour
     public Text answer1cText;
 
     [Header("Drugie pytanie")]
-    public GameObject secondQuestion;
     public Text secondQuestionText;
     public Toggle answer2a;
     public Text answer2aText;
@@ -32,8 +33,6 @@ public class DiplomaExamManager : MonoBehaviour
     public Text answer2bText;
     public Toggle answer2c;
     public Text answer2cText;
-
-    public Button drawButton;
 
     int points;
     int first;
@@ -57,11 +56,9 @@ public class DiplomaExamManager : MonoBehaviour
     public void OpenTask()
     {
         taskCanvas.SetActive(true);
-        firstQuestion.SetActive(false);
-        secondQuestion.SetActive(false);
+        questions.SetActive(false);
 
-        drawButton.gameObject.SetActive(true);
-        welcomeText.gameObject.SetActive(true);
+        welcomeDraw.SetActive(true);
 
         welcomeText.text = "Aby wylosowaæ pytania z puli proszê wcisn¹æ strza³kê";
 
@@ -91,8 +88,8 @@ public class DiplomaExamManager : MonoBehaviour
 
     public void DrawClick()
     {
-        drawButton.gameObject.SetActive(false);
-
+        questions.SetActive(true);
+        welcomeDraw.SetActive(false);
 
         first = Random.Range(0, questionsList.Count);
         do
@@ -100,16 +97,12 @@ public class DiplomaExamManager : MonoBehaviour
             second = Random.Range(0, questionsList.Count);
         } while (second == first);
 
-        welcomeText.gameObject.SetActive(false);
 
-        firstQuestion.SetActive(true);
         firstQuestionText.text = questionsList[first][0];
         answer1aText.text = questionsList[first][1];
         answer1bText.text = questionsList[first][2];
         answer1cText.text = questionsList[first][3];
 
-
-        secondQuestion.SetActive(true);
         secondQuestionText.text = questionsList[second][0];
         answer2aText.text = questionsList[second][1];
         answer2bText.text = questionsList[second][2];

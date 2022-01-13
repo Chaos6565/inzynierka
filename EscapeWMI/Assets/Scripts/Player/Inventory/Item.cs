@@ -55,8 +55,6 @@ public class Item
             case ItemType.Podanie:          return ItemData.Instance.podanieSprite;
             case ItemType.Haslo:            return ItemData.Instance.hasloSprite;
             case ItemType.Plan3:            return ItemData.Instance.plan3Sprite;
-            case ItemType.Mapka:            return ItemData.Instance.mapkaSprite;
-            case ItemType.MapkaStartowa:    return ItemData.Instance.mapkaStartowaSprite;
         }
     }
 
@@ -82,8 +80,6 @@ public class Item
             case ItemType.Podanie:          return ItemData.Instance.podanieDisplay;
             case ItemType.Haslo:            return ItemData.Instance.hasloDisplay;
             case ItemType.Plan3:            return ItemData.Instance.plan3Display;
-            case ItemType.Mapka:            return ItemData.Instance.mapkaDisplay;
-            case ItemType.MapkaStartowa:    return ItemData.Instance.mapkaStartowaDisplay;
         }
     }
 

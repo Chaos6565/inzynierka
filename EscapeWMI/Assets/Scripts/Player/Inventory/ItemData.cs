@@ -51,10 +51,6 @@ public class ItemData : MonoBehaviour
     public Sprite hasloDisplay;
     public Sprite plan3Sprite;
     public Sprite plan3Display;
-    public Sprite mapkaSprite;
-    public Sprite mapkaDisplay;
-    public Sprite mapkaStartowaSprite;
-    public Sprite mapkaStartowaDisplay;
 
 
 

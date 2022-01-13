@@ -30,10 +30,9 @@ public class LectureTrigger : InteractableObject
             if (!isCompleted && Manager.Complete == true)
             {
                 isCompleted = true;
-                GetComponentInParent<ModuleContentScript>().ModuleCompleted();
                 DisableInteraction();
                 Manager.SetCompleted(false);
-                isCompleted = false;
+                GetComponentInParent<ModuleContentScript>().ModuleCompleted();
                 //Destroy(this);
             }
         }

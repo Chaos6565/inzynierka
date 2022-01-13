@@ -85,8 +85,9 @@ public class GameStateManager : MonoBehaviourPun
         if (_gameState + 1 < gameModules.Count)
         {
             _gameState++;
-            Debug.Log("Game State: " + (_gameState).ToString());
+
             if (idOfGameStatesToSkip != null && idOfGameStatesToSkip.Contains(_gameState))
+            {
                 if (_gameState + 1 < gameModules.Count)
                 {
                     _gameState += 1;
@@ -94,8 +95,10 @@ public class GameStateManager : MonoBehaviourPun
                 }
                 else
                     Debug.Log("All game modules completed.");
+            }
             else
                 gameModules[_gameState].EnableModule();
+            Debug.Log("Game State: " + (_gameState).ToString());
         }
         else
             Debug.Log("All game modules completed.");

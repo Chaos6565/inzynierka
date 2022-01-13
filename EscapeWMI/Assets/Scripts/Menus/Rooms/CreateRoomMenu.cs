@@ -11,7 +11,7 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
     [SerializeField]
     private InputField _roomName;
 
-    [SerializeField] private const int MaxPlayersPerRoom = 3;
+    [SerializeField] private const int MaxPlayersPerRoom = 8;
 
     private MainMenuScript _mainMenuScript;
 

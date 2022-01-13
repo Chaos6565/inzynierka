@@ -34,7 +34,8 @@ public class ItemWorld : MonoBehaviourPun
     [PunRPC]
     public void RPCDestroyOnMaster(int id)
     {
-        if (PhotonNetwork.IsMasterClient)
-            PhotonNetwork.Destroy(PhotonView.Find(id));
+        //if (PhotonNetwork.IsMasterClient)
+        //    PhotonNetwork.Destroy(PhotonView.Find(id));
+        Destroy(PhotonView.Find(id));
     }
 }

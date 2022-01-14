@@ -10,6 +10,7 @@ public class ButtonsScript : MonoBehaviour
     public GameObject settingsPanel;
     public GameObject creditsPanel;
     public GameObject quitPanel;
+    public GameObject HowToPanel;
 
     public void ButtonClick(string buttonName)
     {
@@ -20,6 +21,7 @@ public class ButtonsScript : MonoBehaviour
             settingsPanel.SetActive(false);
             creditsPanel.SetActive(false);
             quitPanel.SetActive(false);
+            HowToPanel.SetActive(false);
         }
         else if (buttonName == "Option Button")
         {
@@ -28,6 +30,7 @@ public class ButtonsScript : MonoBehaviour
             settingsPanel.SetActive(true);
             creditsPanel.SetActive(false);
             quitPanel.SetActive(false);
+            HowToPanel.SetActive(false);
         }
         else if (buttonName == "Credits Button")
         {
@@ -36,6 +39,8 @@ public class ButtonsScript : MonoBehaviour
             settingsPanel.SetActive(false);
             creditsPanel.SetActive(true);
             quitPanel.SetActive(false);
+            HowToPanel.SetActive(false);
+            
         }
         else if (buttonName == "Quit Button")
         {
@@ -44,6 +49,16 @@ public class ButtonsScript : MonoBehaviour
             settingsPanel.SetActive(false);
             creditsPanel.SetActive(false);
             quitPanel.SetActive(true);
+            HowToPanel.SetActive(false);
+        }
+        else if (buttonName == "HowTo Button")
+        {
+            mainPanel.SetActive(false);
+            playPanel.SetActive(false);
+            settingsPanel.SetActive(false);
+            creditsPanel.SetActive(false);
+            quitPanel.SetActive(false);
+            HowToPanel.SetActive(true);
         }
     }
 
